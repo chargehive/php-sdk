@@ -19,6 +19,12 @@ class ChargehiveChargeRefundTransaction implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $paymentMethodToken;
+    /**
+     * 
+     *
      * @return string
      */
     public function getSourceTransactionId()
@@ -58,8 +64,29 @@ class ChargehiveChargeRefundTransaction implements \JsonSerializable
         $this->amount = $amount;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getPaymentMethodToken()
+    {
+        return $this->paymentMethodToken;
+    }
+    /**
+     * 
+     *
+     * @param string $paymentMethodToken
+     *
+     * @return self
+     */
+    public function setPaymentMethodToken(string $paymentMethodToken)
+    {
+        $this->paymentMethodToken = $paymentMethodToken;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['sourceTransactionId' => $this->sourceTransactionId, 'amount' => $this->amount];
+        return ['sourceTransactionId' => $this->sourceTransactionId, 'amount' => $this->amount, 'paymentMethodToken' => $this->paymentMethodToken];
     }
 }

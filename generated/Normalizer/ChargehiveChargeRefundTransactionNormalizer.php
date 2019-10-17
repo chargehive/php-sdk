@@ -34,6 +34,9 @@ class ChargehiveChargeRefundTransactionNormalizer implements DenormalizerInterfa
         if (property_exists($data, 'amount')) {
             $object->setAmount($this->denormalizer->denormalize($data->{'amount'}, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypeAmount', 'json', $context));
         }
+        if (property_exists($data, 'payment_method_token')) {
+            $object->setPaymentMethodToken($data->{'payment_method_token'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -44,6 +47,9 @@ class ChargehiveChargeRefundTransactionNormalizer implements DenormalizerInterfa
         }
         if (null !== $object->getAmount()) {
             $data->{'amount'} = $this->normalizer->normalize($object->getAmount(), 'json', $context);
+        }
+        if (null !== $object->getPaymentMethodToken()) {
+            $data->{'payment_method_token'} = $object->getPaymentMethodToken();
         }
         return $data;
     }
