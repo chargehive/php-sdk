@@ -36,6 +36,8 @@ class NormalizerFactory
         $normalizers[] = new ChargehiveConnectionValidateResponseNormalizer();
         $normalizers[] = new ChargehiveMethodUpdateRequestNormalizer();
         $normalizers[] = new ChargehiveMethodUpdateResponseNormalizer();
+        $normalizers[] = new ChargehiveMethodVerifyRequestNormalizer();
+        $normalizers[] = new ChargehiveMethodVerifyResponseNormalizer();
         $normalizers[] = new ChargehiveSchedulerOnDemandTriggerRequestNormalizer();
         $normalizers[] = new ChargehiveSchedulerOnDemandTriggerResponseNormalizer();
         $normalizers[] = new ChargehiveStringTransportNormalizer();
