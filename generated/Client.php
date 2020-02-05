@@ -109,6 +109,30 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
     /**
      * 
      *
+     * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationGetRequest $body 
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationGetResponse|\Psr\Http\Message\ResponseInterface
+     */
+    public function configurationGet(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationGetRequest $body, string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\ConfigurationGet($body), $fetch);
+    }
+    /**
+     * 
+     *
+     * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationListRequest $body 
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationListResponse|\Psr\Http\Message\ResponseInterface
+     */
+    public function configurationList(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationListRequest $body, string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\ConfigurationList($body), $fetch);
+    }
+    /**
+     * 
+     *
      * @param string $kind 
      * @param string $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
@@ -177,6 +201,18 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
     public function ping(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveStringTransport $body, string $fetch = self::FETCH_OBJECT)
     {
         return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\Ping($body), $fetch);
+    }
+    /**
+     * 
+     *
+     * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandTriggerRequest $body 
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandTriggerResponse|\Psr\Http\Message\ResponseInterface
+     */
+    public function schedulerOnDemandTrigger(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandTriggerRequest $body, string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\SchedulerOnDemandTrigger($body), $fetch);
     }
     public static function create($httpClient = null)
     {
