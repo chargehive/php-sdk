@@ -10,35 +10,26 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-class ChargehiveMethodVerifyRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class ChargehiveMethodUnlockRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodVerifyRequest';
+        return $type === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodUnlockRequest';
     }
     public function supportsNormalization($data, $format = null)
     {
-        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodVerifyRequest';
+        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodUnlockRequest';
     }
     public function denormalize($data, $class, $format = null, array $context = array())
     {
         if (!is_object($data)) {
             throw new InvalidArgumentException();
         }
-        $object = new \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodVerifyRequest();
+        $object = new \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockRequest();
         if (property_exists($data, 'token')) {
             $object->setToken($data->{'token'});
-        }
-        if (property_exists($data, 'amount')) {
-            $object->setAmount($this->denormalizer->denormalize($data->{'amount'}, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypeAmount', 'json', $context));
-        }
-        if (property_exists($data, 'connector_id')) {
-            $object->setConnectorId($data->{'connector_id'});
-        }
-        if (property_exists($data, 'charge_id')) {
-            $object->setChargeId($data->{'charge_id'});
         }
         return $object;
     }
@@ -47,15 +38,6 @@ class ChargehiveMethodVerifyRequestNormalizer implements DenormalizerInterface, 
         $data = new \stdClass();
         if (null !== $object->getToken()) {
             $data->{'token'} = $object->getToken();
-        }
-        if (null !== $object->getAmount()) {
-            $data->{'amount'} = $this->normalizer->normalize($object->getAmount(), 'json', $context);
-        }
-        if (null !== $object->getConnectorId()) {
-            $data->{'connector_id'} = $object->getConnectorId();
-        }
-        if (null !== $object->getChargeId()) {
-            $data->{'charge_id'} = $object->getChargeId();
         }
         return $data;
     }

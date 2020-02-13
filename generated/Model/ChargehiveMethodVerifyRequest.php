@@ -25,6 +25,12 @@ class ChargehiveMethodVerifyRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $chargeId;
+    /**
+     * 
+     *
      * @return string
      */
     public function getToken()
@@ -85,8 +91,29 @@ class ChargehiveMethodVerifyRequest implements \JsonSerializable
         $this->connectorId = $connectorId;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getChargeId()
+    {
+        return $this->chargeId;
+    }
+    /**
+     * 
+     *
+     * @param string $chargeId
+     *
+     * @return self
+     */
+    public function setChargeId(string $chargeId)
+    {
+        $this->chargeId = $chargeId;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['token' => $this->token, 'amount' => $this->amount, 'connectorId' => $this->connectorId];
+        return ['token' => $this->token, 'amount' => $this->amount, 'connectorId' => $this->connectorId, 'chargeId' => $this->chargeId];
     }
 }
