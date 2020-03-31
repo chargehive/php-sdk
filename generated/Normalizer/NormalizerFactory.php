@@ -40,8 +40,8 @@ class NormalizerFactory
         $normalizers[] = new ChargehiveMethodUpdateResponseNormalizer();
         $normalizers[] = new ChargehiveMethodVerifyRequestNormalizer();
         $normalizers[] = new ChargehiveMethodVerifyResponseNormalizer();
-        $normalizers[] = new ChargehiveSchedulerOnDemandTriggerRequestNormalizer();
-        $normalizers[] = new ChargehiveSchedulerOnDemandTriggerResponseNormalizer();
+        $normalizers[] = new ChargehiveSchedulerOnDemandResponseNormalizer();
+        $normalizers[] = new ChargehiveSchedulerTriggerResponseNormalizer();
         $normalizers[] = new ChargehiveStringTransportNormalizer();
         $normalizers[] = new ChargehiveSupportedMethodUpdateTypesNormalizer();
         $normalizers[] = new ChtypeAddressNormalizer();
@@ -67,6 +67,8 @@ class NormalizerFactory
         $normalizers[] = new ChtypeTransactionDetailNormalizer();
         $normalizers[] = new ChtypeVerificationResultNormalizer();
         $normalizers[] = new ChtypeVerifyRequestDataNormalizer();
+        $normalizers[] = new ProtobufAnyNormalizer();
+        $normalizers[] = new RuntimeErrorNormalizer();
         return $normalizers;
     }
 }

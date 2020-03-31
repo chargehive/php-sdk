@@ -2,14 +2,14 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Endpoint;
 
-class SchedulerOnDemandTrigger extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\OpenApiRuntime\Client\Psr7HttplugEndpoint
+class SchedulerOnDemand extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\OpenApiRuntime\Client\Psr7HttplugEndpoint
 {
     /**
      * 
      *
-     * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandTriggerRequest $body 
+     * @param \stdClass $body 
      */
-    public function __construct(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandTriggerRequest $body)
+    public function __construct(\stdClass $body)
     {
         $this->body = $body;
     }
@@ -20,11 +20,11 @@ class SchedulerOnDemandTrigger extends \Jane\OpenApiRuntime\Client\BaseEndpoint 
     }
     public function getUri() : string
     {
-        return '/v1/scheduler/ondemand/trigger';
+        return '/v1/scheduler/ondemand';
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, \Http\Message\StreamFactory $streamFactory = null) : array
     {
-        return $this->getSerializedBody($serializer);
+        return array(array(), $this->body);
     }
     public function getExtraHeaders() : array
     {
@@ -34,12 +34,13 @@ class SchedulerOnDemandTrigger extends \Jane\OpenApiRuntime\Client\BaseEndpoint 
      * {@inheritdoc}
      *
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandTriggerResponse
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
-            return $serializer->deserialize($body, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveSchedulerOnDemandTriggerResponse', 'json');
+            return $serializer->deserialize($body, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveSchedulerOnDemandResponse', 'json');
         }
+        return $serializer->deserialize($body, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\RuntimeError', 'json');
     }
 }

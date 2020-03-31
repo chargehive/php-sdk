@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveSchedulerOnDemandTriggerResponse implements \JsonSerializable
+class ChargehiveSchedulerOnDemandResponse implements \JsonSerializable
 {
     /**
      * 
