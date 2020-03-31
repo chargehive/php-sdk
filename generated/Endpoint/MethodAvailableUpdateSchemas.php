@@ -25,12 +25,13 @@ class MethodAvailableUpdateSchemas extends \Jane\OpenApiRuntime\Client\BaseEndpo
      * {@inheritdoc}
      *
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSupportedMethodUpdateTypes
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSupportedMethodUpdateTypes|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveSupportedMethodUpdateTypes', 'json');
         }
+        return $serializer->deserialize($body, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\RuntimeError', 'json');
     }
 }

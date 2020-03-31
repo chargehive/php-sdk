@@ -34,12 +34,13 @@ class ConfigurationGet extends \Jane\OpenApiRuntime\Client\BaseEndpoint implemen
      * {@inheritdoc}
      *
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationGetResponse
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationGetResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveConfigurationGetResponse', 'json');
         }
+        return $serializer->deserialize($body, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\RuntimeError', 'json');
     }
 }

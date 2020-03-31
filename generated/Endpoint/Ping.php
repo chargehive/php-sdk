@@ -34,12 +34,13 @@ class Ping extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\Ope
      * {@inheritdoc}
      *
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveStringTransport
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveStringTransport|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError
      */
     protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveStringTransport', 'json');
         }
+        return $serializer->deserialize($body, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\RuntimeError', 'json');
     }
 }

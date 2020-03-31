@@ -34,6 +34,12 @@ class ChargehiveConfigurationListItemNormalizer implements DenormalizerInterface
         if (property_exists($data, 'id')) {
             $object->setId($data->{'id'});
         }
+        if (property_exists($data, 'description')) {
+            $object->setDescription($data->{'description'});
+        }
+        if (property_exists($data, 'disabled')) {
+            $object->setDisabled($data->{'disabled'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -44,6 +50,12 @@ class ChargehiveConfigurationListItemNormalizer implements DenormalizerInterface
         }
         if (null !== $object->getId()) {
             $data->{'id'} = $object->getId();
+        }
+        if (null !== $object->getDescription()) {
+            $data->{'description'} = $object->getDescription();
+        }
+        if (null !== $object->getDisabled()) {
+            $data->{'disabled'} = $object->getDisabled();
         }
         return $data;
     }

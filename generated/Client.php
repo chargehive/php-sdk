@@ -10,7 +10,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCreateRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCreateResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCreateResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function chargeCreate(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCreateRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -23,7 +23,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeAuthorizeRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeAuthorizeResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeAuthorizeResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function chargeAuthorize(string $chargeId, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeAuthorizeRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -36,7 +36,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCancelRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCancelResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCancelResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function chargeCancel(string $chargeId, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCancelRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -49,7 +49,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCaptureRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCaptureResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCaptureResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function chargeCapture(string $chargeId, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCaptureRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -62,7 +62,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeFraudScanRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeFraudScanResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeFraudScanResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function chargeFraudScan(string $chargeId, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeFraudScanRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -75,7 +75,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeModifyRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeModifyResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeModifyResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function chargeModify(string $chargeId, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeModifyRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -88,7 +88,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeRefundRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeRefundResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeRefundResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function chargeRefund(string $chargeId, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeRefundRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -100,7 +100,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationApplyRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationApplyResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationApplyResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function configurationApply(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationApplyRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -112,7 +112,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationGetRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationGetResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationGetResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function configurationGet(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationGetRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -124,7 +124,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationListRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationListResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationListResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function configurationList(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationListRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -137,7 +137,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param string $id 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationDeleteResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationDeleteResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function configurationDelete(string $kind, string $id, string $fetch = self::FETCH_OBJECT)
     {
@@ -149,7 +149,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConnectionValidateRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConnectionValidateResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConnectionValidateResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function connectionValidate(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConnectionValidateRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -162,7 +162,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConnectionConfirmRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConnectionValidateResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConnectionValidateResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function connectionValidationConfirm(string $requestId, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConnectionConfirmRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -171,7 +171,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
     /**
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSupportedMethodUpdateTypes|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSupportedMethodUpdateTypes|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function methodAvailableUpdateSchemas(string $fetch = self::FETCH_OBJECT)
     {
@@ -184,7 +184,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function methodUnlock(string $token, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -197,7 +197,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUpdateRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUpdateResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUpdateResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function methodUpdate(string $token, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUpdateRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -210,7 +210,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodVerifyRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodVerifyResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodVerifyResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function methodVerify(string $token, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodVerifyRequest $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -222,7 +222,7 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveStringTransport $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveStringTransport|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveStringTransport|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
     public function ping(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveStringTransport $body, string $fetch = self::FETCH_OBJECT)
     {
@@ -231,14 +231,26 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
     /**
      * 
      *
-     * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandTriggerRequest $body 
+     * @param \stdClass $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
-     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandTriggerResponse|\Psr\Http\Message\ResponseInterface
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
-    public function schedulerOnDemandTrigger(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandTriggerRequest $body, string $fetch = self::FETCH_OBJECT)
+    public function schedulerOnDemand(\stdClass $body, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\SchedulerOnDemandTrigger($body), $fetch);
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\SchedulerOnDemand($body), $fetch);
+    }
+    /**
+     * 
+     *
+     * @param \stdClass $body 
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerTriggerResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
+     */
+    public function schedulerTrigger(\stdClass $body, string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\SchedulerTrigger($body), $fetch);
     }
     public static function create($httpClient = null)
     {
