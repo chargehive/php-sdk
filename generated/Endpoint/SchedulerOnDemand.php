@@ -7,9 +7,9 @@ class SchedulerOnDemand extends \Jane\OpenApiRuntime\Client\BaseEndpoint impleme
     /**
      * 
      *
-     * @param \stdClass $body 
+     * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandRequest $body 
      */
-    public function __construct(\stdClass $body)
+    public function __construct(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandRequest $body)
     {
         $this->body = $body;
     }
@@ -24,7 +24,7 @@ class SchedulerOnDemand extends \Jane\OpenApiRuntime\Client\BaseEndpoint impleme
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, \Http\Message\StreamFactory $streamFactory = null) : array
     {
-        return array(array(), $this->body);
+        return $this->getSerializedBody($serializer);
     }
     public function getExtraHeaders() : array
     {
