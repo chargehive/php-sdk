@@ -4,6 +4,15 @@ namespace ChargeHive\Php\Sdk\Generated\Endpoint;
 
 class SchedulerOnDemand extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\OpenApiRuntime\Client\Psr7HttplugEndpoint
 {
+    /**
+     * 
+     *
+     * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandRequest $body 
+     */
+    public function __construct(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveSchedulerOnDemandRequest $body)
+    {
+        $this->body = $body;
+    }
     use \Jane\OpenApiRuntime\Client\Psr7HttplugEndpointTrait;
     public function getMethod() : string
     {
@@ -15,7 +24,7 @@ class SchedulerOnDemand extends \Jane\OpenApiRuntime\Client\BaseEndpoint impleme
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, \Http\Message\StreamFactory $streamFactory = null) : array
     {
-        return array(array(), null);
+        return $this->getSerializedBody($serializer);
     }
     public function getExtraHeaders() : array
     {
