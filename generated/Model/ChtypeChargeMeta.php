@@ -115,6 +115,12 @@ class ChtypeChargeMeta implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $placementId;
+    /**
+     * 
+     *
      * @return ChtypeAddress
      */
     public function getBillingAddress()
@@ -490,8 +496,29 @@ class ChtypeChargeMeta implements \JsonSerializable
         $this->customerId = $customerId;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getPlacementId()
+    {
+        return $this->placementId;
+    }
+    /**
+     * 
+     *
+     * @param string $placementId
+     *
+     * @return self
+     */
+    public function setPlacementId(string $placementId)
+    {
+        $this->placementId = $placementId;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['billingAddress' => $this->billingAddress, 'deliveryAddress' => $this->deliveryAddress, 'items' => $this->items, 'terms' => $this->terms, 'note' => $this->note, 'merchantMemo' => $this->merchantMemo, 'invoiceDate' => $this->invoiceDate, 'dueDate' => $this->dueDate, 'discountAmount' => $this->discountAmount, 'deliveryAmount' => $this->deliveryAmount, 'taxAmount' => $this->taxAmount, 'totalAmount' => $this->totalAmount, 'person' => $this->person, 'company' => $this->company, 'ipAddress' => $this->ipAddress, 'delivery' => $this->delivery, 'device' => $this->device, 'customerId' => $this->customerId];
+        return ['billingAddress' => $this->billingAddress, 'deliveryAddress' => $this->deliveryAddress, 'items' => $this->items, 'terms' => $this->terms, 'note' => $this->note, 'merchantMemo' => $this->merchantMemo, 'invoiceDate' => $this->invoiceDate, 'dueDate' => $this->dueDate, 'discountAmount' => $this->discountAmount, 'deliveryAmount' => $this->deliveryAmount, 'taxAmount' => $this->taxAmount, 'totalAmount' => $this->totalAmount, 'person' => $this->person, 'company' => $this->company, 'ipAddress' => $this->ipAddress, 'delivery' => $this->delivery, 'device' => $this->device, 'customerId' => $this->customerId, 'placementId' => $this->placementId];
     }
 }

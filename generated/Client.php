@@ -97,6 +97,32 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
     /**
      * 
      *
+     * @param string $chargeId 
+     * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeResumeRequest $body 
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeResumeResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
+     */
+    public function chargeResume(string $chargeId, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeResumeRequest $body, string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\ChargeResume($chargeId, $body), $fetch);
+    }
+    /**
+     * 
+     *
+     * @param string $chargeId 
+     * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeSuspendRequest $body 
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeSuspendResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
+     */
+    public function chargeSuspend(string $chargeId, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeSuspendRequest $body, string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\ChargeSuspend($chargeId, $body), $fetch);
+    }
+    /**
+     * 
+     *
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationApplyRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
@@ -176,6 +202,27 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
     public function methodAvailableUpdateSchemas(string $fetch = self::FETCH_OBJECT)
     {
         return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\MethodAvailableUpdateSchemas(), $fetch);
+    }
+    /**
+     * 
+     *
+     * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodTokenizeRequest $body 
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodTokenizeResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
+     */
+    public function methodTokenize(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodTokenizeRequest $body, string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\MethodTokenize($body), $fetch);
+    }
+    /**
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveTransportKeyRetrieveResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
+     */
+    public function transportKeyRetrieve(string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\TransportKeyRetrieve(), $fetch);
     }
     /**
      * 

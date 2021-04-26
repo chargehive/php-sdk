@@ -10,58 +10,52 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-class ChtypePaymentMethodNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class ChtypePaymentMethodVerificationItemNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypePaymentMethod';
+        return $type === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypePaymentMethodVerificationItem';
     }
     public function supportsNormalization($data, $format = null)
     {
-        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypePaymentMethod';
+        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypePaymentMethodVerificationItem';
     }
     public function denormalize($data, $class, $format = null, array $context = array())
     {
         if (!is_object($data)) {
             throw new InvalidArgumentException();
         }
-        $object = new \ChargeHive\Php\Sdk\Generated\Model\ChtypePaymentMethod();
-        if (property_exists($data, 'schema')) {
-            $object->setSchema($data->{'schema'});
-        }
-        if (property_exists($data, 'json')) {
-            $object->setJson($data->{'json'});
-        }
+        $object = new \ChargeHive\Php\Sdk\Generated\Model\ChtypePaymentMethodVerificationItem();
         if (property_exists($data, 'type')) {
             $object->setType($data->{'type'});
         }
-        if (property_exists($data, 'provider')) {
-            $object->setProvider($data->{'provider'});
+        if (property_exists($data, 'value')) {
+            $object->setValue($data->{'value'});
         }
-        if (property_exists($data, 'inputType')) {
-            $object->setInputType($data->{'inputType'});
+        if (property_exists($data, 'transport_key_id')) {
+            $object->setTransportKeyId($data->{'transport_key_id'});
+        }
+        if (property_exists($data, 'is_error')) {
+            $object->setIsError($data->{'is_error'});
         }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
     {
         $data = new \stdClass();
-        if (null !== $object->getSchema()) {
-            $data->{'schema'} = $object->getSchema();
-        }
-        if (null !== $object->getJson()) {
-            $data->{'json'} = $object->getJson();
-        }
         if (null !== $object->getType()) {
             $data->{'type'} = $object->getType();
         }
-        if (null !== $object->getProvider()) {
-            $data->{'provider'} = $object->getProvider();
+        if (null !== $object->getValue()) {
+            $data->{'value'} = $object->getValue();
         }
-        if (null !== $object->getInputType()) {
-            $data->{'inputType'} = $object->getInputType();
+        if (null !== $object->getTransportKeyId()) {
+            $data->{'transport_key_id'} = $object->getTransportKeyId();
+        }
+        if (null !== $object->getIsError()) {
+            $data->{'is_error'} = $object->getIsError();
         }
         return $data;
     }

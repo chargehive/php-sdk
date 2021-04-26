@@ -75,12 +75,6 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @var string
      */
-    protected $failureType = 'FAILURE_TYPE_INVALID';
-    /**
-     * 
-     *
-     * @var string
-     */
     protected $environment = 'ENVIRONMENT_INVALID';
     /**
      * 
@@ -124,6 +118,12 @@ class ChtypeTransactionDetail implements \JsonSerializable
      * @var string
      */
     protected $connectorId;
+    /**
+     * 
+     *
+     * @var bool
+     */
+    protected $primary;
     /**
      * 
      *
@@ -360,27 +360,6 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getFailureType()
-    {
-        return $this->failureType;
-    }
-    /**
-     * 
-     *
-     * @param string $failureType
-     *
-     * @return self
-     */
-    public function setFailureType(string $failureType)
-    {
-        $this->failureType = $failureType;
-        return $this;
-    }
-    /**
-     * 
-     *
-     * @return string
-     */
     public function getEnvironment()
     {
         return $this->environment;
@@ -544,8 +523,29 @@ class ChtypeTransactionDetail implements \JsonSerializable
         $this->connectorId = $connectorId;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return bool
+     */
+    public function getPrimary()
+    {
+        return $this->primary;
+    }
+    /**
+     * 
+     *
+     * @param bool $primary
+     *
+     * @return self
+     */
+    public function setPrimary(bool $primary)
+    {
+        $this->primary = $primary;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['actorId' => $this->actorId, 'actorVersion' => $this->actorVersion, 'actorType' => $this->actorType, 'transactionId' => $this->transactionId, 'requestedAmount' => $this->requestedAmount, 'processedAmount' => $this->processedAmount, 'feeEstimate' => $this->feeEstimate, 'feeActual' => $this->feeActual, 'startTime' => $this->startTime, 'endTime' => $this->endTime, 'wasSuccessful' => $this->wasSuccessful, 'failureType' => $this->failureType, 'environment' => $this->environment, 'response' => $this->response, 'verificationResult' => $this->verificationResult, 'additionalData' => $this->additionalData, 'authorizationCode' => $this->authorizationCode, 'liability' => $this->liability, 'connectorLibrary' => $this->connectorLibrary, 'connectorId' => $this->connectorId];
+        return ['actorId' => $this->actorId, 'actorVersion' => $this->actorVersion, 'actorType' => $this->actorType, 'transactionId' => $this->transactionId, 'requestedAmount' => $this->requestedAmount, 'processedAmount' => $this->processedAmount, 'feeEstimate' => $this->feeEstimate, 'feeActual' => $this->feeActual, 'startTime' => $this->startTime, 'endTime' => $this->endTime, 'wasSuccessful' => $this->wasSuccessful, 'environment' => $this->environment, 'response' => $this->response, 'verificationResult' => $this->verificationResult, 'additionalData' => $this->additionalData, 'authorizationCode' => $this->authorizationCode, 'liability' => $this->liability, 'connectorLibrary' => $this->connectorLibrary, 'connectorId' => $this->connectorId, 'primary' => $this->primary];
     }
 }
