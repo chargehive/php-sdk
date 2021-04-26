@@ -43,6 +43,12 @@ class ChtypePaymentMethodSchemaCard implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $number;
+    /**
+     * 
+     *
      * @return string
      */
     public function getNameOnCard()
@@ -166,8 +172,29 @@ class ChtypePaymentMethodSchemaCard implements \JsonSerializable
         $this->issueNumber = $issueNumber;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getNumber()
+    {
+        return $this->number;
+    }
+    /**
+     * 
+     *
+     * @param string $number
+     *
+     * @return self
+     */
+    public function setNumber(string $number)
+    {
+        $this->number = $number;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['nameOnCard' => $this->nameOnCard, 'validFromMonth' => $this->validFromMonth, 'validFromYear' => $this->validFromYear, 'expiryMonth' => $this->expiryMonth, 'expiryYear' => $this->expiryYear, 'issueNumber' => $this->issueNumber];
+        return ['nameOnCard' => $this->nameOnCard, 'validFromMonth' => $this->validFromMonth, 'validFromYear' => $this->validFromYear, 'expiryMonth' => $this->expiryMonth, 'expiryYear' => $this->expiryYear, 'issueNumber' => $this->issueNumber, 'number' => $this->number];
     }
 }

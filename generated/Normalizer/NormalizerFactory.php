@@ -23,6 +23,10 @@ class NormalizerFactory
         $normalizers[] = new ChargehiveChargeRefundRequestNormalizer();
         $normalizers[] = new ChargehiveChargeRefundResponseNormalizer();
         $normalizers[] = new ChargehiveChargeRefundTransactionNormalizer();
+        $normalizers[] = new ChargehiveChargeResumeRequestNormalizer();
+        $normalizers[] = new ChargehiveChargeResumeResponseNormalizer();
+        $normalizers[] = new ChargehiveChargeSuspendRequestNormalizer();
+        $normalizers[] = new ChargehiveChargeSuspendResponseNormalizer();
         $normalizers[] = new ChargehiveConfigurationApplyRequestNormalizer();
         $normalizers[] = new ChargehiveConfigurationApplyResponseNormalizer();
         $normalizers[] = new ChargehiveConfigurationDeleteResponseNormalizer();
@@ -34,6 +38,8 @@ class NormalizerFactory
         $normalizers[] = new ChargehiveConnectionConfirmRequestNormalizer();
         $normalizers[] = new ChargehiveConnectionValidateRequestNormalizer();
         $normalizers[] = new ChargehiveConnectionValidateResponseNormalizer();
+        $normalizers[] = new ChargehiveMethodTokenizeRequestNormalizer();
+        $normalizers[] = new ChargehiveMethodTokenizeResponseNormalizer();
         $normalizers[] = new ChargehiveMethodUnlockRequestNormalizer();
         $normalizers[] = new ChargehiveMethodUnlockResponseNormalizer();
         $normalizers[] = new ChargehiveMethodUpdateRequestNormalizer();
@@ -45,6 +51,8 @@ class NormalizerFactory
         $normalizers[] = new ChargehiveSchedulerTriggerResponseNormalizer();
         $normalizers[] = new ChargehiveStringTransportNormalizer();
         $normalizers[] = new ChargehiveSupportedMethodUpdateTypesNormalizer();
+        $normalizers[] = new ChargehiveTransportKeyRetrieveResponseNormalizer();
+        $normalizers[] = new ChargehivechtypeLabelNormalizer();
         $normalizers[] = new ChtypeAddressNormalizer();
         $normalizers[] = new ChtypeAmountNormalizer();
         $normalizers[] = new ChtypeAttemptDetailNormalizer();
@@ -60,6 +68,7 @@ class NormalizerFactory
         $normalizers[] = new ChtypePaymentMethodNormalizer();
         $normalizers[] = new ChtypePaymentMethodInfoNormalizer();
         $normalizers[] = new ChtypePaymentMethodSchemaCardNormalizer();
+        $normalizers[] = new ChtypePaymentMethodVerificationItemNormalizer();
         $normalizers[] = new ChtypePersonNormalizer();
         $normalizers[] = new ChtypeReasonNormalizer();
         $normalizers[] = new ChtypeResponseDetailNormalizer();

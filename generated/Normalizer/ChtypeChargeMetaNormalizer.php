@@ -86,6 +86,9 @@ class ChtypeChargeMetaNormalizer implements DenormalizerInterface, NormalizerInt
         if (property_exists($data, 'customer_id')) {
             $object->setCustomerId($data->{'customer_id'});
         }
+        if (property_exists($data, 'placement_id')) {
+            $object->setPlacementId($data->{'placement_id'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -148,6 +151,9 @@ class ChtypeChargeMetaNormalizer implements DenormalizerInterface, NormalizerInt
         }
         if (null !== $object->getCustomerId()) {
             $data->{'customer_id'} = $object->getCustomerId();
+        }
+        if (null !== $object->getPlacementId()) {
+            $data->{'placement_id'} = $object->getPlacementId();
         }
         return $data;
     }

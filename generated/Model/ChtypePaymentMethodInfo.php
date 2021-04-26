@@ -49,6 +49,24 @@ class ChtypePaymentMethodInfo implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $provider = 'PAYMENT_METHOD_PROVIDER_INVALID';
+    /**
+     * 
+     *
+     * @var string
+     */
+    protected $inputType = 'INPUT_TYPE_INVALID';
+    /**
+     * 
+     *
+     * @var string
+     */
+    protected $status = 'STATUS_INVALID';
+    /**
+     * 
+     *
      * @return string
      */
     public function getTokenId()
@@ -193,8 +211,71 @@ class ChtypePaymentMethodInfo implements \JsonSerializable
         $this->info = $info;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getProvider()
+    {
+        return $this->provider;
+    }
+    /**
+     * 
+     *
+     * @param string $provider
+     *
+     * @return self
+     */
+    public function setProvider(string $provider)
+    {
+        $this->provider = $provider;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getInputType()
+    {
+        return $this->inputType;
+    }
+    /**
+     * 
+     *
+     * @param string $inputType
+     *
+     * @return self
+     */
+    public function setInputType(string $inputType)
+    {
+        $this->inputType = $inputType;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->status;
+    }
+    /**
+     * 
+     *
+     * @param string $status
+     *
+     * @return self
+     */
+    public function setStatus(string $status)
+    {
+        $this->status = $status;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['tokenId' => $this->tokenId, 'name' => $this->name, 'paymentScheme' => $this->paymentScheme, 'validFrom' => $this->validFrom, 'expiry' => $this->expiry, 'type' => $this->type, 'info' => $this->info];
+        return ['tokenId' => $this->tokenId, 'name' => $this->name, 'paymentScheme' => $this->paymentScheme, 'validFrom' => $this->validFrom, 'expiry' => $this->expiry, 'type' => $this->type, 'info' => $this->info, 'provider' => $this->provider, 'inputType' => $this->inputType, 'status' => $this->status];
     }
 }

@@ -61,9 +61,6 @@ class ChtypeTransactionDetailNormalizer implements DenormalizerInterface, Normal
         if (property_exists($data, 'was_successful')) {
             $object->setWasSuccessful($data->{'was_successful'});
         }
-        if (property_exists($data, 'failure_type')) {
-            $object->setFailureType($data->{'failure_type'});
-        }
         if (property_exists($data, 'environment')) {
             $object->setEnvironment($data->{'environment'});
         }
@@ -91,6 +88,9 @@ class ChtypeTransactionDetailNormalizer implements DenormalizerInterface, Normal
         }
         if (property_exists($data, 'connector_id')) {
             $object->setConnectorId($data->{'connector_id'});
+        }
+        if (property_exists($data, 'primary')) {
+            $object->setPrimary($data->{'primary'});
         }
         return $object;
     }
@@ -130,9 +130,6 @@ class ChtypeTransactionDetailNormalizer implements DenormalizerInterface, Normal
         if (null !== $object->getWasSuccessful()) {
             $data->{'was_successful'} = $object->getWasSuccessful();
         }
-        if (null !== $object->getFailureType()) {
-            $data->{'failure_type'} = $object->getFailureType();
-        }
         if (null !== $object->getEnvironment()) {
             $data->{'environment'} = $object->getEnvironment();
         }
@@ -160,6 +157,9 @@ class ChtypeTransactionDetailNormalizer implements DenormalizerInterface, Normal
         }
         if (null !== $object->getConnectorId()) {
             $data->{'connector_id'} = $object->getConnectorId();
+        }
+        if (null !== $object->getPrimary()) {
+            $data->{'primary'} = $object->getPrimary();
         }
         return $data;
     }

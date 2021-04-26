@@ -118,6 +118,12 @@ class ChtypeTransactionNormalizer implements DenormalizerInterface, NormalizerIn
         if (property_exists($data, 'transaction_time')) {
             $object->setTransactionTime(\DateTime::createFromFormat("Y-m-d\TH:i:sP", $data->{'transaction_time'}));
         }
+        if (property_exists($data, 'payment_provider')) {
+            $object->setPaymentProvider($data->{'payment_provider'});
+        }
+        if (property_exists($data, 'payment_input_type')) {
+            $object->setPaymentInputType($data->{'payment_input_type'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -212,6 +218,12 @@ class ChtypeTransactionNormalizer implements DenormalizerInterface, NormalizerIn
         }
         if (null !== $object->getTransactionTime()) {
             $data->{'transaction_time'} = $object->getTransactionTime()->format("Y-m-d\TH:i:sP");
+        }
+        if (null !== $object->getPaymentProvider()) {
+            $data->{'payment_provider'} = $object->getPaymentProvider();
+        }
+        if (null !== $object->getPaymentInputType()) {
+            $data->{'payment_input_type'} = $object->getPaymentInputType();
         }
         return $data;
     }

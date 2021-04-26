@@ -53,6 +53,15 @@ class ChtypePaymentMethodInfoNormalizer implements DenormalizerInterface, Normal
             }
             $object->setInfo($values);
         }
+        if (property_exists($data, 'provider')) {
+            $object->setProvider($data->{'provider'});
+        }
+        if (property_exists($data, 'inputType')) {
+            $object->setInputType($data->{'inputType'});
+        }
+        if (property_exists($data, 'status')) {
+            $object->setStatus($data->{'status'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -82,6 +91,15 @@ class ChtypePaymentMethodInfoNormalizer implements DenormalizerInterface, Normal
                 $values->{$key} = $value;
             }
             $data->{'info'} = $values;
+        }
+        if (null !== $object->getProvider()) {
+            $data->{'provider'} = $object->getProvider();
+        }
+        if (null !== $object->getInputType()) {
+            $data->{'inputType'} = $object->getInputType();
+        }
+        if (null !== $object->getStatus()) {
+            $data->{'status'} = $object->getStatus();
         }
         return $data;
     }
