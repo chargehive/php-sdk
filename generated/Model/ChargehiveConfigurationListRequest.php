@@ -13,6 +13,12 @@ class ChargehiveConfigurationListRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $chargeId;
+    /**
+     * 
+     *
      * @return string
      */
     public function getKind()
@@ -31,8 +37,29 @@ class ChargehiveConfigurationListRequest implements \JsonSerializable
         $this->kind = $kind;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getChargeId()
+    {
+        return $this->chargeId;
+    }
+    /**
+     * 
+     *
+     * @param string $chargeId
+     *
+     * @return self
+     */
+    public function setChargeId(string $chargeId)
+    {
+        $this->chargeId = $chargeId;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['kind' => $this->kind];
+        return ['kind' => $this->kind, 'chargeId' => $this->chargeId];
     }
 }

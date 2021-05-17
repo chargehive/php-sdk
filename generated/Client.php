@@ -254,6 +254,19 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * 
      *
      * @param string $token 
+     * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodRefreshRequest $body 
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodRefreshResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
+     */
+    public function methodRefresh(string $token, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodRefreshRequest $body, string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\MethodRefresh($token, $body), $fetch);
+    }
+    /**
+     * 
+     *
+     * @param string $token 
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodVerifyRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
