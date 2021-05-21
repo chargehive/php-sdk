@@ -31,9 +31,6 @@ class ChargehiveConfigurationListRequestNormalizer implements DenormalizerInterf
         if (property_exists($data, 'kind')) {
             $object->setKind($data->{'kind'});
         }
-        if (property_exists($data, 'charge_id')) {
-            $object->setChargeId($data->{'charge_id'});
-        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -41,9 +38,6 @@ class ChargehiveConfigurationListRequestNormalizer implements DenormalizerInterf
         $data = new \stdClass();
         if (null !== $object->getKind()) {
             $data->{'kind'} = $object->getKind();
-        }
-        if (null !== $object->getChargeId()) {
-            $data->{'charge_id'} = $object->getChargeId();
         }
         return $data;
     }
