@@ -2,37 +2,37 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveConfigurationListRequest implements \JsonSerializable
+class ChargehiveMethodSuspendRequest implements \JsonSerializable
 {
     /**
      * 
      *
      * @var string
      */
-    protected $kind;
+    protected $token;
     /**
      * 
      *
      * @return string
      */
-    public function getKind()
+    public function getToken()
     {
-        return $this->kind;
+        return $this->token;
     }
     /**
      * 
      *
-     * @param string $kind
+     * @param string $token
      *
      * @return self
      */
-    public function setKind(string $kind)
+    public function setToken(string $token)
     {
-        $this->kind = $kind;
+        $this->token = $token;
         return $this;
     }
     public function jsonSerialize()
     {
-        return ['kind' => $this->kind];
+        return ['token' => $this->token];
     }
 }

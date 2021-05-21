@@ -10,40 +10,34 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-class ChargehiveMethodRefreshRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class ChargehiveMethodSuspendResponseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodRefreshRequest';
+        return $type === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodSuspendResponse';
     }
     public function supportsNormalization($data, $format = null)
     {
-        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodRefreshRequest';
+        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodSuspendResponse';
     }
     public function denormalize($data, $class, $format = null, array $context = array())
     {
         if (!is_object($data)) {
             throw new InvalidArgumentException();
         }
-        $object = new \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodRefreshRequest();
-        if (property_exists($data, 'token')) {
-            $object->setToken($data->{'token'});
-        }
-        if (property_exists($data, 'connector_id')) {
-            $object->setConnectorId($data->{'connector_id'});
+        $object = new \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodSuspendResponse();
+        if (property_exists($data, 'success')) {
+            $object->setSuccess($data->{'success'});
         }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
     {
         $data = new \stdClass();
-        if (null !== $object->getToken()) {
-            $data->{'token'} = $object->getToken();
-        }
-        if (null !== $object->getConnectorId()) {
-            $data->{'connector_id'} = $object->getConnectorId();
+        if (null !== $object->getSuccess()) {
+            $data->{'success'} = $object->getSuccess();
         }
         return $data;
     }
