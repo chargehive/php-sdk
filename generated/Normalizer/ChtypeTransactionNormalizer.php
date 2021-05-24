@@ -124,6 +124,9 @@ class ChtypeTransactionNormalizer implements DenormalizerInterface, NormalizerIn
         if (property_exists($data, 'payment_input_type')) {
             $object->setPaymentInputType($data->{'payment_input_type'});
         }
+        if (property_exists($data, 'auth_code')) {
+            $object->setAuthCode($data->{'auth_code'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -224,6 +227,9 @@ class ChtypeTransactionNormalizer implements DenormalizerInterface, NormalizerIn
         }
         if (null !== $object->getPaymentInputType()) {
             $data->{'payment_input_type'} = $object->getPaymentInputType();
+        }
+        if (null !== $object->getAuthCode()) {
+            $data->{'auth_code'} = $object->getAuthCode();
         }
         return $data;
     }

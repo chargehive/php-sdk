@@ -10,40 +10,40 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-class ChargehiveConfigurationListRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class ChargehiveMethodRefreshResponseNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveConfigurationListRequest';
+        return $type === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodRefreshResponse';
     }
     public function supportsNormalization($data, $format = null)
     {
-        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveConfigurationListRequest';
+        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodRefreshResponse';
     }
     public function denormalize($data, $class, $format = null, array $context = array())
     {
         if (!is_object($data)) {
             throw new InvalidArgumentException();
         }
-        $object = new \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationListRequest();
-        if (property_exists($data, 'kind')) {
-            $object->setKind($data->{'kind'});
+        $object = new \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodRefreshResponse();
+        if (property_exists($data, 'success')) {
+            $object->setSuccess($data->{'success'});
         }
-        if (property_exists($data, 'charge_id')) {
-            $object->setChargeId($data->{'charge_id'});
+        if (property_exists($data, 'err_message')) {
+            $object->setErrMessage($data->{'err_message'});
         }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
     {
         $data = new \stdClass();
-        if (null !== $object->getKind()) {
-            $data->{'kind'} = $object->getKind();
+        if (null !== $object->getSuccess()) {
+            $data->{'success'} = $object->getSuccess();
         }
-        if (null !== $object->getChargeId()) {
-            $data->{'charge_id'} = $object->getChargeId();
+        if (null !== $object->getErrMessage()) {
+            $data->{'err_message'} = $object->getErrMessage();
         }
         return $data;
     }
