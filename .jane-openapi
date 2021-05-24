@@ -1,8 +1,7 @@
 <?php
-// To use locally
-// 'openapi-file' => 'http://localhost:9051/swagger.json',
 return [
     'openapi-file' => 'https://api.chargehive.com/swagger.json',
+    'openapi-file' => 'http://localhost:9051/swagger.json', // To use locally
     'namespace' => 'ChargeHive\\Php\\Sdk\\Generated',
     'directory' => __DIR__ . '/generated',
 ];
