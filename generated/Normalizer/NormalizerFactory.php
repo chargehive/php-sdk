@@ -25,6 +25,7 @@ class NormalizerFactory
         $normalizers[] = new ChargehiveChargeRefundTransactionNormalizer();
         $normalizers[] = new ChargehiveChargeResumeRequestNormalizer();
         $normalizers[] = new ChargehiveChargeResumeResponseNormalizer();
+        $normalizers[] = new ChargehiveChargeSummaryRetrieveResponseNormalizer();
         $normalizers[] = new ChargehiveChargeSuspendRequestNormalizer();
         $normalizers[] = new ChargehiveChargeSuspendResponseNormalizer();
         $normalizers[] = new ChargehiveConfigurationApplyRequestNormalizer();
@@ -64,6 +65,7 @@ class NormalizerFactory
         $normalizers[] = new ChtypeAttemptDetailNormalizer();
         $normalizers[] = new ChtypeChargeItemNormalizer();
         $normalizers[] = new ChtypeChargeMetaNormalizer();
+        $normalizers[] = new ChtypeChargeSummaryNormalizer();
         $normalizers[] = new ChtypeCompanyNormalizer();
         $normalizers[] = new ChtypeDeliveryNormalizer();
         $normalizers[] = new ChtypeDeviceNormalizer();
