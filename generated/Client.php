@@ -111,6 +111,18 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
      * 
      *
      * @param string $chargeId 
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeSummaryRetrieveResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
+     */
+    public function chargeSummaryRetrieve(string $chargeId, string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\ChargeSummaryRetrieve($chargeId), $fetch);
+    }
+    /**
+     * 
+     *
+     * @param string $chargeId 
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeSuspendRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
