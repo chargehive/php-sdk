@@ -53,6 +53,13 @@ class ChargehiveChargeCreateRequestNormalizer implements DenormalizerInterface, 
         if (property_exists($data, 'charge_meta')) {
             $object->setChargeMeta($this->denormalizer->denormalize($data->{'charge_meta'}, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypeChargeMeta', 'json', $context));
         }
+        if (property_exists($data, 'labels')) {
+            $values_1 = array();
+            foreach ($data->{'labels'} as $value_1) {
+                $values_1[] = $this->denormalizer->denormalize($value_1, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehivechtypeLabel', 'json', $context);
+            }
+            $object->setLabels($values_1);
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -82,6 +89,13 @@ class ChargehiveChargeCreateRequestNormalizer implements DenormalizerInterface, 
         }
         if (null !== $object->getChargeMeta()) {
             $data->{'charge_meta'} = $this->normalizer->normalize($object->getChargeMeta(), 'json', $context);
+        }
+        if (null !== $object->getLabels()) {
+            $values_1 = array();
+            foreach ($object->getLabels() as $value_1) {
+                $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
+            }
+            $data->{'labels'} = $values_1;
         }
         return $data;
     }

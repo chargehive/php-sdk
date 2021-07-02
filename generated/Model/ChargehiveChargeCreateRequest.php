@@ -49,6 +49,12 @@ class ChargehiveChargeCreateRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var ChargehivechtypeLabel[]
+     */
+    protected $labels;
+    /**
+     * 
+     *
      * @return string
      */
     public function getMerchantReference()
@@ -193,8 +199,29 @@ class ChargehiveChargeCreateRequest implements \JsonSerializable
         $this->chargeMeta = $chargeMeta;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return ChargehivechtypeLabel[]
+     */
+    public function getLabels()
+    {
+        return $this->labels;
+    }
+    /**
+     * 
+     *
+     * @param ChargehivechtypeLabel[] $labels
+     *
+     * @return self
+     */
+    public function setLabels(array $labels)
+    {
+        $this->labels = $labels;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['merchantReference' => $this->merchantReference, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'contractType' => $this->contractType, 'environment' => $this->environment, 'chargeMeta' => $this->chargeMeta];
+        return ['merchantReference' => $this->merchantReference, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'contractType' => $this->contractType, 'environment' => $this->environment, 'chargeMeta' => $this->chargeMeta, 'labels' => $this->labels];
     }
 }
