@@ -43,6 +43,12 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var ChargehivechtypeLabel[]
+     */
+    protected $labels;
+    /**
+     * 
+     *
      * @return string
      */
     public function getChargeId()
@@ -166,8 +172,29 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
         $this->chargeMetaType = $chargeMetaType;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return ChargehivechtypeLabel[]
+     */
+    public function getLabels()
+    {
+        return $this->labels;
+    }
+    /**
+     * 
+     *
+     * @param ChargehivechtypeLabel[] $labels
+     *
+     * @return self
+     */
+    public function setLabels(array $labels)
+    {
+        $this->labels = $labels;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'chargeMeta' => $this->chargeMeta, 'chargeMetaType' => $this->chargeMetaType];
+        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'chargeMeta' => $this->chargeMeta, 'chargeMetaType' => $this->chargeMetaType, 'labels' => $this->labels];
     }
 }
