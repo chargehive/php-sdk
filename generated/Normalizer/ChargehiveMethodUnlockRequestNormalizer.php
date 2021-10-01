@@ -28,16 +28,16 @@ class ChargehiveMethodUnlockRequestNormalizer implements DenormalizerInterface, 
             throw new InvalidArgumentException();
         }
         $object = new \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockRequest();
-        if (property_exists($data, 'token')) {
-            $object->setToken($data->{'token'});
+        if (property_exists($data, 'method_id')) {
+            $object->setMethodId($data->{'method_id'});
         }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
     {
         $data = new \stdClass();
-        if (null !== $object->getToken()) {
-            $data->{'token'} = $object->getToken();
+        if (null !== $object->getMethodId()) {
+            $data->{'method_id'} = $object->getMethodId();
         }
         return $data;
     }

@@ -239,15 +239,15 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
     /**
      * 
      *
-     * @param string $token 
+     * @param string $methodId 
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *
      * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
      */
-    public function methodUnlock(string $token, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockRequest $body, string $fetch = self::FETCH_OBJECT)
+    public function methodUnlock(string $methodId, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockRequest $body, string $fetch = self::FETCH_OBJECT)
     {
-        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\MethodUnlock($token, $body), $fetch);
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\MethodUnlock($methodId, $body), $fetch);
     }
     /**
      * 
