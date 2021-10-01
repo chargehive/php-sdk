@@ -9,30 +9,30 @@ class ChargehiveMethodUnlockRequest implements \JsonSerializable
      *
      * @var string
      */
-    protected $token;
+    protected $methodId;
     /**
      * 
      *
      * @return string
      */
-    public function getToken()
+    public function getMethodId()
     {
-        return $this->token;
+        return $this->methodId;
     }
     /**
      * 
      *
-     * @param string $token
+     * @param string $methodId
      *
      * @return self
      */
-    public function setToken(string $token)
+    public function setMethodId(string $methodId)
     {
-        $this->token = $token;
+        $this->methodId = $methodId;
         return $this;
     }
     public function jsonSerialize()
     {
-        return ['token' => $this->token];
+        return ['methodId' => $this->methodId];
     }
 }

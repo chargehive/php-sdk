@@ -4,16 +4,16 @@ namespace ChargeHive\Php\Sdk\Generated\Endpoint;
 
 class MethodUnlock extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\OpenApiRuntime\Client\Psr7HttplugEndpoint
 {
-    protected $token;
+    protected $method_id;
     /**
      * 
      *
-     * @param string $token 
+     * @param string $methodId 
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockRequest $body 
      */
-    public function __construct(string $token, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockRequest $body)
+    public function __construct(string $methodId, \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockRequest $body)
     {
-        $this->token = $token;
+        $this->method_id = $methodId;
         $this->body = $body;
     }
     use \Jane\OpenApiRuntime\Client\Psr7HttplugEndpointTrait;
@@ -23,7 +23,7 @@ class MethodUnlock extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \
     }
     public function getUri() : string
     {
-        return str_replace(array('{token}'), array($this->token), '/v1/method/unlock/{token}');
+        return str_replace(array('{method_id}'), array($this->method_id), '/v1/method/unlock/{method_id}');
     }
     public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, \Http\Message\StreamFactory $streamFactory = null) : array
     {
