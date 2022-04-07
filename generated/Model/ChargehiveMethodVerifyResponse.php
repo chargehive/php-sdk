@@ -31,6 +31,12 @@ class ChargehiveMethodVerifyResponse implements \JsonSerializable
     /**
      * 
      *
+     * @var ChargehivePCIBTokenizeResponse
+     */
+    protected $tokenizeResponse;
+    /**
+     * 
+     *
      * @return bool
      */
     public function getVerified()
@@ -112,8 +118,29 @@ class ChargehiveMethodVerifyResponse implements \JsonSerializable
         $this->transaction = $transaction;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return ChargehivePCIBTokenizeResponse
+     */
+    public function getTokenizeResponse()
+    {
+        return $this->tokenizeResponse;
+    }
+    /**
+     * 
+     *
+     * @param ChargehivePCIBTokenizeResponse $tokenizeResponse
+     *
+     * @return self
+     */
+    public function setTokenizeResponse(ChargehivePCIBTokenizeResponse $tokenizeResponse)
+    {
+        $this->tokenizeResponse = $tokenizeResponse;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['verified' => $this->verified, 'authed' => $this->authed, 'info' => $this->info, 'transaction' => $this->transaction];
+        return ['verified' => $this->verified, 'authed' => $this->authed, 'info' => $this->info, 'transaction' => $this->transaction, 'tokenizeResponse' => $this->tokenizeResponse];
     }
 }

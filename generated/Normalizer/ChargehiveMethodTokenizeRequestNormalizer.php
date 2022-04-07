@@ -71,6 +71,9 @@ class ChargehiveMethodTokenizeRequestNormalizer implements DenormalizerInterface
         if (property_exists($data, 'charge_meta')) {
             $object->setChargeMeta($this->denormalizer->denormalize($data->{'charge_meta'}, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypeChargeMeta', 'json', $context));
         }
+        if (property_exists($data, 'billing_profile_id')) {
+            $object->setBillingProfileId($data->{'billing_profile_id'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -118,6 +121,9 @@ class ChargehiveMethodTokenizeRequestNormalizer implements DenormalizerInterface
         }
         if (null !== $object->getChargeMeta()) {
             $data->{'charge_meta'} = $this->normalizer->normalize($object->getChargeMeta(), 'json', $context);
+        }
+        if (null !== $object->getBillingProfileId()) {
+            $data->{'billing_profile_id'} = $object->getBillingProfileId();
         }
         return $data;
     }

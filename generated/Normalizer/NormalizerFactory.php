@@ -53,6 +53,7 @@ class NormalizerFactory
         $normalizers[] = new ChargehiveMethodUpdateResponseNormalizer();
         $normalizers[] = new ChargehiveMethodVerifyRequestNormalizer();
         $normalizers[] = new ChargehiveMethodVerifyResponseNormalizer();
+        $normalizers[] = new ChargehivePCIBTokenizeResponseNormalizer();
         $normalizers[] = new ChargehiveSchedulerOnDemandRequestNormalizer();
         $normalizers[] = new ChargehiveSchedulerOnDemandResponseNormalizer();
         $normalizers[] = new ChargehiveSchedulerTriggerResponseNormalizer();

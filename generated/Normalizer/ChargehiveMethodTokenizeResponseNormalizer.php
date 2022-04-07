@@ -50,6 +50,9 @@ class ChargehiveMethodTokenizeResponseNormalizer implements DenormalizerInterfac
         if (property_exists($data, 'merchant_message')) {
             $object->setMerchantMessage($data->{'merchant_message'});
         }
+        if (property_exists($data, 'tokenize_response')) {
+            $object->setTokenizeResponse($this->denormalizer->denormalize($data->{'tokenize_response'}, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehivePCIBTokenizeResponse', 'json', $context));
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -76,6 +79,9 @@ class ChargehiveMethodTokenizeResponseNormalizer implements DenormalizerInterfac
         }
         if (null !== $object->getMerchantMessage()) {
             $data->{'merchant_message'} = $object->getMerchantMessage();
+        }
+        if (null !== $object->getTokenizeResponse()) {
+            $data->{'tokenize_response'} = $this->normalizer->normalize($object->getTokenizeResponse(), 'json', $context);
         }
         return $data;
     }

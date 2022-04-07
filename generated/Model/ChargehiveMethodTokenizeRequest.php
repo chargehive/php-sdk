@@ -61,6 +61,12 @@ class ChargehiveMethodTokenizeRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $billingProfileId;
+    /**
+     * 
+     *
      * @return string
      */
     public function getDataLocation()
@@ -247,8 +253,29 @@ class ChargehiveMethodTokenizeRequest implements \JsonSerializable
         $this->chargeMeta = $chargeMeta;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getBillingProfileId()
+    {
+        return $this->billingProfileId;
+    }
+    /**
+     * 
+     *
+     * @param string $billingProfileId
+     *
+     * @return self
+     */
+    public function setBillingProfileId(string $billingProfileId)
+    {
+        $this->billingProfileId = $billingProfileId;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['dataLocation' => $this->dataLocation, 'method' => $this->method, 'displayName' => $this->displayName, 'paymentMethodVerification' => $this->paymentMethodVerification, 'references' => $this->references, 'labels' => $this->labels, 'verifyChargeId' => $this->verifyChargeId, 'additionalData' => $this->additionalData, 'chargeMeta' => $this->chargeMeta];
+        return ['dataLocation' => $this->dataLocation, 'method' => $this->method, 'displayName' => $this->displayName, 'paymentMethodVerification' => $this->paymentMethodVerification, 'references' => $this->references, 'labels' => $this->labels, 'verifyChargeId' => $this->verifyChargeId, 'additionalData' => $this->additionalData, 'chargeMeta' => $this->chargeMeta, 'billingProfileId' => $this->billingProfileId];
     }
 }
