@@ -31,6 +31,12 @@ class ChargehiveMethodVerifyRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $billingProfileId;
+    /**
+     * 
+     *
      * @return string
      */
     public function getToken()
@@ -112,8 +118,29 @@ class ChargehiveMethodVerifyRequest implements \JsonSerializable
         $this->chargeId = $chargeId;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getBillingProfileId()
+    {
+        return $this->billingProfileId;
+    }
+    /**
+     * 
+     *
+     * @param string $billingProfileId
+     *
+     * @return self
+     */
+    public function setBillingProfileId(string $billingProfileId)
+    {
+        $this->billingProfileId = $billingProfileId;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['token' => $this->token, 'amount' => $this->amount, 'connectorId' => $this->connectorId, 'chargeId' => $this->chargeId];
+        return ['token' => $this->token, 'amount' => $this->amount, 'connectorId' => $this->connectorId, 'chargeId' => $this->chargeId, 'billingProfileId' => $this->billingProfileId];
     }
 }

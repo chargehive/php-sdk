@@ -43,6 +43,12 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
     /**
      * 
      *
+     * @var ChargehivePCIBTokenizeResponse
+     */
+    protected $tokenizeResponse;
+    /**
+     * 
+     *
      * @return bool
      */
     public function getSuccess()
@@ -166,8 +172,29 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
         $this->merchantMessage = $merchantMessage;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return ChargehivePCIBTokenizeResponse
+     */
+    public function getTokenizeResponse()
+    {
+        return $this->tokenizeResponse;
+    }
+    /**
+     * 
+     *
+     * @param ChargehivePCIBTokenizeResponse $tokenizeResponse
+     *
+     * @return self
+     */
+    public function setTokenizeResponse(ChargehivePCIBTokenizeResponse $tokenizeResponse)
+    {
+        $this->tokenizeResponse = $tokenizeResponse;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['success' => $this->success, 'token' => $this->token, 'info' => $this->info, 'additionalData' => $this->additionalData, 'customerMessage' => $this->customerMessage, 'merchantMessage' => $this->merchantMessage];
+        return ['success' => $this->success, 'token' => $this->token, 'info' => $this->info, 'additionalData' => $this->additionalData, 'customerMessage' => $this->customerMessage, 'merchantMessage' => $this->merchantMessage, 'tokenizeResponse' => $this->tokenizeResponse];
     }
 }
