@@ -2,9 +2,9 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Endpoint;
 
-class TransportKeyRetrieve extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\OpenApiRuntime\Client\Psr7HttplugEndpoint
+class TransportKeyRetrieve extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\OpenApiRuntime\Client\Psr7Endpoint
 {
-    use \Jane\OpenApiRuntime\Client\Psr7HttplugEndpointTrait;
+    use \Jane\OpenApiRuntime\Client\Psr7EndpointTrait;
     public function getMethod() : string
     {
         return 'GET';
@@ -13,7 +13,7 @@ class TransportKeyRetrieve extends \Jane\OpenApiRuntime\Client\BaseEndpoint impl
     {
         return '/v1/method/transport-key';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, \Http\Message\StreamFactory $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
@@ -27,7 +27,7 @@ class TransportKeyRetrieve extends \Jane\OpenApiRuntime\Client\BaseEndpoint impl
      *
      * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveTransportKeyRetrieveResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError
      */
-    protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
+    protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveTransportKeyRetrieveResponse', 'json');

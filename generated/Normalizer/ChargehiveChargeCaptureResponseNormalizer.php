@@ -20,12 +20,12 @@ class ChargehiveChargeCaptureResponseNormalizer implements DenormalizerInterface
     }
     public function supportsNormalization($data, $format = null)
     {
-        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveChargeCaptureResponse';
+        return is_object($data) && get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveChargeCaptureResponse';
     }
     public function denormalize($data, $class, $format = null, array $context = array())
     {
         if (!is_object($data)) {
-            throw new InvalidArgumentException();
+            throw new InvalidArgumentException(sprintf('Given $data is not an object (%s given). We need an object in order to continue denormalize method.', gettype($data)));
         }
         $object = new \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCaptureResponse();
         if (property_exists($data, 'acknowledged')) {
@@ -33,6 +33,9 @@ class ChargehiveChargeCaptureResponseNormalizer implements DenormalizerInterface
         }
         if (property_exists($data, 'process_id')) {
             $object->setProcessId($data->{'process_id'});
+        }
+        if (property_exists($data, 'message')) {
+            $object->setMessage($data->{'message'});
         }
         return $object;
     }
@@ -44,6 +47,9 @@ class ChargehiveChargeCaptureResponseNormalizer implements DenormalizerInterface
         }
         if (null !== $object->getProcessId()) {
             $data->{'process_id'} = $object->getProcessId();
+        }
+        if (null !== $object->getMessage()) {
+            $data->{'message'} = $object->getMessage();
         }
         return $data;
     }

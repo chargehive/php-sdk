@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypePaymentMethod implements \JsonSerializable
+class ChtypePaymentMethod
 {
     /**
      * 
@@ -39,7 +39,7 @@ class ChtypePaymentMethod implements \JsonSerializable
      *
      * @return string
      */
-    public function getSchema()
+    public function getSchema() : string
     {
         return $this->schema;
     }
@@ -50,7 +50,7 @@ class ChtypePaymentMethod implements \JsonSerializable
      *
      * @return self
      */
-    public function setSchema(string $schema)
+    public function setSchema(string $schema) : self
     {
         $this->schema = $schema;
         return $this;
@@ -60,7 +60,7 @@ class ChtypePaymentMethod implements \JsonSerializable
      *
      * @return string
      */
-    public function getJson()
+    public function getJson() : string
     {
         return $this->json;
     }
@@ -71,7 +71,7 @@ class ChtypePaymentMethod implements \JsonSerializable
      *
      * @return self
      */
-    public function setJson(string $json)
+    public function setJson(string $json) : self
     {
         $this->json = $json;
         return $this;
@@ -81,7 +81,7 @@ class ChtypePaymentMethod implements \JsonSerializable
      *
      * @return string
      */
-    public function getType()
+    public function getType() : string
     {
         return $this->type;
     }
@@ -92,7 +92,7 @@ class ChtypePaymentMethod implements \JsonSerializable
      *
      * @return self
      */
-    public function setType(string $type)
+    public function setType(string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -102,7 +102,7 @@ class ChtypePaymentMethod implements \JsonSerializable
      *
      * @return string
      */
-    public function getProvider()
+    public function getProvider() : string
     {
         return $this->provider;
     }
@@ -113,7 +113,7 @@ class ChtypePaymentMethod implements \JsonSerializable
      *
      * @return self
      */
-    public function setProvider(string $provider)
+    public function setProvider(string $provider) : self
     {
         $this->provider = $provider;
         return $this;
@@ -123,7 +123,7 @@ class ChtypePaymentMethod implements \JsonSerializable
      *
      * @return string
      */
-    public function getInputType()
+    public function getInputType() : string
     {
         return $this->inputType;
     }
@@ -134,13 +134,9 @@ class ChtypePaymentMethod implements \JsonSerializable
      *
      * @return self
      */
-    public function setInputType(string $inputType)
+    public function setInputType(string $inputType) : self
     {
         $this->inputType = $inputType;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['schema' => $this->schema, 'json' => $this->json, 'type' => $this->type, 'provider' => $this->provider, 'inputType' => $this->inputType];
     }
 }

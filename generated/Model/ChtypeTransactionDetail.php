@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeTransactionDetail implements \JsonSerializable
+class ChtypeTransactionDetail
 {
     /**
      * 
@@ -129,7 +129,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getActorId()
+    public function getActorId() : string
     {
         return $this->actorId;
     }
@@ -140,7 +140,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setActorId(string $actorId)
+    public function setActorId(string $actorId) : self
     {
         $this->actorId = $actorId;
         return $this;
@@ -150,7 +150,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getActorVersion()
+    public function getActorVersion() : string
     {
         return $this->actorVersion;
     }
@@ -161,7 +161,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setActorVersion(string $actorVersion)
+    public function setActorVersion(string $actorVersion) : self
     {
         $this->actorVersion = $actorVersion;
         return $this;
@@ -171,7 +171,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getActorType()
+    public function getActorType() : string
     {
         return $this->actorType;
     }
@@ -182,7 +182,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setActorType(string $actorType)
+    public function setActorType(string $actorType) : self
     {
         $this->actorType = $actorType;
         return $this;
@@ -192,7 +192,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getTransactionId()
+    public function getTransactionId() : string
     {
         return $this->transactionId;
     }
@@ -203,7 +203,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setTransactionId(string $transactionId)
+    public function setTransactionId(string $transactionId) : self
     {
         $this->transactionId = $transactionId;
         return $this;
@@ -213,7 +213,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return ChtypeAmount
      */
-    public function getRequestedAmount()
+    public function getRequestedAmount() : ChtypeAmount
     {
         return $this->requestedAmount;
     }
@@ -224,7 +224,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setRequestedAmount(ChtypeAmount $requestedAmount)
+    public function setRequestedAmount(ChtypeAmount $requestedAmount) : self
     {
         $this->requestedAmount = $requestedAmount;
         return $this;
@@ -234,7 +234,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return ChtypeAmount
      */
-    public function getProcessedAmount()
+    public function getProcessedAmount() : ChtypeAmount
     {
         return $this->processedAmount;
     }
@@ -245,7 +245,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setProcessedAmount(ChtypeAmount $processedAmount)
+    public function setProcessedAmount(ChtypeAmount $processedAmount) : self
     {
         $this->processedAmount = $processedAmount;
         return $this;
@@ -255,7 +255,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return ChtypeAmount
      */
-    public function getFeeEstimate()
+    public function getFeeEstimate() : ChtypeAmount
     {
         return $this->feeEstimate;
     }
@@ -266,7 +266,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setFeeEstimate(ChtypeAmount $feeEstimate)
+    public function setFeeEstimate(ChtypeAmount $feeEstimate) : self
     {
         $this->feeEstimate = $feeEstimate;
         return $this;
@@ -276,7 +276,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return ChtypeAmount
      */
-    public function getFeeActual()
+    public function getFeeActual() : ChtypeAmount
     {
         return $this->feeActual;
     }
@@ -287,7 +287,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setFeeActual(ChtypeAmount $feeActual)
+    public function setFeeActual(ChtypeAmount $feeActual) : self
     {
         $this->feeActual = $feeActual;
         return $this;
@@ -297,7 +297,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return \DateTime
      */
-    public function getStartTime()
+    public function getStartTime() : \DateTime
     {
         return $this->startTime;
     }
@@ -308,7 +308,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setStartTime(\DateTime $startTime)
+    public function setStartTime(\DateTime $startTime) : self
     {
         $this->startTime = $startTime;
         return $this;
@@ -318,7 +318,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return \DateTime
      */
-    public function getEndTime()
+    public function getEndTime() : \DateTime
     {
         return $this->endTime;
     }
@@ -329,7 +329,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setEndTime(\DateTime $endTime)
+    public function setEndTime(\DateTime $endTime) : self
     {
         $this->endTime = $endTime;
         return $this;
@@ -339,7 +339,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return bool
      */
-    public function getWasSuccessful()
+    public function getWasSuccessful() : bool
     {
         return $this->wasSuccessful;
     }
@@ -350,7 +350,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setWasSuccessful(bool $wasSuccessful)
+    public function setWasSuccessful(bool $wasSuccessful) : self
     {
         $this->wasSuccessful = $wasSuccessful;
         return $this;
@@ -360,7 +360,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getEnvironment()
+    public function getEnvironment() : string
     {
         return $this->environment;
     }
@@ -371,7 +371,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setEnvironment(string $environment)
+    public function setEnvironment(string $environment) : self
     {
         $this->environment = $environment;
         return $this;
@@ -381,7 +381,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return ChtypeResponseDetail
      */
-    public function getResponse()
+    public function getResponse() : ChtypeResponseDetail
     {
         return $this->response;
     }
@@ -392,7 +392,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setResponse(ChtypeResponseDetail $response)
+    public function setResponse(ChtypeResponseDetail $response) : self
     {
         $this->response = $response;
         return $this;
@@ -402,7 +402,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return ChtypeVerificationResult
      */
-    public function getVerificationResult()
+    public function getVerificationResult() : ChtypeVerificationResult
     {
         return $this->verificationResult;
     }
@@ -413,7 +413,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setVerificationResult(ChtypeVerificationResult $verificationResult)
+    public function setVerificationResult(ChtypeVerificationResult $verificationResult) : self
     {
         $this->verificationResult = $verificationResult;
         return $this;
@@ -423,7 +423,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return string[]
      */
-    public function getAdditionalData()
+    public function getAdditionalData() : \ArrayObject
     {
         return $this->additionalData;
     }
@@ -434,7 +434,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setAdditionalData(\ArrayObject $additionalData)
+    public function setAdditionalData(\ArrayObject $additionalData) : self
     {
         $this->additionalData = $additionalData;
         return $this;
@@ -444,7 +444,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getAuthorizationCode()
+    public function getAuthorizationCode() : string
     {
         return $this->authorizationCode;
     }
@@ -455,7 +455,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setAuthorizationCode(string $authorizationCode)
+    public function setAuthorizationCode(string $authorizationCode) : self
     {
         $this->authorizationCode = $authorizationCode;
         return $this;
@@ -465,7 +465,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getLiability()
+    public function getLiability() : string
     {
         return $this->liability;
     }
@@ -476,7 +476,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setLiability(string $liability)
+    public function setLiability(string $liability) : self
     {
         $this->liability = $liability;
         return $this;
@@ -486,7 +486,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getConnectorLibrary()
+    public function getConnectorLibrary() : string
     {
         return $this->connectorLibrary;
     }
@@ -497,7 +497,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setConnectorLibrary(string $connectorLibrary)
+    public function setConnectorLibrary(string $connectorLibrary) : self
     {
         $this->connectorLibrary = $connectorLibrary;
         return $this;
@@ -507,7 +507,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getConnectorId()
+    public function getConnectorId() : string
     {
         return $this->connectorId;
     }
@@ -518,7 +518,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setConnectorId(string $connectorId)
+    public function setConnectorId(string $connectorId) : self
     {
         $this->connectorId = $connectorId;
         return $this;
@@ -528,7 +528,7 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return bool
      */
-    public function getPrimary()
+    public function getPrimary() : bool
     {
         return $this->primary;
     }
@@ -539,13 +539,9 @@ class ChtypeTransactionDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setPrimary(bool $primary)
+    public function setPrimary(bool $primary) : self
     {
         $this->primary = $primary;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['actorId' => $this->actorId, 'actorVersion' => $this->actorVersion, 'actorType' => $this->actorType, 'transactionId' => $this->transactionId, 'requestedAmount' => $this->requestedAmount, 'processedAmount' => $this->processedAmount, 'feeEstimate' => $this->feeEstimate, 'feeActual' => $this->feeActual, 'startTime' => $this->startTime, 'endTime' => $this->endTime, 'wasSuccessful' => $this->wasSuccessful, 'environment' => $this->environment, 'response' => $this->response, 'verificationResult' => $this->verificationResult, 'additionalData' => $this->additionalData, 'authorizationCode' => $this->authorizationCode, 'liability' => $this->liability, 'connectorLibrary' => $this->connectorLibrary, 'connectorId' => $this->connectorId, 'primary' => $this->primary];
     }
 }

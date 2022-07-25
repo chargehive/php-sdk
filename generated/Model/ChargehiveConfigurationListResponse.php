@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveConfigurationListResponse implements \JsonSerializable
+class ChargehiveConfigurationListResponse
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveConfigurationListResponse implements \JsonSerializable
      *
      * @return ChargehiveConfigurationListItem[]
      */
-    public function getItems()
+    public function getItems() : array
     {
         return $this->items;
     }
@@ -26,13 +26,9 @@ class ChargehiveConfigurationListResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setItems(array $items)
+    public function setItems(array $items) : self
     {
         $this->items = $items;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['items' => $this->items];
     }
 }

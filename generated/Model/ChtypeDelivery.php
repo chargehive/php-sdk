@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeDelivery implements \JsonSerializable
+class ChtypeDelivery
 {
     /**
      * 
@@ -33,7 +33,7 @@ class ChtypeDelivery implements \JsonSerializable
      *
      * @return string
      */
-    public function getStandard()
+    public function getStandard() : string
     {
         return $this->standard;
     }
@@ -44,7 +44,7 @@ class ChtypeDelivery implements \JsonSerializable
      *
      * @return self
      */
-    public function setStandard(string $standard)
+    public function setStandard(string $standard) : self
     {
         $this->standard = $standard;
         return $this;
@@ -54,7 +54,7 @@ class ChtypeDelivery implements \JsonSerializable
      *
      * @return string
      */
-    public function getType()
+    public function getType() : string
     {
         return $this->type;
     }
@@ -65,7 +65,7 @@ class ChtypeDelivery implements \JsonSerializable
      *
      * @return self
      */
-    public function setType(string $type)
+    public function setType(string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -75,7 +75,7 @@ class ChtypeDelivery implements \JsonSerializable
      *
      * @return string
      */
-    public function getTrackingCode()
+    public function getTrackingCode() : string
     {
         return $this->trackingCode;
     }
@@ -86,7 +86,7 @@ class ChtypeDelivery implements \JsonSerializable
      *
      * @return self
      */
-    public function setTrackingCode(string $trackingCode)
+    public function setTrackingCode(string $trackingCode) : self
     {
         $this->trackingCode = $trackingCode;
         return $this;
@@ -96,7 +96,7 @@ class ChtypeDelivery implements \JsonSerializable
      *
      * @return string
      */
-    public function getCourier()
+    public function getCourier() : string
     {
         return $this->courier;
     }
@@ -107,13 +107,9 @@ class ChtypeDelivery implements \JsonSerializable
      *
      * @return self
      */
-    public function setCourier(string $courier)
+    public function setCourier(string $courier) : self
     {
         $this->courier = $courier;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['standard' => $this->standard, 'type' => $this->type, 'trackingCode' => $this->trackingCode, 'courier' => $this->courier];
     }
 }

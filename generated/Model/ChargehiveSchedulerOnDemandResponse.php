@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveSchedulerOnDemandResponse implements \JsonSerializable
+class ChargehiveSchedulerOnDemandResponse
 {
     /**
      * 
@@ -21,7 +21,7 @@ class ChargehiveSchedulerOnDemandResponse implements \JsonSerializable
      *
      * @return bool
      */
-    public function getTriggered()
+    public function getTriggered() : bool
     {
         return $this->triggered;
     }
@@ -32,7 +32,7 @@ class ChargehiveSchedulerOnDemandResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setTriggered(bool $triggered)
+    public function setTriggered(bool $triggered) : self
     {
         $this->triggered = $triggered;
         return $this;
@@ -42,7 +42,7 @@ class ChargehiveSchedulerOnDemandResponse implements \JsonSerializable
      *
      * @return string
      */
-    public function getMessage()
+    public function getMessage() : string
     {
         return $this->message;
     }
@@ -53,13 +53,9 @@ class ChargehiveSchedulerOnDemandResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setMessage(string $message)
+    public function setMessage(string $message) : self
     {
         $this->message = $message;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['triggered' => $this->triggered, 'message' => $this->message];
     }
 }

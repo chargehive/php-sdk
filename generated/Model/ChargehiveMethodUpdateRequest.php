@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveMethodUpdateRequest implements \JsonSerializable
+class ChargehiveMethodUpdateRequest
 {
     /**
      * 
@@ -21,7 +21,7 @@ class ChargehiveMethodUpdateRequest implements \JsonSerializable
      *
      * @return string
      */
-    public function getToken()
+    public function getToken() : string
     {
         return $this->token;
     }
@@ -32,7 +32,7 @@ class ChargehiveMethodUpdateRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setToken(string $token)
+    public function setToken(string $token) : self
     {
         $this->token = $token;
         return $this;
@@ -42,7 +42,7 @@ class ChargehiveMethodUpdateRequest implements \JsonSerializable
      *
      * @return ChtypePaymentMethod
      */
-    public function getPaymentMethodUpdates()
+    public function getPaymentMethodUpdates() : ChtypePaymentMethod
     {
         return $this->paymentMethodUpdates;
     }
@@ -53,13 +53,9 @@ class ChargehiveMethodUpdateRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setPaymentMethodUpdates(ChtypePaymentMethod $paymentMethodUpdates)
+    public function setPaymentMethodUpdates(ChtypePaymentMethod $paymentMethodUpdates) : self
     {
         $this->paymentMethodUpdates = $paymentMethodUpdates;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['token' => $this->token, 'paymentMethodUpdates' => $this->paymentMethodUpdates];
     }
 }

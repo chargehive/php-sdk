@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehivechtypeLabel implements \JsonSerializable
+class ChargehivechtypeLabel
 {
     /**
      * 
@@ -21,7 +21,7 @@ class ChargehivechtypeLabel implements \JsonSerializable
      *
      * @return string
      */
-    public function getLabel()
+    public function getLabel() : string
     {
         return $this->label;
     }
@@ -32,7 +32,7 @@ class ChargehivechtypeLabel implements \JsonSerializable
      *
      * @return self
      */
-    public function setLabel(string $label)
+    public function setLabel(string $label) : self
     {
         $this->label = $label;
         return $this;
@@ -42,7 +42,7 @@ class ChargehivechtypeLabel implements \JsonSerializable
      *
      * @return string
      */
-    public function getValue()
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -53,13 +53,9 @@ class ChargehivechtypeLabel implements \JsonSerializable
      *
      * @return self
      */
-    public function setValue(string $value)
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['label' => $this->label, 'value' => $this->value];
     }
 }

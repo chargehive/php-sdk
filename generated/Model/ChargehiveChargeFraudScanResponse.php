@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveChargeFraudScanResponse implements \JsonSerializable
+class ChargehiveChargeFraudScanResponse
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveChargeFraudScanResponse implements \JsonSerializable
      *
      * @return ChtypeFraudResult[]
      */
-    public function getResults()
+    public function getResults() : array
     {
         return $this->results;
     }
@@ -26,13 +26,9 @@ class ChargehiveChargeFraudScanResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setResults(array $results)
+    public function setResults(array $results) : self
     {
         $this->results = $results;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['results' => $this->results];
     }
 }

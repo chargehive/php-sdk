@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveMethodRefreshRequest implements \JsonSerializable
+class ChargehiveMethodRefreshRequest
 {
     /**
      * 
@@ -21,7 +21,7 @@ class ChargehiveMethodRefreshRequest implements \JsonSerializable
      *
      * @return string
      */
-    public function getToken()
+    public function getToken() : string
     {
         return $this->token;
     }
@@ -32,7 +32,7 @@ class ChargehiveMethodRefreshRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setToken(string $token)
+    public function setToken(string $token) : self
     {
         $this->token = $token;
         return $this;
@@ -42,7 +42,7 @@ class ChargehiveMethodRefreshRequest implements \JsonSerializable
      *
      * @return string
      */
-    public function getConnectorId()
+    public function getConnectorId() : string
     {
         return $this->connectorId;
     }
@@ -53,13 +53,9 @@ class ChargehiveMethodRefreshRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setConnectorId(string $connectorId)
+    public function setConnectorId(string $connectorId) : self
     {
         $this->connectorId = $connectorId;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['token' => $this->token, 'connectorId' => $this->connectorId];
     }
 }

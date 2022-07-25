@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class RuntimeError implements \JsonSerializable
+class RuntimeError
 {
     /**
      * 
@@ -33,7 +33,7 @@ class RuntimeError implements \JsonSerializable
      *
      * @return string
      */
-    public function getError()
+    public function getError() : string
     {
         return $this->error;
     }
@@ -44,7 +44,7 @@ class RuntimeError implements \JsonSerializable
      *
      * @return self
      */
-    public function setError(string $error)
+    public function setError(string $error) : self
     {
         $this->error = $error;
         return $this;
@@ -54,7 +54,7 @@ class RuntimeError implements \JsonSerializable
      *
      * @return int
      */
-    public function getCode()
+    public function getCode() : int
     {
         return $this->code;
     }
@@ -65,7 +65,7 @@ class RuntimeError implements \JsonSerializable
      *
      * @return self
      */
-    public function setCode(int $code)
+    public function setCode(int $code) : self
     {
         $this->code = $code;
         return $this;
@@ -75,7 +75,7 @@ class RuntimeError implements \JsonSerializable
      *
      * @return string
      */
-    public function getMessage()
+    public function getMessage() : string
     {
         return $this->message;
     }
@@ -86,7 +86,7 @@ class RuntimeError implements \JsonSerializable
      *
      * @return self
      */
-    public function setMessage(string $message)
+    public function setMessage(string $message) : self
     {
         $this->message = $message;
         return $this;
@@ -96,7 +96,7 @@ class RuntimeError implements \JsonSerializable
      *
      * @return ProtobufAny[]
      */
-    public function getDetails()
+    public function getDetails() : array
     {
         return $this->details;
     }
@@ -107,13 +107,9 @@ class RuntimeError implements \JsonSerializable
      *
      * @return self
      */
-    public function setDetails(array $details)
+    public function setDetails(array $details) : self
     {
         $this->details = $details;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['error' => $this->error, 'code' => $this->code, 'message' => $this->message, 'details' => $this->details];
     }
 }

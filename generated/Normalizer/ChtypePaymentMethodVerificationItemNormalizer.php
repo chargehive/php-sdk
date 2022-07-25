@@ -20,12 +20,12 @@ class ChtypePaymentMethodVerificationItemNormalizer implements DenormalizerInter
     }
     public function supportsNormalization($data, $format = null)
     {
-        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypePaymentMethodVerificationItem';
+        return is_object($data) && get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypePaymentMethodVerificationItem';
     }
     public function denormalize($data, $class, $format = null, array $context = array())
     {
         if (!is_object($data)) {
-            throw new InvalidArgumentException();
+            throw new InvalidArgumentException(sprintf('Given $data is not an object (%s given). We need an object in order to continue denormalize method.', gettype($data)));
         }
         $object = new \ChargeHive\Php\Sdk\Generated\Model\ChtypePaymentMethodVerificationItem();
         if (property_exists($data, 'type')) {
@@ -39,6 +39,9 @@ class ChtypePaymentMethodVerificationItemNormalizer implements DenormalizerInter
         }
         if (property_exists($data, 'is_error')) {
             $object->setIsError($data->{'is_error'});
+        }
+        if (property_exists($data, 'name')) {
+            $object->setName($data->{'name'});
         }
         return $object;
     }
@@ -56,6 +59,9 @@ class ChtypePaymentMethodVerificationItemNormalizer implements DenormalizerInter
         }
         if (null !== $object->getIsError()) {
             $data->{'is_error'} = $object->getIsError();
+        }
+        if (null !== $object->getName()) {
+            $data->{'name'} = $object->getName();
         }
         return $data;
     }

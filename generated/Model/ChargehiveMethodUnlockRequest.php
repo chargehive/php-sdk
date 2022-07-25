@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveMethodUnlockRequest implements \JsonSerializable
+class ChargehiveMethodUnlockRequest
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveMethodUnlockRequest implements \JsonSerializable
      *
      * @return string
      */
-    public function getMethodId()
+    public function getMethodId() : string
     {
         return $this->methodId;
     }
@@ -26,13 +26,9 @@ class ChargehiveMethodUnlockRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setMethodId(string $methodId)
+    public function setMethodId(string $methodId) : self
     {
         $this->methodId = $methodId;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['methodId' => $this->methodId];
     }
 }

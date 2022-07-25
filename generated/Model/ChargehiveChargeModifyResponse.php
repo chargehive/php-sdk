@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveChargeModifyResponse implements \JsonSerializable
+class ChargehiveChargeModifyResponse
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveChargeModifyResponse implements \JsonSerializable
      *
      * @return bool
      */
-    public function getSuccess()
+    public function getSuccess() : bool
     {
         return $this->success;
     }
@@ -26,13 +26,9 @@ class ChargehiveChargeModifyResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setSuccess(bool $success)
+    public function setSuccess(bool $success) : self
     {
         $this->success = $success;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['success' => $this->success];
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveChargeRefundRequest implements \JsonSerializable
+class ChargehiveChargeRefundRequest
 {
     /**
      * 
@@ -33,7 +33,7 @@ class ChargehiveChargeRefundRequest implements \JsonSerializable
      *
      * @return string
      */
-    public function getChargeId()
+    public function getChargeId() : string
     {
         return $this->chargeId;
     }
@@ -44,7 +44,7 @@ class ChargehiveChargeRefundRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setChargeId(string $chargeId)
+    public function setChargeId(string $chargeId) : self
     {
         $this->chargeId = $chargeId;
         return $this;
@@ -54,7 +54,7 @@ class ChargehiveChargeRefundRequest implements \JsonSerializable
      *
      * @return ChtypeAmount
      */
-    public function getAmount()
+    public function getAmount() : ChtypeAmount
     {
         return $this->amount;
     }
@@ -65,7 +65,7 @@ class ChargehiveChargeRefundRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setAmount(ChtypeAmount $amount)
+    public function setAmount(ChtypeAmount $amount) : self
     {
         $this->amount = $amount;
         return $this;
@@ -75,7 +75,7 @@ class ChargehiveChargeRefundRequest implements \JsonSerializable
      *
      * @return ChtypeReason
      */
-    public function getReason()
+    public function getReason() : ChtypeReason
     {
         return $this->reason;
     }
@@ -86,7 +86,7 @@ class ChargehiveChargeRefundRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setReason(ChtypeReason $reason)
+    public function setReason(ChtypeReason $reason) : self
     {
         $this->reason = $reason;
         return $this;
@@ -96,7 +96,7 @@ class ChargehiveChargeRefundRequest implements \JsonSerializable
      *
      * @return ChargehiveChargeRefundTransaction[]
      */
-    public function getTransactions()
+    public function getTransactions() : array
     {
         return $this->transactions;
     }
@@ -107,13 +107,9 @@ class ChargehiveChargeRefundRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setTransactions(array $transactions)
+    public function setTransactions(array $transactions) : self
     {
         $this->transactions = $transactions;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'reason' => $this->reason, 'transactions' => $this->transactions];
     }
 }

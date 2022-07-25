@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeFraudResult implements \JsonSerializable
+class ChtypeFraudResult
 {
     /**
      * 
@@ -57,7 +57,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getFraudCheckId()
+    public function getFraudCheckId() : string
     {
         return $this->fraudCheckId;
     }
@@ -68,7 +68,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setFraudCheckId(string $fraudCheckId)
+    public function setFraudCheckId(string $fraudCheckId) : self
     {
         $this->fraudCheckId = $fraudCheckId;
         return $this;
@@ -78,7 +78,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return ChtypeFraudScore
      */
-    public function getOverallScore()
+    public function getOverallScore() : ChtypeFraudScore
     {
         return $this->overallScore;
     }
@@ -89,7 +89,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setOverallScore(ChtypeFraudScore $overallScore)
+    public function setOverallScore(ChtypeFraudScore $overallScore) : self
     {
         $this->overallScore = $overallScore;
         return $this;
@@ -99,7 +99,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return ChtypeFraudScore[]
      */
-    public function getSubScores()
+    public function getSubScores() : array
     {
         return $this->subScores;
     }
@@ -110,7 +110,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setSubScores(array $subScores)
+    public function setSubScores(array $subScores) : self
     {
         $this->subScores = $subScores;
         return $this;
@@ -120,7 +120,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getSuggestedAction()
+    public function getSuggestedAction() : string
     {
         return $this->suggestedAction;
     }
@@ -131,7 +131,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setSuggestedAction(string $suggestedAction)
+    public function setSuggestedAction(string $suggestedAction) : self
     {
         $this->suggestedAction = $suggestedAction;
         return $this;
@@ -141,7 +141,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return \DateTime
      */
-    public function getScanTime()
+    public function getScanTime() : \DateTime
     {
         return $this->scanTime;
     }
@@ -152,7 +152,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setScanTime(\DateTime $scanTime)
+    public function setScanTime(\DateTime $scanTime) : self
     {
         $this->scanTime = $scanTime;
         return $this;
@@ -162,7 +162,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getConnectorLibrary()
+    public function getConnectorLibrary() : string
     {
         return $this->connectorLibrary;
     }
@@ -173,7 +173,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setConnectorLibrary(string $connectorLibrary)
+    public function setConnectorLibrary(string $connectorLibrary) : self
     {
         $this->connectorLibrary = $connectorLibrary;
         return $this;
@@ -183,7 +183,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return string[]
      */
-    public function getAdditionalData()
+    public function getAdditionalData() : \ArrayObject
     {
         return $this->additionalData;
     }
@@ -194,7 +194,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setAdditionalData(\ArrayObject $additionalData)
+    public function setAdditionalData(\ArrayObject $additionalData) : self
     {
         $this->additionalData = $additionalData;
         return $this;
@@ -204,7 +204,7 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return string[]
      */
-    public function getInfoLinks()
+    public function getInfoLinks() : \ArrayObject
     {
         return $this->infoLinks;
     }
@@ -215,13 +215,9 @@ class ChtypeFraudResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setInfoLinks(\ArrayObject $infoLinks)
+    public function setInfoLinks(\ArrayObject $infoLinks) : self
     {
         $this->infoLinks = $infoLinks;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['fraudCheckId' => $this->fraudCheckId, 'overallScore' => $this->overallScore, 'subScores' => $this->subScores, 'suggestedAction' => $this->suggestedAction, 'scanTime' => $this->scanTime, 'connectorLibrary' => $this->connectorLibrary, 'additionalData' => $this->additionalData, 'infoLinks' => $this->infoLinks];
     }
 }

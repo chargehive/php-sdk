@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeVerifyRequestData implements \JsonSerializable
+class ChtypeVerifyRequestData
 {
     /**
      * 
@@ -39,7 +39,7 @@ class ChtypeVerifyRequestData implements \JsonSerializable
      *
      * @return string
      */
-    public function getType()
+    public function getType() : string
     {
         return $this->type;
     }
@@ -50,7 +50,7 @@ class ChtypeVerifyRequestData implements \JsonSerializable
      *
      * @return self
      */
-    public function setType(string $type)
+    public function setType(string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -60,7 +60,7 @@ class ChtypeVerifyRequestData implements \JsonSerializable
      *
      * @return string[]
      */
-    public function getData()
+    public function getData() : \ArrayObject
     {
         return $this->data;
     }
@@ -71,7 +71,7 @@ class ChtypeVerifyRequestData implements \JsonSerializable
      *
      * @return self
      */
-    public function setData(\ArrayObject $data)
+    public function setData(\ArrayObject $data) : self
     {
         $this->data = $data;
         return $this;
@@ -81,7 +81,7 @@ class ChtypeVerifyRequestData implements \JsonSerializable
      *
      * @return string
      */
-    public function getConnectorLibrary()
+    public function getConnectorLibrary() : string
     {
         return $this->connectorLibrary;
     }
@@ -92,7 +92,7 @@ class ChtypeVerifyRequestData implements \JsonSerializable
      *
      * @return self
      */
-    public function setConnectorLibrary(string $connectorLibrary)
+    public function setConnectorLibrary(string $connectorLibrary) : self
     {
         $this->connectorLibrary = $connectorLibrary;
         return $this;
@@ -102,7 +102,7 @@ class ChtypeVerifyRequestData implements \JsonSerializable
      *
      * @return string
      */
-    public function getEnvironment()
+    public function getEnvironment() : string
     {
         return $this->environment;
     }
@@ -113,7 +113,7 @@ class ChtypeVerifyRequestData implements \JsonSerializable
      *
      * @return self
      */
-    public function setEnvironment(string $environment)
+    public function setEnvironment(string $environment) : self
     {
         $this->environment = $environment;
         return $this;
@@ -123,7 +123,7 @@ class ChtypeVerifyRequestData implements \JsonSerializable
      *
      * @return bool
      */
-    public function getRequired()
+    public function getRequired() : bool
     {
         return $this->required;
     }
@@ -134,13 +134,9 @@ class ChtypeVerifyRequestData implements \JsonSerializable
      *
      * @return self
      */
-    public function setRequired(bool $required)
+    public function setRequired(bool $required) : self
     {
         $this->required = $required;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['type' => $this->type, 'data' => $this->data, 'connectorLibrary' => $this->connectorLibrary, 'environment' => $this->environment, 'required' => $this->required];
     }
 }

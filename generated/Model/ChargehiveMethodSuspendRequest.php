@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveMethodSuspendRequest implements \JsonSerializable
+class ChargehiveMethodSuspendRequest
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveMethodSuspendRequest implements \JsonSerializable
      *
      * @return string
      */
-    public function getToken()
+    public function getToken() : string
     {
         return $this->token;
     }
@@ -26,13 +26,9 @@ class ChargehiveMethodSuspendRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setToken(string $token)
+    public function setToken(string $token) : self
     {
         $this->token = $token;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['token' => $this->token];
     }
 }

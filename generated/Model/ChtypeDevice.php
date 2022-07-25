@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeDevice implements \JsonSerializable
+class ChtypeDevice
 {
     /**
      * 
@@ -159,7 +159,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getBrowserAcceptHeader()
+    public function getBrowserAcceptHeader() : string
     {
         return $this->browserAcceptHeader;
     }
@@ -170,7 +170,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setBrowserAcceptHeader(string $browserAcceptHeader)
+    public function setBrowserAcceptHeader(string $browserAcceptHeader) : self
     {
         $this->browserAcceptHeader = $browserAcceptHeader;
         return $this;
@@ -180,7 +180,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return int
      */
-    public function getColorDepth()
+    public function getColorDepth() : int
     {
         return $this->colorDepth;
     }
@@ -191,7 +191,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setColorDepth(int $colorDepth)
+    public function setColorDepth(int $colorDepth) : self
     {
         $this->colorDepth = $colorDepth;
         return $this;
@@ -201,7 +201,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return bool
      */
-    public function getJavaEnabled()
+    public function getJavaEnabled() : bool
     {
         return $this->javaEnabled;
     }
@@ -212,7 +212,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setJavaEnabled(bool $javaEnabled)
+    public function setJavaEnabled(bool $javaEnabled) : self
     {
         $this->javaEnabled = $javaEnabled;
         return $this;
@@ -222,7 +222,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return bool
      */
-    public function getJavascriptEnabled()
+    public function getJavascriptEnabled() : bool
     {
         return $this->javascriptEnabled;
     }
@@ -233,7 +233,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setJavascriptEnabled(bool $javascriptEnabled)
+    public function setJavascriptEnabled(bool $javascriptEnabled) : self
     {
         $this->javascriptEnabled = $javascriptEnabled;
         return $this;
@@ -243,7 +243,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getLanguage()
+    public function getLanguage() : string
     {
         return $this->language;
     }
@@ -254,7 +254,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setLanguage(string $language)
+    public function setLanguage(string $language) : self
     {
         $this->language = $language;
         return $this;
@@ -264,7 +264,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return ChtypeDimension
      */
-    public function getScreen()
+    public function getScreen() : ChtypeDimension
     {
         return $this->screen;
     }
@@ -275,7 +275,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setScreen(ChtypeDimension $screen)
+    public function setScreen(ChtypeDimension $screen) : self
     {
         $this->screen = $screen;
         return $this;
@@ -285,7 +285,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return ChtypeDimension
      */
-    public function getScreenAvailable()
+    public function getScreenAvailable() : ChtypeDimension
     {
         return $this->screenAvailable;
     }
@@ -296,7 +296,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setScreenAvailable(ChtypeDimension $screenAvailable)
+    public function setScreenAvailable(ChtypeDimension $screenAvailable) : self
     {
         $this->screenAvailable = $screenAvailable;
         return $this;
@@ -306,7 +306,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return ChtypeDimension
      */
-    public function getWindowInner()
+    public function getWindowInner() : ChtypeDimension
     {
         return $this->windowInner;
     }
@@ -317,7 +317,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setWindowInner(ChtypeDimension $windowInner)
+    public function setWindowInner(ChtypeDimension $windowInner) : self
     {
         $this->windowInner = $windowInner;
         return $this;
@@ -327,7 +327,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return ChtypeDimension
      */
-    public function getWindowOuter()
+    public function getWindowOuter() : ChtypeDimension
     {
         return $this->windowOuter;
     }
@@ -338,7 +338,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setWindowOuter(ChtypeDimension $windowOuter)
+    public function setWindowOuter(ChtypeDimension $windowOuter) : self
     {
         $this->windowOuter = $windowOuter;
         return $this;
@@ -348,7 +348,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return int
      */
-    public function getTimezoneOffsetMins()
+    public function getTimezoneOffsetMins() : int
     {
         return $this->timezoneOffsetMins;
     }
@@ -359,7 +359,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setTimezoneOffsetMins(int $timezoneOffsetMins)
+    public function setTimezoneOffsetMins(int $timezoneOffsetMins) : self
     {
         $this->timezoneOffsetMins = $timezoneOffsetMins;
         return $this;
@@ -369,7 +369,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getUserAgent()
+    public function getUserAgent() : string
     {
         return $this->userAgent;
     }
@@ -380,7 +380,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setUserAgent(string $userAgent)
+    public function setUserAgent(string $userAgent) : self
     {
         $this->userAgent = $userAgent;
         return $this;
@@ -390,7 +390,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getIpAddress()
+    public function getIpAddress() : string
     {
         return $this->ipAddress;
     }
@@ -401,7 +401,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setIpAddress(string $ipAddress)
+    public function setIpAddress(string $ipAddress) : self
     {
         $this->ipAddress = $ipAddress;
         return $this;
@@ -411,7 +411,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return bool
      */
-    public function getCookiesEnabled()
+    public function getCookiesEnabled() : bool
     {
         return $this->cookiesEnabled;
     }
@@ -422,7 +422,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setCookiesEnabled(bool $cookiesEnabled)
+    public function setCookiesEnabled(bool $cookiesEnabled) : self
     {
         $this->cookiesEnabled = $cookiesEnabled;
         return $this;
@@ -432,7 +432,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getFlashVersion()
+    public function getFlashVersion() : string
     {
         return $this->flashVersion;
     }
@@ -443,7 +443,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setFlashVersion(string $flashVersion)
+    public function setFlashVersion(string $flashVersion) : self
     {
         $this->flashVersion = $flashVersion;
         return $this;
@@ -453,7 +453,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return bool
      */
-    public function getIsTouch()
+    public function getIsTouch() : bool
     {
         return $this->isTouch;
     }
@@ -464,7 +464,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setIsTouch(bool $isTouch)
+    public function setIsTouch(bool $isTouch) : self
     {
         $this->isTouch = $isTouch;
         return $this;
@@ -474,7 +474,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getOs()
+    public function getOs() : string
     {
         return $this->os;
     }
@@ -485,7 +485,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setOs(string $os)
+    public function setOs(string $os) : self
     {
         $this->os = $os;
         return $this;
@@ -495,7 +495,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getOsVersion()
+    public function getOsVersion() : string
     {
         return $this->osVersion;
     }
@@ -506,7 +506,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setOsVersion(string $osVersion)
+    public function setOsVersion(string $osVersion) : self
     {
         $this->osVersion = $osVersion;
         return $this;
@@ -516,7 +516,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getBrowser()
+    public function getBrowser() : string
     {
         return $this->browser;
     }
@@ -527,7 +527,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setBrowser(string $browser)
+    public function setBrowser(string $browser) : self
     {
         $this->browser = $browser;
         return $this;
@@ -537,7 +537,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getBrowserVersion()
+    public function getBrowserVersion() : string
     {
         return $this->browserVersion;
     }
@@ -548,7 +548,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setBrowserVersion(string $browserVersion)
+    public function setBrowserVersion(string $browserVersion) : self
     {
         $this->browserVersion = $browserVersion;
         return $this;
@@ -558,7 +558,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getDeviceManufacturer()
+    public function getDeviceManufacturer() : string
     {
         return $this->deviceManufacturer;
     }
@@ -569,7 +569,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setDeviceManufacturer(string $deviceManufacturer)
+    public function setDeviceManufacturer(string $deviceManufacturer) : self
     {
         $this->deviceManufacturer = $deviceManufacturer;
         return $this;
@@ -579,7 +579,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getDeviceName()
+    public function getDeviceName() : string
     {
         return $this->deviceName;
     }
@@ -590,7 +590,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setDeviceName(string $deviceName)
+    public function setDeviceName(string $deviceName) : self
     {
         $this->deviceName = $deviceName;
         return $this;
@@ -600,7 +600,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getDeviceVersion()
+    public function getDeviceVersion() : string
     {
         return $this->deviceVersion;
     }
@@ -611,7 +611,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setDeviceVersion(string $deviceVersion)
+    public function setDeviceVersion(string $deviceVersion) : self
     {
         $this->deviceVersion = $deviceVersion;
         return $this;
@@ -621,7 +621,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getFingerprint()
+    public function getFingerprint() : string
     {
         return $this->fingerprint;
     }
@@ -632,7 +632,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setFingerprint(string $fingerprint)
+    public function setFingerprint(string $fingerprint) : self
     {
         $this->fingerprint = $fingerprint;
         return $this;
@@ -642,7 +642,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getType()
+    public function getType() : string
     {
         return $this->type;
     }
@@ -653,7 +653,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setType(string $type)
+    public function setType(string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -663,7 +663,7 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return string
      */
-    public function getTimezone()
+    public function getTimezone() : string
     {
         return $this->timezone;
     }
@@ -674,13 +674,9 @@ class ChtypeDevice implements \JsonSerializable
      *
      * @return self
      */
-    public function setTimezone(string $timezone)
+    public function setTimezone(string $timezone) : self
     {
         $this->timezone = $timezone;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['browserAcceptHeader' => $this->browserAcceptHeader, 'colorDepth' => $this->colorDepth, 'javaEnabled' => $this->javaEnabled, 'javascriptEnabled' => $this->javascriptEnabled, 'language' => $this->language, 'screen' => $this->screen, 'screenAvailable' => $this->screenAvailable, 'windowInner' => $this->windowInner, 'windowOuter' => $this->windowOuter, 'timezoneOffsetMins' => $this->timezoneOffsetMins, 'userAgent' => $this->userAgent, 'ipAddress' => $this->ipAddress, 'cookiesEnabled' => $this->cookiesEnabled, 'flashVersion' => $this->flashVersion, 'isTouch' => $this->isTouch, 'os' => $this->os, 'osVersion' => $this->osVersion, 'browser' => $this->browser, 'browserVersion' => $this->browserVersion, 'deviceManufacturer' => $this->deviceManufacturer, 'deviceName' => $this->deviceName, 'deviceVersion' => $this->deviceVersion, 'fingerprint' => $this->fingerprint, 'type' => $this->type, 'timezone' => $this->timezone];
     }
 }

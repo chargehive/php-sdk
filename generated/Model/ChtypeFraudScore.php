@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeFraudScore implements \JsonSerializable
+class ChtypeFraudScore
 {
     /**
      * 
@@ -39,7 +39,7 @@ class ChtypeFraudScore implements \JsonSerializable
      *
      * @return float
      */
-    public function getScore()
+    public function getScore() : float
     {
         return $this->score;
     }
@@ -50,7 +50,7 @@ class ChtypeFraudScore implements \JsonSerializable
      *
      * @return self
      */
-    public function setScore(float $score)
+    public function setScore(float $score) : self
     {
         $this->score = $score;
         return $this;
@@ -60,7 +60,7 @@ class ChtypeFraudScore implements \JsonSerializable
      *
      * @return string
      */
-    public function getRiskLevel()
+    public function getRiskLevel() : string
     {
         return $this->riskLevel;
     }
@@ -71,7 +71,7 @@ class ChtypeFraudScore implements \JsonSerializable
      *
      * @return self
      */
-    public function setRiskLevel(string $riskLevel)
+    public function setRiskLevel(string $riskLevel) : self
     {
         $this->riskLevel = $riskLevel;
         return $this;
@@ -81,7 +81,7 @@ class ChtypeFraudScore implements \JsonSerializable
      *
      * @return ChtypeFraudFactor
      */
-    public function getFactor()
+    public function getFactor() : ChtypeFraudFactor
     {
         return $this->factor;
     }
@@ -92,7 +92,7 @@ class ChtypeFraudScore implements \JsonSerializable
      *
      * @return self
      */
-    public function setFactor(ChtypeFraudFactor $factor)
+    public function setFactor(ChtypeFraudFactor $factor) : self
     {
         $this->factor = $factor;
         return $this;
@@ -102,7 +102,7 @@ class ChtypeFraudScore implements \JsonSerializable
      *
      * @return string
      */
-    public function getSummary()
+    public function getSummary() : string
     {
         return $this->summary;
     }
@@ -113,7 +113,7 @@ class ChtypeFraudScore implements \JsonSerializable
      *
      * @return self
      */
-    public function setSummary(string $summary)
+    public function setSummary(string $summary) : self
     {
         $this->summary = $summary;
         return $this;
@@ -123,7 +123,7 @@ class ChtypeFraudScore implements \JsonSerializable
      *
      * @return string[]
      */
-    public function getData()
+    public function getData() : \ArrayObject
     {
         return $this->data;
     }
@@ -134,13 +134,9 @@ class ChtypeFraudScore implements \JsonSerializable
      *
      * @return self
      */
-    public function setData(\ArrayObject $data)
+    public function setData(\ArrayObject $data) : self
     {
         $this->data = $data;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['score' => $this->score, 'riskLevel' => $this->riskLevel, 'factor' => $this->factor, 'summary' => $this->summary, 'data' => $this->data];
     }
 }

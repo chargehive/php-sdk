@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveConfigurationGetResponse implements \JsonSerializable
+class ChargehiveConfigurationGetResponse
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveConfigurationGetResponse implements \JsonSerializable
      *
      * @return string
      */
-    public function getConfigurationItem()
+    public function getConfigurationItem() : string
     {
         return $this->configurationItem;
     }
@@ -26,13 +26,9 @@ class ChargehiveConfigurationGetResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setConfigurationItem(string $configurationItem)
+    public function setConfigurationItem(string $configurationItem) : self
     {
         $this->configurationItem = $configurationItem;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['configurationItem' => $this->configurationItem];
     }
 }

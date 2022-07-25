@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeAddress implements \JsonSerializable
+class ChtypeAddress
 {
     /**
      * 
@@ -63,7 +63,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return string
      */
-    public function getLineOne()
+    public function getLineOne() : string
     {
         return $this->lineOne;
     }
@@ -74,7 +74,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return self
      */
-    public function setLineOne(string $lineOne)
+    public function setLineOne(string $lineOne) : self
     {
         $this->lineOne = $lineOne;
         return $this;
@@ -84,7 +84,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return string
      */
-    public function getLineTwo()
+    public function getLineTwo() : string
     {
         return $this->lineTwo;
     }
@@ -95,7 +95,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return self
      */
-    public function setLineTwo(string $lineTwo)
+    public function setLineTwo(string $lineTwo) : self
     {
         $this->lineTwo = $lineTwo;
         return $this;
@@ -105,7 +105,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return string
      */
-    public function getLineThree()
+    public function getLineThree() : string
     {
         return $this->lineThree;
     }
@@ -116,7 +116,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return self
      */
-    public function setLineThree(string $lineThree)
+    public function setLineThree(string $lineThree) : self
     {
         $this->lineThree = $lineThree;
         return $this;
@@ -126,7 +126,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return string
      */
-    public function getTown()
+    public function getTown() : string
     {
         return $this->town;
     }
@@ -137,7 +137,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return self
      */
-    public function setTown(string $town)
+    public function setTown(string $town) : self
     {
         $this->town = $town;
         return $this;
@@ -147,7 +147,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return string
      */
-    public function getCounty()
+    public function getCounty() : string
     {
         return $this->county;
     }
@@ -158,7 +158,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return self
      */
-    public function setCounty(string $county)
+    public function setCounty(string $county) : self
     {
         $this->county = $county;
         return $this;
@@ -168,7 +168,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return string
      */
-    public function getCountry()
+    public function getCountry() : string
     {
         return $this->country;
     }
@@ -179,7 +179,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return self
      */
-    public function setCountry(string $country)
+    public function setCountry(string $country) : self
     {
         $this->country = $country;
         return $this;
@@ -189,7 +189,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return string
      */
-    public function getPostalCode()
+    public function getPostalCode() : string
     {
         return $this->postalCode;
     }
@@ -200,7 +200,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return self
      */
-    public function setPostalCode(string $postalCode)
+    public function setPostalCode(string $postalCode) : self
     {
         $this->postalCode = $postalCode;
         return $this;
@@ -210,7 +210,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return string
      */
-    public function getFao()
+    public function getFao() : string
     {
         return $this->fao;
     }
@@ -221,7 +221,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return self
      */
-    public function setFao(string $fao)
+    public function setFao(string $fao) : self
     {
         $this->fao = $fao;
         return $this;
@@ -231,7 +231,7 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return string
      */
-    public function getCompanyName()
+    public function getCompanyName() : string
     {
         return $this->companyName;
     }
@@ -242,13 +242,9 @@ class ChtypeAddress implements \JsonSerializable
      *
      * @return self
      */
-    public function setCompanyName(string $companyName)
+    public function setCompanyName(string $companyName) : self
     {
         $this->companyName = $companyName;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['lineOne' => $this->lineOne, 'lineTwo' => $this->lineTwo, 'lineThree' => $this->lineThree, 'town' => $this->town, 'county' => $this->county, 'country' => $this->country, 'postalCode' => $this->postalCode, 'fao' => $this->fao, 'companyName' => $this->companyName];
     }
 }

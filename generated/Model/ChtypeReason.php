@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeReason implements \JsonSerializable
+class ChtypeReason
 {
     /**
      * 
@@ -33,7 +33,7 @@ class ChtypeReason implements \JsonSerializable
      *
      * @return string
      */
-    public function getDescription()
+    public function getDescription() : string
     {
         return $this->description;
     }
@@ -44,7 +44,7 @@ class ChtypeReason implements \JsonSerializable
      *
      * @return self
      */
-    public function setDescription(string $description)
+    public function setDescription(string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -54,7 +54,7 @@ class ChtypeReason implements \JsonSerializable
      *
      * @return string
      */
-    public function getReasonType()
+    public function getReasonType() : string
     {
         return $this->reasonType;
     }
@@ -65,7 +65,7 @@ class ChtypeReason implements \JsonSerializable
      *
      * @return self
      */
-    public function setReasonType(string $reasonType)
+    public function setReasonType(string $reasonType) : self
     {
         $this->reasonType = $reasonType;
         return $this;
@@ -75,7 +75,7 @@ class ChtypeReason implements \JsonSerializable
      *
      * @return string
      */
-    public function getRequestorComment()
+    public function getRequestorComment() : string
     {
         return $this->requestorComment;
     }
@@ -86,7 +86,7 @@ class ChtypeReason implements \JsonSerializable
      *
      * @return self
      */
-    public function setRequestorComment(string $requestorComment)
+    public function setRequestorComment(string $requestorComment) : self
     {
         $this->requestorComment = $requestorComment;
         return $this;
@@ -96,7 +96,7 @@ class ChtypeReason implements \JsonSerializable
      *
      * @return string
      */
-    public function getRequestedBy()
+    public function getRequestedBy() : string
     {
         return $this->requestedBy;
     }
@@ -107,13 +107,9 @@ class ChtypeReason implements \JsonSerializable
      *
      * @return self
      */
-    public function setRequestedBy(string $requestedBy)
+    public function setRequestedBy(string $requestedBy) : self
     {
         $this->requestedBy = $requestedBy;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['description' => $this->description, 'reasonType' => $this->reasonType, 'requestorComment' => $this->requestorComment, 'requestedBy' => $this->requestedBy];
     }
 }

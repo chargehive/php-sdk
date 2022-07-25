@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeFraudFactor implements \JsonSerializable
+class ChtypeFraudFactor
 {
     /**
      * 
@@ -33,7 +33,7 @@ class ChtypeFraudFactor implements \JsonSerializable
      *
      * @return string
      */
-    public function getOn()
+    public function getOn() : string
     {
         return $this->on;
     }
@@ -44,7 +44,7 @@ class ChtypeFraudFactor implements \JsonSerializable
      *
      * @return self
      */
-    public function setOn(string $on)
+    public function setOn(string $on) : self
     {
         $this->on = $on;
         return $this;
@@ -54,7 +54,7 @@ class ChtypeFraudFactor implements \JsonSerializable
      *
      * @return string
      */
-    public function getFactor()
+    public function getFactor() : string
     {
         return $this->factor;
     }
@@ -65,7 +65,7 @@ class ChtypeFraudFactor implements \JsonSerializable
      *
      * @return self
      */
-    public function setFactor(string $factor)
+    public function setFactor(string $factor) : self
     {
         $this->factor = $factor;
         return $this;
@@ -75,7 +75,7 @@ class ChtypeFraudFactor implements \JsonSerializable
      *
      * @return string
      */
-    public function getOtherOn()
+    public function getOtherOn() : string
     {
         return $this->otherOn;
     }
@@ -86,7 +86,7 @@ class ChtypeFraudFactor implements \JsonSerializable
      *
      * @return self
      */
-    public function setOtherOn(string $otherOn)
+    public function setOtherOn(string $otherOn) : self
     {
         $this->otherOn = $otherOn;
         return $this;
@@ -96,7 +96,7 @@ class ChtypeFraudFactor implements \JsonSerializable
      *
      * @return string
      */
-    public function getOtherFactor()
+    public function getOtherFactor() : string
     {
         return $this->otherFactor;
     }
@@ -107,13 +107,9 @@ class ChtypeFraudFactor implements \JsonSerializable
      *
      * @return self
      */
-    public function setOtherFactor(string $otherFactor)
+    public function setOtherFactor(string $otherFactor) : self
     {
         $this->otherFactor = $otherFactor;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['on' => $this->on, 'factor' => $this->factor, 'otherOn' => $this->otherOn, 'otherFactor' => $this->otherFactor];
     }
 }
