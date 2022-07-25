@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveMethodTokenizeResponse implements \JsonSerializable
+class ChargehiveMethodTokenizeResponse
 {
     /**
      * 
@@ -51,7 +51,7 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return bool
      */
-    public function getSuccess()
+    public function getSuccess() : bool
     {
         return $this->success;
     }
@@ -62,7 +62,7 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setSuccess(bool $success)
+    public function setSuccess(bool $success) : self
     {
         $this->success = $success;
         return $this;
@@ -72,7 +72,7 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return string
      */
-    public function getToken()
+    public function getToken() : string
     {
         return $this->token;
     }
@@ -83,7 +83,7 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setToken(string $token)
+    public function setToken(string $token) : self
     {
         $this->token = $token;
         return $this;
@@ -93,7 +93,7 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return ChtypePaymentMethodInfo
      */
-    public function getInfo()
+    public function getInfo() : ChtypePaymentMethodInfo
     {
         return $this->info;
     }
@@ -104,7 +104,7 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setInfo(ChtypePaymentMethodInfo $info)
+    public function setInfo(ChtypePaymentMethodInfo $info) : self
     {
         $this->info = $info;
         return $this;
@@ -114,7 +114,7 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return string[]
      */
-    public function getAdditionalData()
+    public function getAdditionalData() : \ArrayObject
     {
         return $this->additionalData;
     }
@@ -125,7 +125,7 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setAdditionalData(\ArrayObject $additionalData)
+    public function setAdditionalData(\ArrayObject $additionalData) : self
     {
         $this->additionalData = $additionalData;
         return $this;
@@ -135,7 +135,7 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return string
      */
-    public function getCustomerMessage()
+    public function getCustomerMessage() : string
     {
         return $this->customerMessage;
     }
@@ -146,7 +146,7 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setCustomerMessage(string $customerMessage)
+    public function setCustomerMessage(string $customerMessage) : self
     {
         $this->customerMessage = $customerMessage;
         return $this;
@@ -156,7 +156,7 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return string
      */
-    public function getMerchantMessage()
+    public function getMerchantMessage() : string
     {
         return $this->merchantMessage;
     }
@@ -167,7 +167,7 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setMerchantMessage(string $merchantMessage)
+    public function setMerchantMessage(string $merchantMessage) : self
     {
         $this->merchantMessage = $merchantMessage;
         return $this;
@@ -177,7 +177,7 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return ChargehivePCIBTokenizeResponse
      */
-    public function getTokenizeResponse()
+    public function getTokenizeResponse() : ChargehivePCIBTokenizeResponse
     {
         return $this->tokenizeResponse;
     }
@@ -188,13 +188,9 @@ class ChargehiveMethodTokenizeResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setTokenizeResponse(ChargehivePCIBTokenizeResponse $tokenizeResponse)
+    public function setTokenizeResponse(ChargehivePCIBTokenizeResponse $tokenizeResponse) : self
     {
         $this->tokenizeResponse = $tokenizeResponse;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['success' => $this->success, 'token' => $this->token, 'info' => $this->info, 'additionalData' => $this->additionalData, 'customerMessage' => $this->customerMessage, 'merchantMessage' => $this->merchantMessage, 'tokenizeResponse' => $this->tokenizeResponse];
     }
 }

@@ -347,18 +347,21 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
     {
         return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\SchedulerTrigger(), $fetch);
     }
-    public static function create($httpClient = null)
+    public static function create($httpClient = null, \Jane\OpenApiRuntime\Client\Authentication $authentication = null)
     {
         if (null === $httpClient) {
             $httpClient = \Http\Discovery\HttpClientDiscovery::find();
             $plugins = array();
             $uri = \Http\Discovery\UriFactoryDiscovery::find()->createUri('https://api.chargehive.com');
             $plugins[] = new \Http\Client\Common\Plugin\AddHostPlugin($uri);
+            if (null !== $authentication) {
+                $plugins[] = $authentication->getPlugin();
+            }
             $httpClient = new \Http\Client\Common\PluginClient($httpClient, $plugins);
         }
         $messageFactory = \Http\Discovery\MessageFactoryDiscovery::find();
         $streamFactory = \Http\Discovery\StreamFactoryDiscovery::find();
-        $serializer = new \Symfony\Component\Serializer\Serializer(\ChargeHive\Php\Sdk\Generated\Normalizer\NormalizerFactory::create(), array(new \Symfony\Component\Serializer\Encoder\JsonEncoder(new \Symfony\Component\Serializer\Encoder\JsonEncode(), new \Symfony\Component\Serializer\Encoder\JsonDecode())));
+        $serializer = new \Symfony\Component\Serializer\Serializer(array(new \Symfony\Component\Serializer\Normalizer\ArrayDenormalizer(), new \ChargeHive\Php\Sdk\Generated\Normalizer\JaneObjectNormalizer()), array(new \Symfony\Component\Serializer\Encoder\JsonEncoder(new \Symfony\Component\Serializer\Encoder\JsonEncode(), new \Symfony\Component\Serializer\Encoder\JsonDecode())));
         return new static($httpClient, $messageFactory, $serializer, $streamFactory);
     }
 }

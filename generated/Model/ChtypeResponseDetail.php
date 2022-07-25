@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeResponseDetail implements \JsonSerializable
+class ChtypeResponseDetail
 {
     /**
      * 
@@ -63,7 +63,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getResponseCode()
+    public function getResponseCode() : string
     {
         return $this->responseCode;
     }
@@ -74,7 +74,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setResponseCode(string $responseCode)
+    public function setResponseCode(string $responseCode) : self
     {
         $this->responseCode = $responseCode;
         return $this;
@@ -84,7 +84,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getConsumerMessage()
+    public function getConsumerMessage() : string
     {
         return $this->consumerMessage;
     }
@@ -95,7 +95,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setConsumerMessage(string $consumerMessage)
+    public function setConsumerMessage(string $consumerMessage) : self
     {
         $this->consumerMessage = $consumerMessage;
         return $this;
@@ -105,7 +105,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getMerchantMessage()
+    public function getMerchantMessage() : string
     {
         return $this->merchantMessage;
     }
@@ -116,7 +116,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setMerchantMessage(string $merchantMessage)
+    public function setMerchantMessage(string $merchantMessage) : self
     {
         $this->merchantMessage = $merchantMessage;
         return $this;
@@ -126,7 +126,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getFailureType()
+    public function getFailureType() : string
     {
         return $this->failureType;
     }
@@ -137,7 +137,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setFailureType(string $failureType)
+    public function setFailureType(string $failureType) : self
     {
         $this->failureType = $failureType;
         return $this;
@@ -147,7 +147,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getCategory()
+    public function getCategory() : string
     {
         return $this->category;
     }
@@ -158,7 +158,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setCategory(string $category)
+    public function setCategory(string $category) : self
     {
         $this->category = $category;
         return $this;
@@ -168,7 +168,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getErrorType()
+    public function getErrorType() : string
     {
         return $this->errorType;
     }
@@ -179,7 +179,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setErrorType(string $errorType)
+    public function setErrorType(string $errorType) : self
     {
         $this->errorType = $errorType;
         return $this;
@@ -189,7 +189,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return string[]
      */
-    public function getErrorProperties()
+    public function getErrorProperties() : \ArrayObject
     {
         return $this->errorProperties;
     }
@@ -200,7 +200,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setErrorProperties(\ArrayObject $errorProperties)
+    public function setErrorProperties(\ArrayObject $errorProperties) : self
     {
         $this->errorProperties = $errorProperties;
         return $this;
@@ -210,7 +210,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getOriginatingCode()
+    public function getOriginatingCode() : string
     {
         return $this->originatingCode;
     }
@@ -221,7 +221,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setOriginatingCode(string $originatingCode)
+    public function setOriginatingCode(string $originatingCode) : self
     {
         $this->originatingCode = $originatingCode;
         return $this;
@@ -231,7 +231,7 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return ChtypeResponseDetail[]
      */
-    public function getSpecificErrors()
+    public function getSpecificErrors() : array
     {
         return $this->specificErrors;
     }
@@ -242,13 +242,9 @@ class ChtypeResponseDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setSpecificErrors(array $specificErrors)
+    public function setSpecificErrors(array $specificErrors) : self
     {
         $this->specificErrors = $specificErrors;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['responseCode' => $this->responseCode, 'consumerMessage' => $this->consumerMessage, 'merchantMessage' => $this->merchantMessage, 'failureType' => $this->failureType, 'category' => $this->category, 'errorType' => $this->errorType, 'errorProperties' => $this->errorProperties, 'originatingCode' => $this->originatingCode, 'specificErrors' => $this->specificErrors];
     }
 }

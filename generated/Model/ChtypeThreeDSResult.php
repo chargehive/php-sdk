@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeThreeDSResult implements \JsonSerializable
+class ChtypeThreeDSResult
 {
     /**
      * 
@@ -111,7 +111,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getEci()
+    public function getEci() : string
     {
         return $this->eci;
     }
@@ -122,7 +122,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setEci(string $eci)
+    public function setEci(string $eci) : self
     {
         $this->eci = $eci;
         return $this;
@@ -132,7 +132,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getCavv()
+    public function getCavv() : string
     {
         return $this->cavv;
     }
@@ -143,7 +143,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setCavv(string $cavv)
+    public function setCavv(string $cavv) : self
     {
         $this->cavv = $cavv;
         return $this;
@@ -153,7 +153,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getXid()
+    public function getXid() : string
     {
         return $this->xid;
     }
@@ -164,7 +164,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setXid(string $xid)
+    public function setXid(string $xid) : self
     {
         $this->xid = $xid;
         return $this;
@@ -174,7 +174,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getEnrollment()
+    public function getEnrollment() : string
     {
         return $this->enrollment;
     }
@@ -185,7 +185,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setEnrollment(string $enrollment)
+    public function setEnrollment(string $enrollment) : self
     {
         $this->enrollment = $enrollment;
         return $this;
@@ -195,7 +195,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getResult()
+    public function getResult() : string
     {
         return $this->result;
     }
@@ -206,7 +206,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setResult(string $result)
+    public function setResult(string $result) : self
     {
         $this->result = $result;
         return $this;
@@ -216,7 +216,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getSignatureStatus()
+    public function getSignatureStatus() : string
     {
         return $this->signatureStatus;
     }
@@ -227,7 +227,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setSignatureStatus(string $signatureStatus)
+    public function setSignatureStatus(string $signatureStatus) : self
     {
         $this->signatureStatus = $signatureStatus;
         return $this;
@@ -237,7 +237,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getServerTransactionId()
+    public function getServerTransactionId() : string
     {
         return $this->serverTransactionId;
     }
@@ -248,7 +248,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setServerTransactionId(string $serverTransactionId)
+    public function setServerTransactionId(string $serverTransactionId) : self
     {
         $this->serverTransactionId = $serverTransactionId;
         return $this;
@@ -258,7 +258,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getStatus()
+    public function getStatus() : string
     {
         return $this->status;
     }
@@ -269,7 +269,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setStatus(string $status)
+    public function setStatus(string $status) : self
     {
         $this->status = $status;
         return $this;
@@ -279,7 +279,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return int
      */
-    public function getMajorVersion()
+    public function getMajorVersion() : int
     {
         return $this->majorVersion;
     }
@@ -290,7 +290,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setMajorVersion(int $majorVersion)
+    public function setMajorVersion(int $majorVersion) : self
     {
         $this->majorVersion = $majorVersion;
         return $this;
@@ -300,7 +300,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getVersion()
+    public function getVersion() : string
     {
         return $this->version;
     }
@@ -311,7 +311,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setVersion(string $version)
+    public function setVersion(string $version) : self
     {
         $this->version = $version;
         return $this;
@@ -321,7 +321,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getPaReq()
+    public function getPaReq() : string
     {
         return $this->paReq;
     }
@@ -332,7 +332,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setPaReq(string $paReq)
+    public function setPaReq(string $paReq) : self
     {
         $this->paReq = $paReq;
         return $this;
@@ -342,7 +342,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getAcsUrl()
+    public function getAcsUrl() : string
     {
         return $this->acsUrl;
     }
@@ -353,7 +353,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setAcsUrl(string $acsUrl)
+    public function setAcsUrl(string $acsUrl) : self
     {
         $this->acsUrl = $acsUrl;
         return $this;
@@ -363,7 +363,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getPaRes()
+    public function getPaRes() : string
     {
         return $this->paRes;
     }
@@ -374,7 +374,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setPaRes(string $paRes)
+    public function setPaRes(string $paRes) : self
     {
         $this->paRes = $paRes;
         return $this;
@@ -384,7 +384,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getId()
+    public function getId() : string
     {
         return $this->id;
     }
@@ -395,7 +395,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setId(string $id)
+    public function setId(string $id) : self
     {
         $this->id = $id;
         return $this;
@@ -405,7 +405,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return \DateTime
      */
-    public function getTimestamp()
+    public function getTimestamp() : \DateTime
     {
         return $this->timestamp;
     }
@@ -416,7 +416,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setTimestamp(\DateTime $timestamp)
+    public function setTimestamp(\DateTime $timestamp) : self
     {
         $this->timestamp = $timestamp;
         return $this;
@@ -426,7 +426,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getLiability()
+    public function getLiability() : string
     {
         return $this->liability;
     }
@@ -437,7 +437,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setLiability(string $liability)
+    public function setLiability(string $liability) : self
     {
         $this->liability = $liability;
         return $this;
@@ -447,7 +447,7 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return string
      */
-    public function getSdkResponse()
+    public function getSdkResponse() : string
     {
         return $this->sdkResponse;
     }
@@ -458,13 +458,9 @@ class ChtypeThreeDSResult implements \JsonSerializable
      *
      * @return self
      */
-    public function setSdkResponse(string $sdkResponse)
+    public function setSdkResponse(string $sdkResponse) : self
     {
         $this->sdkResponse = $sdkResponse;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['eci' => $this->eci, 'cavv' => $this->cavv, 'xid' => $this->xid, 'enrollment' => $this->enrollment, 'result' => $this->result, 'signatureStatus' => $this->signatureStatus, 'serverTransactionId' => $this->serverTransactionId, 'status' => $this->status, 'majorVersion' => $this->majorVersion, 'version' => $this->version, 'paReq' => $this->paReq, 'acsUrl' => $this->acsUrl, 'paRes' => $this->paRes, 'id' => $this->id, 'timestamp' => $this->timestamp, 'liability' => $this->liability, 'sdkResponse' => $this->sdkResponse];
     }
 }

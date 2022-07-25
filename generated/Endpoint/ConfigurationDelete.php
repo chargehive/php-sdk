@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Endpoint;
 
-class ConfigurationDelete extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\OpenApiRuntime\Client\Psr7HttplugEndpoint
+class ConfigurationDelete extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\OpenApiRuntime\Client\Psr7Endpoint
 {
     protected $kind;
     protected $id;
@@ -17,7 +17,7 @@ class ConfigurationDelete extends \Jane\OpenApiRuntime\Client\BaseEndpoint imple
         $this->kind = $kind;
         $this->id = $id;
     }
-    use \Jane\OpenApiRuntime\Client\Psr7HttplugEndpointTrait;
+    use \Jane\OpenApiRuntime\Client\Psr7EndpointTrait;
     public function getMethod() : string
     {
         return 'DELETE';
@@ -26,7 +26,7 @@ class ConfigurationDelete extends \Jane\OpenApiRuntime\Client\BaseEndpoint imple
     {
         return str_replace(array('{kind}', '{id}'), array($this->kind, $this->id), '/v1/configuration/{kind}/{id}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, \Http\Message\StreamFactory $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return array(array(), null);
     }
@@ -40,7 +40,7 @@ class ConfigurationDelete extends \Jane\OpenApiRuntime\Client\BaseEndpoint imple
      *
      * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationDeleteResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError
      */
-    protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
+    protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveConfigurationDeleteResponse', 'json');

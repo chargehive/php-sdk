@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ProtobufAny implements \JsonSerializable
+class ProtobufAny
 {
     /**
     * A URL/resource name that uniquely identifies the type of the serialized
@@ -73,7 +73,7 @@ class ProtobufAny implements \JsonSerializable
     *
     * @return string
     */
-    public function getTypeUrl()
+    public function getTypeUrl() : string
     {
         return $this->typeUrl;
     }
@@ -110,7 +110,7 @@ class ProtobufAny implements \JsonSerializable
     *
     * @return self
     */
-    public function setTypeUrl(string $typeUrl)
+    public function setTypeUrl(string $typeUrl) : self
     {
         $this->typeUrl = $typeUrl;
         return $this;
@@ -120,7 +120,7 @@ class ProtobufAny implements \JsonSerializable
      *
      * @return string
      */
-    public function getValue()
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -131,13 +131,9 @@ class ProtobufAny implements \JsonSerializable
      *
      * @return self
      */
-    public function setValue(string $value)
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['typeUrl' => $this->typeUrl, 'value' => $this->value];
     }
 }

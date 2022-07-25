@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeChargeItem implements \JsonSerializable
+class ChtypeChargeItem
 {
     /**
      * 
@@ -117,7 +117,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getSubscriptionId()
+    public function getSubscriptionId() : string
     {
         return $this->subscriptionId;
     }
@@ -128,7 +128,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setSubscriptionId(string $subscriptionId)
+    public function setSubscriptionId(string $subscriptionId) : self
     {
         $this->subscriptionId = $subscriptionId;
         return $this;
@@ -138,7 +138,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return int
      */
-    public function getRenewalNumber()
+    public function getRenewalNumber() : int
     {
         return $this->renewalNumber;
     }
@@ -149,7 +149,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setRenewalNumber(int $renewalNumber)
+    public function setRenewalNumber(int $renewalNumber) : self
     {
         $this->renewalNumber = $renewalNumber;
         return $this;
@@ -159,7 +159,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getDuration()
+    public function getDuration() : string
     {
         return $this->duration;
     }
@@ -170,7 +170,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setDuration(string $duration)
+    public function setDuration(string $duration) : self
     {
         $this->duration = $duration;
         return $this;
@@ -180,7 +180,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return \DateTime
      */
-    public function getStartDate()
+    public function getStartDate() : \DateTime
     {
         return $this->startDate;
     }
@@ -191,7 +191,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setStartDate(\DateTime $startDate)
+    public function setStartDate(\DateTime $startDate) : self
     {
         $this->startDate = $startDate;
         return $this;
@@ -201,7 +201,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return \DateTime
      */
-    public function getEndDate()
+    public function getEndDate() : \DateTime
     {
         return $this->endDate;
     }
@@ -212,7 +212,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setEndDate(\DateTime $endDate)
+    public function setEndDate(\DateTime $endDate) : self
     {
         $this->endDate = $endDate;
         return $this;
@@ -222,7 +222,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getProductType()
+    public function getProductType() : string
     {
         return $this->productType;
     }
@@ -233,7 +233,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setProductType(string $productType)
+    public function setProductType(string $productType) : self
     {
         $this->productType = $productType;
         return $this;
@@ -243,7 +243,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getSkuType()
+    public function getSkuType() : string
     {
         return $this->skuType;
     }
@@ -254,7 +254,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setSkuType(string $skuType)
+    public function setSkuType(string $skuType) : self
     {
         $this->skuType = $skuType;
         return $this;
@@ -264,7 +264,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return ChtypeDelivery
      */
-    public function getDelivery()
+    public function getDelivery() : ChtypeDelivery
     {
         return $this->delivery;
     }
@@ -275,7 +275,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setDelivery(ChtypeDelivery $delivery)
+    public function setDelivery(ChtypeDelivery $delivery) : self
     {
         $this->delivery = $delivery;
         return $this;
@@ -285,7 +285,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getQuantity()
+    public function getQuantity() : string
     {
         return $this->quantity;
     }
@@ -296,7 +296,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setQuantity(string $quantity)
+    public function setQuantity(string $quantity) : self
     {
         $this->quantity = $quantity;
         return $this;
@@ -306,7 +306,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return ChtypeAmount
      */
-    public function getUnitPrice()
+    public function getUnitPrice() : ChtypeAmount
     {
         return $this->unitPrice;
     }
@@ -317,7 +317,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setUnitPrice(ChtypeAmount $unitPrice)
+    public function setUnitPrice(ChtypeAmount $unitPrice) : self
     {
         $this->unitPrice = $unitPrice;
         return $this;
@@ -327,7 +327,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return ChtypeAmount
      */
-    public function getTaxAmount()
+    public function getTaxAmount() : ChtypeAmount
     {
         return $this->taxAmount;
     }
@@ -338,7 +338,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setTaxAmount(ChtypeAmount $taxAmount)
+    public function setTaxAmount(ChtypeAmount $taxAmount) : self
     {
         $this->taxAmount = $taxAmount;
         return $this;
@@ -348,7 +348,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return ChtypeAmount
      */
-    public function getDiscountAmount()
+    public function getDiscountAmount() : ChtypeAmount
     {
         return $this->discountAmount;
     }
@@ -359,7 +359,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setDiscountAmount(ChtypeAmount $discountAmount)
+    public function setDiscountAmount(ChtypeAmount $discountAmount) : self
     {
         $this->discountAmount = $discountAmount;
         return $this;
@@ -369,7 +369,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getName()
+    public function getName() : string
     {
         return $this->name;
     }
@@ -380,7 +380,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setName(string $name)
+    public function setName(string $name) : self
     {
         $this->name = $name;
         return $this;
@@ -390,7 +390,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getDescription()
+    public function getDescription() : string
     {
         return $this->description;
     }
@@ -401,7 +401,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setDescription(string $description)
+    public function setDescription(string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -411,7 +411,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getProductCode()
+    public function getProductCode() : string
     {
         return $this->productCode;
     }
@@ -422,7 +422,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setProductCode(string $productCode)
+    public function setProductCode(string $productCode) : self
     {
         $this->productCode = $productCode;
         return $this;
@@ -432,7 +432,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getSkuCode()
+    public function getSkuCode() : string
     {
         return $this->skuCode;
     }
@@ -443,7 +443,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setSkuCode(string $skuCode)
+    public function setSkuCode(string $skuCode) : self
     {
         $this->skuCode = $skuCode;
         return $this;
@@ -453,7 +453,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getTermUnits()
+    public function getTermUnits() : string
     {
         return $this->termUnits;
     }
@@ -464,7 +464,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setTermUnits(string $termUnits)
+    public function setTermUnits(string $termUnits) : self
     {
         $this->termUnits = $termUnits;
         return $this;
@@ -474,7 +474,7 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getTermType()
+    public function getTermType() : string
     {
         return $this->termType;
     }
@@ -485,13 +485,9 @@ class ChtypeChargeItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setTermType(string $termType)
+    public function setTermType(string $termType) : self
     {
         $this->termType = $termType;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['subscriptionId' => $this->subscriptionId, 'renewalNumber' => $this->renewalNumber, 'duration' => $this->duration, 'startDate' => $this->startDate, 'endDate' => $this->endDate, 'productType' => $this->productType, 'skuType' => $this->skuType, 'delivery' => $this->delivery, 'quantity' => $this->quantity, 'unitPrice' => $this->unitPrice, 'taxAmount' => $this->taxAmount, 'discountAmount' => $this->discountAmount, 'name' => $this->name, 'description' => $this->description, 'productCode' => $this->productCode, 'skuCode' => $this->skuCode, 'termUnits' => $this->termUnits, 'termType' => $this->termType];
     }
 }

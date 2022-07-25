@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Endpoint;
 
-class MethodUnlock extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\OpenApiRuntime\Client\Psr7HttplugEndpoint
+class MethodUnlock extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\OpenApiRuntime\Client\Psr7Endpoint
 {
     protected $method_id;
     /**
@@ -16,7 +16,7 @@ class MethodUnlock extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \
         $this->method_id = $methodId;
         $this->body = $body;
     }
-    use \Jane\OpenApiRuntime\Client\Psr7HttplugEndpointTrait;
+    use \Jane\OpenApiRuntime\Client\Psr7EndpointTrait;
     public function getMethod() : string
     {
         return 'PUT';
@@ -25,7 +25,7 @@ class MethodUnlock extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \
     {
         return str_replace(array('{method_id}'), array($this->method_id), '/v1/method/unlock/{method_id}');
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, \Http\Message\StreamFactory $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
@@ -39,7 +39,7 @@ class MethodUnlock extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \
      *
      * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError
      */
-    protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
+    protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodUnlockResponse', 'json');

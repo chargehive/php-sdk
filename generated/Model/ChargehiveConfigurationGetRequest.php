@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveConfigurationGetRequest implements \JsonSerializable
+class ChargehiveConfigurationGetRequest
 {
     /**
      * 
@@ -21,7 +21,7 @@ class ChargehiveConfigurationGetRequest implements \JsonSerializable
      *
      * @return string
      */
-    public function getKind()
+    public function getKind() : string
     {
         return $this->kind;
     }
@@ -32,7 +32,7 @@ class ChargehiveConfigurationGetRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setKind(string $kind)
+    public function setKind(string $kind) : self
     {
         $this->kind = $kind;
         return $this;
@@ -42,7 +42,7 @@ class ChargehiveConfigurationGetRequest implements \JsonSerializable
      *
      * @return string
      */
-    public function getId()
+    public function getId() : string
     {
         return $this->id;
     }
@@ -53,13 +53,9 @@ class ChargehiveConfigurationGetRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setId(string $id)
+    public function setId(string $id) : self
     {
         $this->id = $id;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['kind' => $this->kind, 'id' => $this->id];
     }
 }

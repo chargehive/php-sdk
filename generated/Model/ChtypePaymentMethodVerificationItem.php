@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypePaymentMethodVerificationItem implements \JsonSerializable
+class ChtypePaymentMethodVerificationItem
 {
     /**
      * 
@@ -31,9 +31,15 @@ class ChtypePaymentMethodVerificationItem implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $name;
+    /**
+     * 
+     *
      * @return string
      */
-    public function getType()
+    public function getType() : string
     {
         return $this->type;
     }
@@ -44,7 +50,7 @@ class ChtypePaymentMethodVerificationItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setType(string $type)
+    public function setType(string $type) : self
     {
         $this->type = $type;
         return $this;
@@ -54,7 +60,7 @@ class ChtypePaymentMethodVerificationItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getValue()
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -65,7 +71,7 @@ class ChtypePaymentMethodVerificationItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setValue(string $value)
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;
@@ -75,7 +81,7 @@ class ChtypePaymentMethodVerificationItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getTransportKeyId()
+    public function getTransportKeyId() : string
     {
         return $this->transportKeyId;
     }
@@ -86,7 +92,7 @@ class ChtypePaymentMethodVerificationItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setTransportKeyId(string $transportKeyId)
+    public function setTransportKeyId(string $transportKeyId) : self
     {
         $this->transportKeyId = $transportKeyId;
         return $this;
@@ -96,7 +102,7 @@ class ChtypePaymentMethodVerificationItem implements \JsonSerializable
      *
      * @return bool
      */
-    public function getIsError()
+    public function getIsError() : bool
     {
         return $this->isError;
     }
@@ -107,13 +113,30 @@ class ChtypePaymentMethodVerificationItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setIsError(bool $isError)
+    public function setIsError(bool $isError) : self
     {
         $this->isError = $isError;
         return $this;
     }
-    public function jsonSerialize()
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getName() : string
     {
-        return ['type' => $this->type, 'value' => $this->value, 'transportKeyId' => $this->transportKeyId, 'isError' => $this->isError];
+        return $this->name;
+    }
+    /**
+     * 
+     *
+     * @param string $name
+     *
+     * @return self
+     */
+    public function setName(string $name) : self
+    {
+        $this->name = $name;
+        return $this;
     }
 }

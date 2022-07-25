@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehivePCIBTokenizeResponse implements \JsonSerializable
+class ChargehivePCIBTokenizeResponse
 {
     /**
      * 
@@ -33,7 +33,7 @@ class ChargehivePCIBTokenizeResponse implements \JsonSerializable
      *
      * @return string
      */
-    public function getTokenID()
+    public function getTokenID() : string
     {
         return $this->tokenID;
     }
@@ -44,7 +44,7 @@ class ChargehivePCIBTokenizeResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setTokenID(string $tokenID)
+    public function setTokenID(string $tokenID) : self
     {
         $this->tokenID = $tokenID;
         return $this;
@@ -54,7 +54,7 @@ class ChargehivePCIBTokenizeResponse implements \JsonSerializable
      *
      * @return string
      */
-    public function getToken()
+    public function getToken() : string
     {
         return $this->token;
     }
@@ -65,7 +65,7 @@ class ChargehivePCIBTokenizeResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setToken(string $token)
+    public function setToken(string $token) : self
     {
         $this->token = $token;
         return $this;
@@ -75,7 +75,7 @@ class ChargehivePCIBTokenizeResponse implements \JsonSerializable
      *
      * @return string
      */
-    public function getProfileFingerprint()
+    public function getProfileFingerprint() : string
     {
         return $this->profileFingerprint;
     }
@@ -86,7 +86,7 @@ class ChargehivePCIBTokenizeResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setProfileFingerprint(string $profileFingerprint)
+    public function setProfileFingerprint(string $profileFingerprint) : self
     {
         $this->profileFingerprint = $profileFingerprint;
         return $this;
@@ -96,7 +96,7 @@ class ChargehivePCIBTokenizeResponse implements \JsonSerializable
      *
      * @return string
      */
-    public function getMerchantFingerprint()
+    public function getMerchantFingerprint() : string
     {
         return $this->merchantFingerprint;
     }
@@ -107,13 +107,9 @@ class ChargehivePCIBTokenizeResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setMerchantFingerprint(string $merchantFingerprint)
+    public function setMerchantFingerprint(string $merchantFingerprint) : self
     {
         $this->merchantFingerprint = $merchantFingerprint;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['tokenID' => $this->tokenID, 'token' => $this->token, 'profileFingerprint' => $this->profileFingerprint, 'merchantFingerprint' => $this->merchantFingerprint];
     }
 }

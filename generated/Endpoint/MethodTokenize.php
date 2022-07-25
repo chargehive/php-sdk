@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Endpoint;
 
-class MethodTokenize extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\OpenApiRuntime\Client\Psr7HttplugEndpoint
+class MethodTokenize extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements \Jane\OpenApiRuntime\Client\Psr7Endpoint
 {
     /**
      * 
@@ -13,7 +13,7 @@ class MethodTokenize extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements
     {
         $this->body = $body;
     }
-    use \Jane\OpenApiRuntime\Client\Psr7HttplugEndpointTrait;
+    use \Jane\OpenApiRuntime\Client\Psr7EndpointTrait;
     public function getMethod() : string
     {
         return 'POST';
@@ -22,7 +22,7 @@ class MethodTokenize extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements
     {
         return '/v1/method/tokenize';
     }
-    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, \Http\Message\StreamFactory $streamFactory = null) : array
+    public function getBody(\Symfony\Component\Serializer\SerializerInterface $serializer, $streamFactory = null) : array
     {
         return $this->getSerializedBody($serializer);
     }
@@ -36,7 +36,7 @@ class MethodTokenize extends \Jane\OpenApiRuntime\Client\BaseEndpoint implements
      *
      * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodTokenizeResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError
      */
-    protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType = null)
+    protected function transformResponseBody(string $body, int $status, \Symfony\Component\Serializer\SerializerInterface $serializer, ?string $contentType)
     {
         if (200 === $status) {
             return $serializer->deserialize($body, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodTokenizeResponse', 'json');

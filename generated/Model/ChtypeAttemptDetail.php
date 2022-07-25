@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeAttemptDetail implements \JsonSerializable
+class ChtypeAttemptDetail
 {
     /**
      * 
@@ -45,7 +45,7 @@ class ChtypeAttemptDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getChargeTransactionNumber()
+    public function getChargeTransactionNumber() : string
     {
         return $this->chargeTransactionNumber;
     }
@@ -56,7 +56,7 @@ class ChtypeAttemptDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setChargeTransactionNumber(string $chargeTransactionNumber)
+    public function setChargeTransactionNumber(string $chargeTransactionNumber) : self
     {
         $this->chargeTransactionNumber = $chargeTransactionNumber;
         return $this;
@@ -66,7 +66,7 @@ class ChtypeAttemptDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getChargeAttemptNumber()
+    public function getChargeAttemptNumber() : string
     {
         return $this->chargeAttemptNumber;
     }
@@ -77,7 +77,7 @@ class ChtypeAttemptDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setChargeAttemptNumber(string $chargeAttemptNumber)
+    public function setChargeAttemptNumber(string $chargeAttemptNumber) : self
     {
         $this->chargeAttemptNumber = $chargeAttemptNumber;
         return $this;
@@ -87,7 +87,7 @@ class ChtypeAttemptDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getAttemptTransactionNumber()
+    public function getAttemptTransactionNumber() : string
     {
         return $this->attemptTransactionNumber;
     }
@@ -98,7 +98,7 @@ class ChtypeAttemptDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setAttemptTransactionNumber(string $attemptTransactionNumber)
+    public function setAttemptTransactionNumber(string $attemptTransactionNumber) : self
     {
         $this->attemptTransactionNumber = $attemptTransactionNumber;
         return $this;
@@ -108,7 +108,7 @@ class ChtypeAttemptDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getAttemptMethodCascade()
+    public function getAttemptMethodCascade() : string
     {
         return $this->attemptMethodCascade;
     }
@@ -119,7 +119,7 @@ class ChtypeAttemptDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setAttemptMethodCascade(string $attemptMethodCascade)
+    public function setAttemptMethodCascade(string $attemptMethodCascade) : self
     {
         $this->attemptMethodCascade = $attemptMethodCascade;
         return $this;
@@ -129,7 +129,7 @@ class ChtypeAttemptDetail implements \JsonSerializable
      *
      * @return string
      */
-    public function getAttemptConnectorCascade()
+    public function getAttemptConnectorCascade() : string
     {
         return $this->attemptConnectorCascade;
     }
@@ -140,7 +140,7 @@ class ChtypeAttemptDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setAttemptConnectorCascade(string $attemptConnectorCascade)
+    public function setAttemptConnectorCascade(string $attemptConnectorCascade) : self
     {
         $this->attemptConnectorCascade = $attemptConnectorCascade;
         return $this;
@@ -150,7 +150,7 @@ class ChtypeAttemptDetail implements \JsonSerializable
      *
      * @return bool
      */
-    public function getIsPrimaryMethod()
+    public function getIsPrimaryMethod() : bool
     {
         return $this->isPrimaryMethod;
     }
@@ -161,13 +161,9 @@ class ChtypeAttemptDetail implements \JsonSerializable
      *
      * @return self
      */
-    public function setIsPrimaryMethod(bool $isPrimaryMethod)
+    public function setIsPrimaryMethod(bool $isPrimaryMethod) : self
     {
         $this->isPrimaryMethod = $isPrimaryMethod;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['chargeTransactionNumber' => $this->chargeTransactionNumber, 'chargeAttemptNumber' => $this->chargeAttemptNumber, 'attemptTransactionNumber' => $this->attemptTransactionNumber, 'attemptMethodCascade' => $this->attemptMethodCascade, 'attemptConnectorCascade' => $this->attemptConnectorCascade, 'isPrimaryMethod' => $this->isPrimaryMethod];
     }
 }

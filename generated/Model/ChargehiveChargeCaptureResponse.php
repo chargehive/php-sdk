@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveChargeCaptureResponse implements \JsonSerializable
+class ChargehiveChargeCaptureResponse
 {
     /**
      * 
@@ -19,9 +19,15 @@ class ChargehiveChargeCaptureResponse implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $message;
+    /**
+     * 
+     *
      * @return bool
      */
-    public function getAcknowledged()
+    public function getAcknowledged() : bool
     {
         return $this->acknowledged;
     }
@@ -32,7 +38,7 @@ class ChargehiveChargeCaptureResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setAcknowledged(bool $acknowledged)
+    public function setAcknowledged(bool $acknowledged) : self
     {
         $this->acknowledged = $acknowledged;
         return $this;
@@ -42,7 +48,7 @@ class ChargehiveChargeCaptureResponse implements \JsonSerializable
      *
      * @return string
      */
-    public function getProcessId()
+    public function getProcessId() : string
     {
         return $this->processId;
     }
@@ -53,13 +59,30 @@ class ChargehiveChargeCaptureResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setProcessId(string $processId)
+    public function setProcessId(string $processId) : self
     {
         $this->processId = $processId;
         return $this;
     }
-    public function jsonSerialize()
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getMessage() : string
     {
-        return ['acknowledged' => $this->acknowledged, 'processId' => $this->processId];
+        return $this->message;
+    }
+    /**
+     * 
+     *
+     * @param string $message
+     *
+     * @return self
+     */
+    public function setMessage(string $message) : self
+    {
+        $this->message = $message;
+        return $this;
     }
 }

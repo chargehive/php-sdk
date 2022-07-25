@@ -20,12 +20,12 @@ class ChargehiveConfigurationDeleteResponseNormalizer implements DenormalizerInt
     }
     public function supportsNormalization($data, $format = null)
     {
-        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveConfigurationDeleteResponse';
+        return is_object($data) && get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveConfigurationDeleteResponse';
     }
     public function denormalize($data, $class, $format = null, array $context = array())
     {
         if (!is_object($data)) {
-            throw new InvalidArgumentException();
+            throw new InvalidArgumentException(sprintf('Given $data is not an object (%s given). We need an object in order to continue denormalize method.', gettype($data)));
         }
         $object = new \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationDeleteResponse();
         if (property_exists($data, 'success')) {

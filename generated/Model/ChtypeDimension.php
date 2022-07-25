@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeDimension implements \JsonSerializable
+class ChtypeDimension
 {
     /**
      * 
@@ -21,7 +21,7 @@ class ChtypeDimension implements \JsonSerializable
      *
      * @return int
      */
-    public function getWidth()
+    public function getWidth() : int
     {
         return $this->width;
     }
@@ -32,7 +32,7 @@ class ChtypeDimension implements \JsonSerializable
      *
      * @return self
      */
-    public function setWidth(int $width)
+    public function setWidth(int $width) : self
     {
         $this->width = $width;
         return $this;
@@ -42,7 +42,7 @@ class ChtypeDimension implements \JsonSerializable
      *
      * @return int
      */
-    public function getHeight()
+    public function getHeight() : int
     {
         return $this->height;
     }
@@ -53,13 +53,9 @@ class ChtypeDimension implements \JsonSerializable
      *
      * @return self
      */
-    public function setHeight(int $height)
+    public function setHeight(int $height) : self
     {
         $this->height = $height;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['width' => $this->width, 'height' => $this->height];
     }
 }

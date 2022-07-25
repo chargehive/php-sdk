@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveTransportKeyRetrieveResponse implements \JsonSerializable
+class ChargehiveTransportKeyRetrieveResponse
 {
     /**
      * 
@@ -27,7 +27,7 @@ class ChargehiveTransportKeyRetrieveResponse implements \JsonSerializable
      *
      * @return bool
      */
-    public function getSuccess()
+    public function getSuccess() : bool
     {
         return $this->success;
     }
@@ -38,7 +38,7 @@ class ChargehiveTransportKeyRetrieveResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setSuccess(bool $success)
+    public function setSuccess(bool $success) : self
     {
         $this->success = $success;
         return $this;
@@ -48,7 +48,7 @@ class ChargehiveTransportKeyRetrieveResponse implements \JsonSerializable
      *
      * @return string
      */
-    public function getTransportKeyId()
+    public function getTransportKeyId() : string
     {
         return $this->transportKeyId;
     }
@@ -59,7 +59,7 @@ class ChargehiveTransportKeyRetrieveResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setTransportKeyId(string $transportKeyId)
+    public function setTransportKeyId(string $transportKeyId) : self
     {
         $this->transportKeyId = $transportKeyId;
         return $this;
@@ -69,7 +69,7 @@ class ChargehiveTransportKeyRetrieveResponse implements \JsonSerializable
      *
      * @return string
      */
-    public function getPublicKey()
+    public function getPublicKey() : string
     {
         return $this->publicKey;
     }
@@ -80,13 +80,9 @@ class ChargehiveTransportKeyRetrieveResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setPublicKey(string $publicKey)
+    public function setPublicKey(string $publicKey) : self
     {
         $this->publicKey = $publicKey;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['success' => $this->success, 'transportKeyId' => $this->transportKeyId, 'publicKey' => $this->publicKey];
     }
 }

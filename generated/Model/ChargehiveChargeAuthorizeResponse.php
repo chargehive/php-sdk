@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveChargeAuthorizeResponse implements \JsonSerializable
+class ChargehiveChargeAuthorizeResponse
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveChargeAuthorizeResponse implements \JsonSerializable
      *
      * @return ChtypeTransaction
      */
-    public function getTransaction()
+    public function getTransaction() : ChtypeTransaction
     {
         return $this->transaction;
     }
@@ -26,13 +26,9 @@ class ChargehiveChargeAuthorizeResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setTransaction(ChtypeTransaction $transaction)
+    public function setTransaction(ChtypeTransaction $transaction) : self
     {
         $this->transaction = $transaction;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['transaction' => $this->transaction];
     }
 }

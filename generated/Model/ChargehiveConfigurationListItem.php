@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveConfigurationListItem implements \JsonSerializable
+class ChargehiveConfigurationListItem
 {
     /**
      * 
@@ -33,7 +33,7 @@ class ChargehiveConfigurationListItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getKind()
+    public function getKind() : string
     {
         return $this->kind;
     }
@@ -44,7 +44,7 @@ class ChargehiveConfigurationListItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setKind(string $kind)
+    public function setKind(string $kind) : self
     {
         $this->kind = $kind;
         return $this;
@@ -54,7 +54,7 @@ class ChargehiveConfigurationListItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getId()
+    public function getId() : string
     {
         return $this->id;
     }
@@ -65,7 +65,7 @@ class ChargehiveConfigurationListItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setId(string $id)
+    public function setId(string $id) : self
     {
         $this->id = $id;
         return $this;
@@ -75,7 +75,7 @@ class ChargehiveConfigurationListItem implements \JsonSerializable
      *
      * @return string
      */
-    public function getDescription()
+    public function getDescription() : string
     {
         return $this->description;
     }
@@ -86,7 +86,7 @@ class ChargehiveConfigurationListItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setDescription(string $description)
+    public function setDescription(string $description) : self
     {
         $this->description = $description;
         return $this;
@@ -96,7 +96,7 @@ class ChargehiveConfigurationListItem implements \JsonSerializable
      *
      * @return bool
      */
-    public function getDisabled()
+    public function getDisabled() : bool
     {
         return $this->disabled;
     }
@@ -107,13 +107,9 @@ class ChargehiveConfigurationListItem implements \JsonSerializable
      *
      * @return self
      */
-    public function setDisabled(bool $disabled)
+    public function setDisabled(bool $disabled) : self
     {
         $this->disabled = $disabled;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['kind' => $this->kind, 'id' => $this->id, 'description' => $this->description, 'disabled' => $this->disabled];
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeAmount implements \JsonSerializable
+class ChtypeAmount
 {
     /**
      * 
@@ -21,7 +21,7 @@ class ChtypeAmount implements \JsonSerializable
      *
      * @return string
      */
-    public function getUnits()
+    public function getUnits() : string
     {
         return $this->units;
     }
@@ -32,7 +32,7 @@ class ChtypeAmount implements \JsonSerializable
      *
      * @return self
      */
-    public function setUnits(string $units)
+    public function setUnits(string $units) : self
     {
         $this->units = $units;
         return $this;
@@ -42,7 +42,7 @@ class ChtypeAmount implements \JsonSerializable
      *
      * @return string
      */
-    public function getCurrency()
+    public function getCurrency() : string
     {
         return $this->currency;
     }
@@ -53,13 +53,9 @@ class ChtypeAmount implements \JsonSerializable
      *
      * @return self
      */
-    public function setCurrency(string $currency)
+    public function setCurrency(string $currency) : self
     {
         $this->currency = $currency;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['units' => $this->units, 'currency' => $this->currency];
     }
 }

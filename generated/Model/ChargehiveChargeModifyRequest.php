@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveChargeModifyRequest implements \JsonSerializable
+class ChargehiveChargeModifyRequest
 {
     /**
      * 
@@ -51,7 +51,7 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return string
      */
-    public function getChargeId()
+    public function getChargeId() : string
     {
         return $this->chargeId;
     }
@@ -62,7 +62,7 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setChargeId(string $chargeId)
+    public function setChargeId(string $chargeId) : self
     {
         $this->chargeId = $chargeId;
         return $this;
@@ -72,7 +72,7 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return ChtypeAmount
      */
-    public function getAmount()
+    public function getAmount() : ChtypeAmount
     {
         return $this->amount;
     }
@@ -83,7 +83,7 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setAmount(ChtypeAmount $amount)
+    public function setAmount(ChtypeAmount $amount) : self
     {
         $this->amount = $amount;
         return $this;
@@ -93,7 +93,7 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return string[]
      */
-    public function getPaymentMethodIds()
+    public function getPaymentMethodIds() : array
     {
         return $this->paymentMethodIds;
     }
@@ -104,7 +104,7 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setPaymentMethodIds(array $paymentMethodIds)
+    public function setPaymentMethodIds(array $paymentMethodIds) : self
     {
         $this->paymentMethodIds = $paymentMethodIds;
         return $this;
@@ -114,7 +114,7 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return \DateTime
      */
-    public function getExpiryTime()
+    public function getExpiryTime() : \DateTime
     {
         return $this->expiryTime;
     }
@@ -125,7 +125,7 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setExpiryTime(\DateTime $expiryTime)
+    public function setExpiryTime(\DateTime $expiryTime) : self
     {
         $this->expiryTime = $expiryTime;
         return $this;
@@ -135,7 +135,7 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return ChtypeChargeMeta
      */
-    public function getChargeMeta()
+    public function getChargeMeta() : ChtypeChargeMeta
     {
         return $this->chargeMeta;
     }
@@ -146,7 +146,7 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setChargeMeta(ChtypeChargeMeta $chargeMeta)
+    public function setChargeMeta(ChtypeChargeMeta $chargeMeta) : self
     {
         $this->chargeMeta = $chargeMeta;
         return $this;
@@ -156,7 +156,7 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return string
      */
-    public function getChargeMetaType()
+    public function getChargeMetaType() : string
     {
         return $this->chargeMetaType;
     }
@@ -167,7 +167,7 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setChargeMetaType(string $chargeMetaType)
+    public function setChargeMetaType(string $chargeMetaType) : self
     {
         $this->chargeMetaType = $chargeMetaType;
         return $this;
@@ -177,7 +177,7 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return ChargehivechtypeLabel[]
      */
-    public function getLabels()
+    public function getLabels() : array
     {
         return $this->labels;
     }
@@ -188,13 +188,9 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
      *
      * @return self
      */
-    public function setLabels(array $labels)
+    public function setLabels(array $labels) : self
     {
         $this->labels = $labels;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'chargeMeta' => $this->chargeMeta, 'chargeMetaType' => $this->chargeMetaType, 'labels' => $this->labels];
     }
 }

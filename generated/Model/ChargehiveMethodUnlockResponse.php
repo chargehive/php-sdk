@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveMethodUnlockResponse implements \JsonSerializable
+class ChargehiveMethodUnlockResponse
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveMethodUnlockResponse implements \JsonSerializable
      *
      * @return bool
      */
-    public function getAcknowledged()
+    public function getAcknowledged() : bool
     {
         return $this->acknowledged;
     }
@@ -26,13 +26,9 @@ class ChargehiveMethodUnlockResponse implements \JsonSerializable
      *
      * @return self
      */
-    public function setAcknowledged(bool $acknowledged)
+    public function setAcknowledged(bool $acknowledged) : self
     {
         $this->acknowledged = $acknowledged;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['acknowledged' => $this->acknowledged];
     }
 }

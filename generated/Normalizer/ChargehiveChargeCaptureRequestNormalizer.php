@@ -20,12 +20,12 @@ class ChargehiveChargeCaptureRequestNormalizer implements DenormalizerInterface,
     }
     public function supportsNormalization($data, $format = null)
     {
-        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveChargeCaptureRequest';
+        return is_object($data) && get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveChargeCaptureRequest';
     }
     public function denormalize($data, $class, $format = null, array $context = array())
     {
         if (!is_object($data)) {
-            throw new InvalidArgumentException();
+            throw new InvalidArgumentException(sprintf('Given $data is not an object (%s given). We need an object in order to continue denormalize method.', gettype($data)));
         }
         $object = new \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeCaptureRequest();
         if (property_exists($data, 'charge_id')) {
@@ -33,6 +33,9 @@ class ChargehiveChargeCaptureRequestNormalizer implements DenormalizerInterface,
         }
         if (property_exists($data, 'amount')) {
             $object->setAmount($this->denormalizer->denormalize($data->{'amount'}, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypeAmount', 'json', $context));
+        }
+        if (property_exists($data, 'initial_transaction_id')) {
+            $object->setInitialTransactionId($data->{'initial_transaction_id'});
         }
         return $object;
     }
@@ -44,6 +47,9 @@ class ChargehiveChargeCaptureRequestNormalizer implements DenormalizerInterface,
         }
         if (null !== $object->getAmount()) {
             $data->{'amount'} = $this->normalizer->normalize($object->getAmount(), 'json', $context);
+        }
+        if (null !== $object->getInitialTransactionId()) {
+            $data->{'initial_transaction_id'} = $object->getInitialTransactionId();
         }
         return $data;
     }

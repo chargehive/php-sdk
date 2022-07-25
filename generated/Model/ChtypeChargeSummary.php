@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeChargeSummary implements \JsonSerializable
+class ChtypeChargeSummary
 {
     /**
      * 
@@ -21,7 +21,7 @@ class ChtypeChargeSummary implements \JsonSerializable
      *
      * @return ChtypeAmount
      */
-    public function getAmount()
+    public function getAmount() : ChtypeAmount
     {
         return $this->amount;
     }
@@ -32,7 +32,7 @@ class ChtypeChargeSummary implements \JsonSerializable
      *
      * @return self
      */
-    public function setAmount(ChtypeAmount $amount)
+    public function setAmount(ChtypeAmount $amount) : self
     {
         $this->amount = $amount;
         return $this;
@@ -42,7 +42,7 @@ class ChtypeChargeSummary implements \JsonSerializable
      *
      * @return string
      */
-    public function getStatus()
+    public function getStatus() : string
     {
         return $this->status;
     }
@@ -53,13 +53,9 @@ class ChtypeChargeSummary implements \JsonSerializable
      *
      * @return self
      */
-    public function setStatus(string $status)
+    public function setStatus(string $status) : self
     {
         $this->status = $status;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['amount' => $this->amount, 'status' => $this->status];
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveStringTransport implements \JsonSerializable
+class ChargehiveStringTransport
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveStringTransport implements \JsonSerializable
      *
      * @return string
      */
-    public function getValue()
+    public function getValue() : string
     {
         return $this->value;
     }
@@ -26,13 +26,9 @@ class ChargehiveStringTransport implements \JsonSerializable
      *
      * @return self
      */
-    public function setValue(string $value)
+    public function setValue(string $value) : self
     {
         $this->value = $value;
         return $this;
-    }
-    public function jsonSerialize()
-    {
-        return ['value' => $this->value];
     }
 }
