@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeVerificationResult
+class ChtypeVerificationResult implements \JsonSerializable
 {
     /**
      * 
@@ -33,7 +33,7 @@ class ChtypeVerificationResult
      *
      * @return string
      */
-    public function getAddressVerificationResult() : string
+    public function getAddressVerificationResult()
     {
         return $this->addressVerificationResult;
     }
@@ -44,7 +44,7 @@ class ChtypeVerificationResult
      *
      * @return self
      */
-    public function setAddressVerificationResult(string $addressVerificationResult) : self
+    public function setAddressVerificationResult(string $addressVerificationResult)
     {
         $this->addressVerificationResult = $addressVerificationResult;
         return $this;
@@ -54,7 +54,7 @@ class ChtypeVerificationResult
      *
      * @return string
      */
-    public function getCvvVerificationResult() : string
+    public function getCvvVerificationResult()
     {
         return $this->cvvVerificationResult;
     }
@@ -65,7 +65,7 @@ class ChtypeVerificationResult
      *
      * @return self
      */
-    public function setCvvVerificationResult(string $cvvVerificationResult) : self
+    public function setCvvVerificationResult(string $cvvVerificationResult)
     {
         $this->cvvVerificationResult = $cvvVerificationResult;
         return $this;
@@ -75,7 +75,7 @@ class ChtypeVerificationResult
      *
      * @return string
      */
-    public function getFraudResult() : string
+    public function getFraudResult()
     {
         return $this->fraudResult;
     }
@@ -86,7 +86,7 @@ class ChtypeVerificationResult
      *
      * @return self
      */
-    public function setFraudResult(string $fraudResult) : self
+    public function setFraudResult(string $fraudResult)
     {
         $this->fraudResult = $fraudResult;
         return $this;
@@ -96,7 +96,7 @@ class ChtypeVerificationResult
      *
      * @return ChtypeThreeDSResult
      */
-    public function getThreedsResult() : ChtypeThreeDSResult
+    public function getThreedsResult()
     {
         return $this->threedsResult;
     }
@@ -107,9 +107,13 @@ class ChtypeVerificationResult
      *
      * @return self
      */
-    public function setThreedsResult(ChtypeThreeDSResult $threedsResult) : self
+    public function setThreedsResult(ChtypeThreeDSResult $threedsResult)
     {
         $this->threedsResult = $threedsResult;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['addressVerificationResult' => $this->addressVerificationResult, 'cvvVerificationResult' => $this->cvvVerificationResult, 'fraudResult' => $this->fraudResult, 'threedsResult' => $this->threedsResult];
     }
 }

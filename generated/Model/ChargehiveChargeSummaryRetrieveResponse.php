@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveChargeSummaryRetrieveResponse
+class ChargehiveChargeSummaryRetrieveResponse implements \JsonSerializable
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveChargeSummaryRetrieveResponse
      *
      * @return ChtypeChargeSummary
      */
-    public function getChargeSummary() : ChtypeChargeSummary
+    public function getChargeSummary()
     {
         return $this->chargeSummary;
     }
@@ -26,9 +26,13 @@ class ChargehiveChargeSummaryRetrieveResponse
      *
      * @return self
      */
-    public function setChargeSummary(ChtypeChargeSummary $chargeSummary) : self
+    public function setChargeSummary(ChtypeChargeSummary $chargeSummary)
     {
         $this->chargeSummary = $chargeSummary;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['chargeSummary' => $this->chargeSummary];
     }
 }

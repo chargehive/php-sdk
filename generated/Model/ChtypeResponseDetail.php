@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeResponseDetail
+class ChtypeResponseDetail implements \JsonSerializable
 {
     /**
      * 
@@ -63,7 +63,7 @@ class ChtypeResponseDetail
      *
      * @return string
      */
-    public function getResponseCode() : string
+    public function getResponseCode()
     {
         return $this->responseCode;
     }
@@ -74,7 +74,7 @@ class ChtypeResponseDetail
      *
      * @return self
      */
-    public function setResponseCode(string $responseCode) : self
+    public function setResponseCode(string $responseCode)
     {
         $this->responseCode = $responseCode;
         return $this;
@@ -84,7 +84,7 @@ class ChtypeResponseDetail
      *
      * @return string
      */
-    public function getConsumerMessage() : string
+    public function getConsumerMessage()
     {
         return $this->consumerMessage;
     }
@@ -95,7 +95,7 @@ class ChtypeResponseDetail
      *
      * @return self
      */
-    public function setConsumerMessage(string $consumerMessage) : self
+    public function setConsumerMessage(string $consumerMessage)
     {
         $this->consumerMessage = $consumerMessage;
         return $this;
@@ -105,7 +105,7 @@ class ChtypeResponseDetail
      *
      * @return string
      */
-    public function getMerchantMessage() : string
+    public function getMerchantMessage()
     {
         return $this->merchantMessage;
     }
@@ -116,7 +116,7 @@ class ChtypeResponseDetail
      *
      * @return self
      */
-    public function setMerchantMessage(string $merchantMessage) : self
+    public function setMerchantMessage(string $merchantMessage)
     {
         $this->merchantMessage = $merchantMessage;
         return $this;
@@ -126,7 +126,7 @@ class ChtypeResponseDetail
      *
      * @return string
      */
-    public function getFailureType() : string
+    public function getFailureType()
     {
         return $this->failureType;
     }
@@ -137,7 +137,7 @@ class ChtypeResponseDetail
      *
      * @return self
      */
-    public function setFailureType(string $failureType) : self
+    public function setFailureType(string $failureType)
     {
         $this->failureType = $failureType;
         return $this;
@@ -147,7 +147,7 @@ class ChtypeResponseDetail
      *
      * @return string
      */
-    public function getCategory() : string
+    public function getCategory()
     {
         return $this->category;
     }
@@ -158,7 +158,7 @@ class ChtypeResponseDetail
      *
      * @return self
      */
-    public function setCategory(string $category) : self
+    public function setCategory(string $category)
     {
         $this->category = $category;
         return $this;
@@ -168,7 +168,7 @@ class ChtypeResponseDetail
      *
      * @return string
      */
-    public function getErrorType() : string
+    public function getErrorType()
     {
         return $this->errorType;
     }
@@ -179,7 +179,7 @@ class ChtypeResponseDetail
      *
      * @return self
      */
-    public function setErrorType(string $errorType) : self
+    public function setErrorType(string $errorType)
     {
         $this->errorType = $errorType;
         return $this;
@@ -189,7 +189,7 @@ class ChtypeResponseDetail
      *
      * @return string[]
      */
-    public function getErrorProperties() : \ArrayObject
+    public function getErrorProperties()
     {
         return $this->errorProperties;
     }
@@ -200,7 +200,7 @@ class ChtypeResponseDetail
      *
      * @return self
      */
-    public function setErrorProperties(\ArrayObject $errorProperties) : self
+    public function setErrorProperties(\ArrayObject $errorProperties)
     {
         $this->errorProperties = $errorProperties;
         return $this;
@@ -210,7 +210,7 @@ class ChtypeResponseDetail
      *
      * @return string
      */
-    public function getOriginatingCode() : string
+    public function getOriginatingCode()
     {
         return $this->originatingCode;
     }
@@ -221,7 +221,7 @@ class ChtypeResponseDetail
      *
      * @return self
      */
-    public function setOriginatingCode(string $originatingCode) : self
+    public function setOriginatingCode(string $originatingCode)
     {
         $this->originatingCode = $originatingCode;
         return $this;
@@ -231,7 +231,7 @@ class ChtypeResponseDetail
      *
      * @return ChtypeResponseDetail[]
      */
-    public function getSpecificErrors() : array
+    public function getSpecificErrors()
     {
         return $this->specificErrors;
     }
@@ -242,9 +242,13 @@ class ChtypeResponseDetail
      *
      * @return self
      */
-    public function setSpecificErrors(array $specificErrors) : self
+    public function setSpecificErrors(array $specificErrors)
     {
         $this->specificErrors = $specificErrors;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['responseCode' => $this->responseCode, 'consumerMessage' => $this->consumerMessage, 'merchantMessage' => $this->merchantMessage, 'failureType' => $this->failureType, 'category' => $this->category, 'errorType' => $this->errorType, 'errorProperties' => $this->errorProperties, 'originatingCode' => $this->originatingCode, 'specificErrors' => $this->specificErrors];
     }
 }

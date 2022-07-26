@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveChargeResumeRequest
+class ChargehiveChargeResumeRequest implements \JsonSerializable
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveChargeResumeRequest
      *
      * @return string
      */
-    public function getChargeId() : string
+    public function getChargeId()
     {
         return $this->chargeId;
     }
@@ -26,9 +26,13 @@ class ChargehiveChargeResumeRequest
      *
      * @return self
      */
-    public function setChargeId(string $chargeId) : self
+    public function setChargeId(string $chargeId)
     {
         $this->chargeId = $chargeId;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['chargeId' => $this->chargeId];
     }
 }

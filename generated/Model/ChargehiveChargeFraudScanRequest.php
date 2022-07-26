@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveChargeFraudScanRequest
+class ChargehiveChargeFraudScanRequest implements \JsonSerializable
 {
     /**
      * 
@@ -21,7 +21,7 @@ class ChargehiveChargeFraudScanRequest
      *
      * @return string
      */
-    public function getChargeId() : string
+    public function getChargeId()
     {
         return $this->chargeId;
     }
@@ -32,7 +32,7 @@ class ChargehiveChargeFraudScanRequest
      *
      * @return self
      */
-    public function setChargeId(string $chargeId) : self
+    public function setChargeId(string $chargeId)
     {
         $this->chargeId = $chargeId;
         return $this;
@@ -42,7 +42,7 @@ class ChargehiveChargeFraudScanRequest
      *
      * @return string[]
      */
-    public function getAdditionalData() : \ArrayObject
+    public function getAdditionalData()
     {
         return $this->additionalData;
     }
@@ -53,9 +53,13 @@ class ChargehiveChargeFraudScanRequest
      *
      * @return self
      */
-    public function setAdditionalData(\ArrayObject $additionalData) : self
+    public function setAdditionalData(\ArrayObject $additionalData)
     {
         $this->additionalData = $additionalData;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['chargeId' => $this->chargeId, 'additionalData' => $this->additionalData];
     }
 }

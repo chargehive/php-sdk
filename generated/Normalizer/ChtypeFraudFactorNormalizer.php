@@ -20,12 +20,12 @@ class ChtypeFraudFactorNormalizer implements DenormalizerInterface, NormalizerIn
     }
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypeFraudFactor';
+        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypeFraudFactor';
     }
     public function denormalize($data, $class, $format = null, array $context = array())
     {
         if (!is_object($data)) {
-            throw new InvalidArgumentException(sprintf('Given $data is not an object (%s given). We need an object in order to continue denormalize method.', gettype($data)));
+            throw new InvalidArgumentException();
         }
         $object = new \ChargeHive\Php\Sdk\Generated\Model\ChtypeFraudFactor();
         if (property_exists($data, 'on')) {

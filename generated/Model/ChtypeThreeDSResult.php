@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeThreeDSResult
+class ChtypeThreeDSResult implements \JsonSerializable
 {
     /**
      * 
@@ -111,7 +111,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getEci() : string
+    public function getEci()
     {
         return $this->eci;
     }
@@ -122,7 +122,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setEci(string $eci) : self
+    public function setEci(string $eci)
     {
         $this->eci = $eci;
         return $this;
@@ -132,7 +132,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getCavv() : string
+    public function getCavv()
     {
         return $this->cavv;
     }
@@ -143,7 +143,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setCavv(string $cavv) : self
+    public function setCavv(string $cavv)
     {
         $this->cavv = $cavv;
         return $this;
@@ -153,7 +153,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getXid() : string
+    public function getXid()
     {
         return $this->xid;
     }
@@ -164,7 +164,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setXid(string $xid) : self
+    public function setXid(string $xid)
     {
         $this->xid = $xid;
         return $this;
@@ -174,7 +174,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getEnrollment() : string
+    public function getEnrollment()
     {
         return $this->enrollment;
     }
@@ -185,7 +185,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setEnrollment(string $enrollment) : self
+    public function setEnrollment(string $enrollment)
     {
         $this->enrollment = $enrollment;
         return $this;
@@ -195,7 +195,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getResult() : string
+    public function getResult()
     {
         return $this->result;
     }
@@ -206,7 +206,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setResult(string $result) : self
+    public function setResult(string $result)
     {
         $this->result = $result;
         return $this;
@@ -216,7 +216,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getSignatureStatus() : string
+    public function getSignatureStatus()
     {
         return $this->signatureStatus;
     }
@@ -227,7 +227,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setSignatureStatus(string $signatureStatus) : self
+    public function setSignatureStatus(string $signatureStatus)
     {
         $this->signatureStatus = $signatureStatus;
         return $this;
@@ -237,7 +237,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getServerTransactionId() : string
+    public function getServerTransactionId()
     {
         return $this->serverTransactionId;
     }
@@ -248,7 +248,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setServerTransactionId(string $serverTransactionId) : self
+    public function setServerTransactionId(string $serverTransactionId)
     {
         $this->serverTransactionId = $serverTransactionId;
         return $this;
@@ -258,7 +258,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getStatus() : string
+    public function getStatus()
     {
         return $this->status;
     }
@@ -269,7 +269,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setStatus(string $status) : self
+    public function setStatus(string $status)
     {
         $this->status = $status;
         return $this;
@@ -279,7 +279,7 @@ class ChtypeThreeDSResult
      *
      * @return int
      */
-    public function getMajorVersion() : int
+    public function getMajorVersion()
     {
         return $this->majorVersion;
     }
@@ -290,7 +290,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setMajorVersion(int $majorVersion) : self
+    public function setMajorVersion(int $majorVersion)
     {
         $this->majorVersion = $majorVersion;
         return $this;
@@ -300,7 +300,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getVersion() : string
+    public function getVersion()
     {
         return $this->version;
     }
@@ -311,7 +311,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setVersion(string $version) : self
+    public function setVersion(string $version)
     {
         $this->version = $version;
         return $this;
@@ -321,7 +321,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getPaReq() : string
+    public function getPaReq()
     {
         return $this->paReq;
     }
@@ -332,7 +332,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setPaReq(string $paReq) : self
+    public function setPaReq(string $paReq)
     {
         $this->paReq = $paReq;
         return $this;
@@ -342,7 +342,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getAcsUrl() : string
+    public function getAcsUrl()
     {
         return $this->acsUrl;
     }
@@ -353,7 +353,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setAcsUrl(string $acsUrl) : self
+    public function setAcsUrl(string $acsUrl)
     {
         $this->acsUrl = $acsUrl;
         return $this;
@@ -363,7 +363,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getPaRes() : string
+    public function getPaRes()
     {
         return $this->paRes;
     }
@@ -374,7 +374,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setPaRes(string $paRes) : self
+    public function setPaRes(string $paRes)
     {
         $this->paRes = $paRes;
         return $this;
@@ -384,7 +384,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getId() : string
+    public function getId()
     {
         return $this->id;
     }
@@ -395,7 +395,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setId(string $id) : self
+    public function setId(string $id)
     {
         $this->id = $id;
         return $this;
@@ -405,7 +405,7 @@ class ChtypeThreeDSResult
      *
      * @return \DateTime
      */
-    public function getTimestamp() : \DateTime
+    public function getTimestamp()
     {
         return $this->timestamp;
     }
@@ -416,7 +416,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setTimestamp(\DateTime $timestamp) : self
+    public function setTimestamp(\DateTime $timestamp)
     {
         $this->timestamp = $timestamp;
         return $this;
@@ -426,7 +426,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getLiability() : string
+    public function getLiability()
     {
         return $this->liability;
     }
@@ -437,7 +437,7 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setLiability(string $liability) : self
+    public function setLiability(string $liability)
     {
         $this->liability = $liability;
         return $this;
@@ -447,7 +447,7 @@ class ChtypeThreeDSResult
      *
      * @return string
      */
-    public function getSdkResponse() : string
+    public function getSdkResponse()
     {
         return $this->sdkResponse;
     }
@@ -458,9 +458,13 @@ class ChtypeThreeDSResult
      *
      * @return self
      */
-    public function setSdkResponse(string $sdkResponse) : self
+    public function setSdkResponse(string $sdkResponse)
     {
         $this->sdkResponse = $sdkResponse;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['eci' => $this->eci, 'cavv' => $this->cavv, 'xid' => $this->xid, 'enrollment' => $this->enrollment, 'result' => $this->result, 'signatureStatus' => $this->signatureStatus, 'serverTransactionId' => $this->serverTransactionId, 'status' => $this->status, 'majorVersion' => $this->majorVersion, 'version' => $this->version, 'paReq' => $this->paReq, 'acsUrl' => $this->acsUrl, 'paRes' => $this->paRes, 'id' => $this->id, 'timestamp' => $this->timestamp, 'liability' => $this->liability, 'sdkResponse' => $this->sdkResponse];
     }
 }

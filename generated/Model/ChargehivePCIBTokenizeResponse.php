@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehivePCIBTokenizeResponse
+class ChargehivePCIBTokenizeResponse implements \JsonSerializable
 {
     /**
      * 
@@ -33,7 +33,7 @@ class ChargehivePCIBTokenizeResponse
      *
      * @return string
      */
-    public function getTokenID() : string
+    public function getTokenID()
     {
         return $this->tokenID;
     }
@@ -44,7 +44,7 @@ class ChargehivePCIBTokenizeResponse
      *
      * @return self
      */
-    public function setTokenID(string $tokenID) : self
+    public function setTokenID(string $tokenID)
     {
         $this->tokenID = $tokenID;
         return $this;
@@ -54,7 +54,7 @@ class ChargehivePCIBTokenizeResponse
      *
      * @return string
      */
-    public function getToken() : string
+    public function getToken()
     {
         return $this->token;
     }
@@ -65,7 +65,7 @@ class ChargehivePCIBTokenizeResponse
      *
      * @return self
      */
-    public function setToken(string $token) : self
+    public function setToken(string $token)
     {
         $this->token = $token;
         return $this;
@@ -75,7 +75,7 @@ class ChargehivePCIBTokenizeResponse
      *
      * @return string
      */
-    public function getProfileFingerprint() : string
+    public function getProfileFingerprint()
     {
         return $this->profileFingerprint;
     }
@@ -86,7 +86,7 @@ class ChargehivePCIBTokenizeResponse
      *
      * @return self
      */
-    public function setProfileFingerprint(string $profileFingerprint) : self
+    public function setProfileFingerprint(string $profileFingerprint)
     {
         $this->profileFingerprint = $profileFingerprint;
         return $this;
@@ -96,7 +96,7 @@ class ChargehivePCIBTokenizeResponse
      *
      * @return string
      */
-    public function getMerchantFingerprint() : string
+    public function getMerchantFingerprint()
     {
         return $this->merchantFingerprint;
     }
@@ -107,9 +107,13 @@ class ChargehivePCIBTokenizeResponse
      *
      * @return self
      */
-    public function setMerchantFingerprint(string $merchantFingerprint) : self
+    public function setMerchantFingerprint(string $merchantFingerprint)
     {
         $this->merchantFingerprint = $merchantFingerprint;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['tokenID' => $this->tokenID, 'token' => $this->token, 'profileFingerprint' => $this->profileFingerprint, 'merchantFingerprint' => $this->merchantFingerprint];
     }
 }

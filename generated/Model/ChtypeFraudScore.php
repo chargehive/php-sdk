@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeFraudScore
+class ChtypeFraudScore implements \JsonSerializable
 {
     /**
      * 
@@ -39,7 +39,7 @@ class ChtypeFraudScore
      *
      * @return float
      */
-    public function getScore() : float
+    public function getScore()
     {
         return $this->score;
     }
@@ -50,7 +50,7 @@ class ChtypeFraudScore
      *
      * @return self
      */
-    public function setScore(float $score) : self
+    public function setScore(float $score)
     {
         $this->score = $score;
         return $this;
@@ -60,7 +60,7 @@ class ChtypeFraudScore
      *
      * @return string
      */
-    public function getRiskLevel() : string
+    public function getRiskLevel()
     {
         return $this->riskLevel;
     }
@@ -71,7 +71,7 @@ class ChtypeFraudScore
      *
      * @return self
      */
-    public function setRiskLevel(string $riskLevel) : self
+    public function setRiskLevel(string $riskLevel)
     {
         $this->riskLevel = $riskLevel;
         return $this;
@@ -81,7 +81,7 @@ class ChtypeFraudScore
      *
      * @return ChtypeFraudFactor
      */
-    public function getFactor() : ChtypeFraudFactor
+    public function getFactor()
     {
         return $this->factor;
     }
@@ -92,7 +92,7 @@ class ChtypeFraudScore
      *
      * @return self
      */
-    public function setFactor(ChtypeFraudFactor $factor) : self
+    public function setFactor(ChtypeFraudFactor $factor)
     {
         $this->factor = $factor;
         return $this;
@@ -102,7 +102,7 @@ class ChtypeFraudScore
      *
      * @return string
      */
-    public function getSummary() : string
+    public function getSummary()
     {
         return $this->summary;
     }
@@ -113,7 +113,7 @@ class ChtypeFraudScore
      *
      * @return self
      */
-    public function setSummary(string $summary) : self
+    public function setSummary(string $summary)
     {
         $this->summary = $summary;
         return $this;
@@ -123,7 +123,7 @@ class ChtypeFraudScore
      *
      * @return string[]
      */
-    public function getData() : \ArrayObject
+    public function getData()
     {
         return $this->data;
     }
@@ -134,9 +134,13 @@ class ChtypeFraudScore
      *
      * @return self
      */
-    public function setData(\ArrayObject $data) : self
+    public function setData(\ArrayObject $data)
     {
         $this->data = $data;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['score' => $this->score, 'riskLevel' => $this->riskLevel, 'factor' => $this->factor, 'summary' => $this->summary, 'data' => $this->data];
     }
 }

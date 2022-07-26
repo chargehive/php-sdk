@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeChargeItem
+class ChtypeChargeItem implements \JsonSerializable
 {
     /**
      * 
@@ -117,7 +117,7 @@ class ChtypeChargeItem
      *
      * @return string
      */
-    public function getSubscriptionId() : string
+    public function getSubscriptionId()
     {
         return $this->subscriptionId;
     }
@@ -128,7 +128,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setSubscriptionId(string $subscriptionId) : self
+    public function setSubscriptionId(string $subscriptionId)
     {
         $this->subscriptionId = $subscriptionId;
         return $this;
@@ -138,7 +138,7 @@ class ChtypeChargeItem
      *
      * @return int
      */
-    public function getRenewalNumber() : int
+    public function getRenewalNumber()
     {
         return $this->renewalNumber;
     }
@@ -149,7 +149,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setRenewalNumber(int $renewalNumber) : self
+    public function setRenewalNumber(int $renewalNumber)
     {
         $this->renewalNumber = $renewalNumber;
         return $this;
@@ -159,7 +159,7 @@ class ChtypeChargeItem
      *
      * @return string
      */
-    public function getDuration() : string
+    public function getDuration()
     {
         return $this->duration;
     }
@@ -170,7 +170,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setDuration(string $duration) : self
+    public function setDuration(string $duration)
     {
         $this->duration = $duration;
         return $this;
@@ -180,7 +180,7 @@ class ChtypeChargeItem
      *
      * @return \DateTime
      */
-    public function getStartDate() : \DateTime
+    public function getStartDate()
     {
         return $this->startDate;
     }
@@ -191,7 +191,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setStartDate(\DateTime $startDate) : self
+    public function setStartDate(\DateTime $startDate)
     {
         $this->startDate = $startDate;
         return $this;
@@ -201,7 +201,7 @@ class ChtypeChargeItem
      *
      * @return \DateTime
      */
-    public function getEndDate() : \DateTime
+    public function getEndDate()
     {
         return $this->endDate;
     }
@@ -212,7 +212,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setEndDate(\DateTime $endDate) : self
+    public function setEndDate(\DateTime $endDate)
     {
         $this->endDate = $endDate;
         return $this;
@@ -222,7 +222,7 @@ class ChtypeChargeItem
      *
      * @return string
      */
-    public function getProductType() : string
+    public function getProductType()
     {
         return $this->productType;
     }
@@ -233,7 +233,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setProductType(string $productType) : self
+    public function setProductType(string $productType)
     {
         $this->productType = $productType;
         return $this;
@@ -243,7 +243,7 @@ class ChtypeChargeItem
      *
      * @return string
      */
-    public function getSkuType() : string
+    public function getSkuType()
     {
         return $this->skuType;
     }
@@ -254,7 +254,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setSkuType(string $skuType) : self
+    public function setSkuType(string $skuType)
     {
         $this->skuType = $skuType;
         return $this;
@@ -264,7 +264,7 @@ class ChtypeChargeItem
      *
      * @return ChtypeDelivery
      */
-    public function getDelivery() : ChtypeDelivery
+    public function getDelivery()
     {
         return $this->delivery;
     }
@@ -275,7 +275,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setDelivery(ChtypeDelivery $delivery) : self
+    public function setDelivery(ChtypeDelivery $delivery)
     {
         $this->delivery = $delivery;
         return $this;
@@ -285,7 +285,7 @@ class ChtypeChargeItem
      *
      * @return string
      */
-    public function getQuantity() : string
+    public function getQuantity()
     {
         return $this->quantity;
     }
@@ -296,7 +296,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setQuantity(string $quantity) : self
+    public function setQuantity(string $quantity)
     {
         $this->quantity = $quantity;
         return $this;
@@ -306,7 +306,7 @@ class ChtypeChargeItem
      *
      * @return ChtypeAmount
      */
-    public function getUnitPrice() : ChtypeAmount
+    public function getUnitPrice()
     {
         return $this->unitPrice;
     }
@@ -317,7 +317,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setUnitPrice(ChtypeAmount $unitPrice) : self
+    public function setUnitPrice(ChtypeAmount $unitPrice)
     {
         $this->unitPrice = $unitPrice;
         return $this;
@@ -327,7 +327,7 @@ class ChtypeChargeItem
      *
      * @return ChtypeAmount
      */
-    public function getTaxAmount() : ChtypeAmount
+    public function getTaxAmount()
     {
         return $this->taxAmount;
     }
@@ -338,7 +338,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setTaxAmount(ChtypeAmount $taxAmount) : self
+    public function setTaxAmount(ChtypeAmount $taxAmount)
     {
         $this->taxAmount = $taxAmount;
         return $this;
@@ -348,7 +348,7 @@ class ChtypeChargeItem
      *
      * @return ChtypeAmount
      */
-    public function getDiscountAmount() : ChtypeAmount
+    public function getDiscountAmount()
     {
         return $this->discountAmount;
     }
@@ -359,7 +359,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setDiscountAmount(ChtypeAmount $discountAmount) : self
+    public function setDiscountAmount(ChtypeAmount $discountAmount)
     {
         $this->discountAmount = $discountAmount;
         return $this;
@@ -369,7 +369,7 @@ class ChtypeChargeItem
      *
      * @return string
      */
-    public function getName() : string
+    public function getName()
     {
         return $this->name;
     }
@@ -380,7 +380,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name)
     {
         $this->name = $name;
         return $this;
@@ -390,7 +390,7 @@ class ChtypeChargeItem
      *
      * @return string
      */
-    public function getDescription() : string
+    public function getDescription()
     {
         return $this->description;
     }
@@ -401,7 +401,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(string $description)
     {
         $this->description = $description;
         return $this;
@@ -411,7 +411,7 @@ class ChtypeChargeItem
      *
      * @return string
      */
-    public function getProductCode() : string
+    public function getProductCode()
     {
         return $this->productCode;
     }
@@ -422,7 +422,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setProductCode(string $productCode) : self
+    public function setProductCode(string $productCode)
     {
         $this->productCode = $productCode;
         return $this;
@@ -432,7 +432,7 @@ class ChtypeChargeItem
      *
      * @return string
      */
-    public function getSkuCode() : string
+    public function getSkuCode()
     {
         return $this->skuCode;
     }
@@ -443,7 +443,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setSkuCode(string $skuCode) : self
+    public function setSkuCode(string $skuCode)
     {
         $this->skuCode = $skuCode;
         return $this;
@@ -453,7 +453,7 @@ class ChtypeChargeItem
      *
      * @return string
      */
-    public function getTermUnits() : string
+    public function getTermUnits()
     {
         return $this->termUnits;
     }
@@ -464,7 +464,7 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setTermUnits(string $termUnits) : self
+    public function setTermUnits(string $termUnits)
     {
         $this->termUnits = $termUnits;
         return $this;
@@ -474,7 +474,7 @@ class ChtypeChargeItem
      *
      * @return string
      */
-    public function getTermType() : string
+    public function getTermType()
     {
         return $this->termType;
     }
@@ -485,9 +485,13 @@ class ChtypeChargeItem
      *
      * @return self
      */
-    public function setTermType(string $termType) : self
+    public function setTermType(string $termType)
     {
         $this->termType = $termType;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['subscriptionId' => $this->subscriptionId, 'renewalNumber' => $this->renewalNumber, 'duration' => $this->duration, 'startDate' => $this->startDate, 'endDate' => $this->endDate, 'productType' => $this->productType, 'skuType' => $this->skuType, 'delivery' => $this->delivery, 'quantity' => $this->quantity, 'unitPrice' => $this->unitPrice, 'taxAmount' => $this->taxAmount, 'discountAmount' => $this->discountAmount, 'name' => $this->name, 'description' => $this->description, 'productCode' => $this->productCode, 'skuCode' => $this->skuCode, 'termUnits' => $this->termUnits, 'termType' => $this->termType];
     }
 }

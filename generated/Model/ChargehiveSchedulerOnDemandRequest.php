@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveSchedulerOnDemandRequest
+class ChargehiveSchedulerOnDemandRequest implements \JsonSerializable
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveSchedulerOnDemandRequest
      *
      * @return string
      */
-    public function getSchedulerId() : string
+    public function getSchedulerId()
     {
         return $this->schedulerId;
     }
@@ -26,9 +26,13 @@ class ChargehiveSchedulerOnDemandRequest
      *
      * @return self
      */
-    public function setSchedulerId(string $schedulerId) : self
+    public function setSchedulerId(string $schedulerId)
     {
         $this->schedulerId = $schedulerId;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['schedulerId' => $this->schedulerId];
     }
 }

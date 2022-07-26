@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveMethodVerifyRequest
+class ChargehiveMethodVerifyRequest implements \JsonSerializable
 {
     /**
      * 
@@ -39,7 +39,7 @@ class ChargehiveMethodVerifyRequest
      *
      * @return string
      */
-    public function getToken() : string
+    public function getToken()
     {
         return $this->token;
     }
@@ -50,7 +50,7 @@ class ChargehiveMethodVerifyRequest
      *
      * @return self
      */
-    public function setToken(string $token) : self
+    public function setToken(string $token)
     {
         $this->token = $token;
         return $this;
@@ -60,7 +60,7 @@ class ChargehiveMethodVerifyRequest
      *
      * @return ChtypeAmount
      */
-    public function getAmount() : ChtypeAmount
+    public function getAmount()
     {
         return $this->amount;
     }
@@ -71,7 +71,7 @@ class ChargehiveMethodVerifyRequest
      *
      * @return self
      */
-    public function setAmount(ChtypeAmount $amount) : self
+    public function setAmount(ChtypeAmount $amount)
     {
         $this->amount = $amount;
         return $this;
@@ -81,7 +81,7 @@ class ChargehiveMethodVerifyRequest
      *
      * @return string
      */
-    public function getConnectorId() : string
+    public function getConnectorId()
     {
         return $this->connectorId;
     }
@@ -92,7 +92,7 @@ class ChargehiveMethodVerifyRequest
      *
      * @return self
      */
-    public function setConnectorId(string $connectorId) : self
+    public function setConnectorId(string $connectorId)
     {
         $this->connectorId = $connectorId;
         return $this;
@@ -102,7 +102,7 @@ class ChargehiveMethodVerifyRequest
      *
      * @return string
      */
-    public function getChargeId() : string
+    public function getChargeId()
     {
         return $this->chargeId;
     }
@@ -113,7 +113,7 @@ class ChargehiveMethodVerifyRequest
      *
      * @return self
      */
-    public function setChargeId(string $chargeId) : self
+    public function setChargeId(string $chargeId)
     {
         $this->chargeId = $chargeId;
         return $this;
@@ -123,7 +123,7 @@ class ChargehiveMethodVerifyRequest
      *
      * @return string
      */
-    public function getBillingProfileId() : string
+    public function getBillingProfileId()
     {
         return $this->billingProfileId;
     }
@@ -134,9 +134,13 @@ class ChargehiveMethodVerifyRequest
      *
      * @return self
      */
-    public function setBillingProfileId(string $billingProfileId) : self
+    public function setBillingProfileId(string $billingProfileId)
     {
         $this->billingProfileId = $billingProfileId;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['token' => $this->token, 'amount' => $this->amount, 'connectorId' => $this->connectorId, 'chargeId' => $this->chargeId, 'billingProfileId' => $this->billingProfileId];
     }
 }

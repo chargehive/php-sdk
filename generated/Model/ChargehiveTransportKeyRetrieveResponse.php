@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveTransportKeyRetrieveResponse
+class ChargehiveTransportKeyRetrieveResponse implements \JsonSerializable
 {
     /**
      * 
@@ -27,7 +27,7 @@ class ChargehiveTransportKeyRetrieveResponse
      *
      * @return bool
      */
-    public function getSuccess() : bool
+    public function getSuccess()
     {
         return $this->success;
     }
@@ -38,7 +38,7 @@ class ChargehiveTransportKeyRetrieveResponse
      *
      * @return self
      */
-    public function setSuccess(bool $success) : self
+    public function setSuccess(bool $success)
     {
         $this->success = $success;
         return $this;
@@ -48,7 +48,7 @@ class ChargehiveTransportKeyRetrieveResponse
      *
      * @return string
      */
-    public function getTransportKeyId() : string
+    public function getTransportKeyId()
     {
         return $this->transportKeyId;
     }
@@ -59,7 +59,7 @@ class ChargehiveTransportKeyRetrieveResponse
      *
      * @return self
      */
-    public function setTransportKeyId(string $transportKeyId) : self
+    public function setTransportKeyId(string $transportKeyId)
     {
         $this->transportKeyId = $transportKeyId;
         return $this;
@@ -69,7 +69,7 @@ class ChargehiveTransportKeyRetrieveResponse
      *
      * @return string
      */
-    public function getPublicKey() : string
+    public function getPublicKey()
     {
         return $this->publicKey;
     }
@@ -80,9 +80,13 @@ class ChargehiveTransportKeyRetrieveResponse
      *
      * @return self
      */
-    public function setPublicKey(string $publicKey) : self
+    public function setPublicKey(string $publicKey)
     {
         $this->publicKey = $publicKey;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['success' => $this->success, 'transportKeyId' => $this->transportKeyId, 'publicKey' => $this->publicKey];
     }
 }

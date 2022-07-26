@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypePaymentMethodSchemaCard
+class ChtypePaymentMethodSchemaCard implements \JsonSerializable
 {
     /**
      * 
@@ -51,7 +51,7 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return string
      */
-    public function getNameOnCard() : string
+    public function getNameOnCard()
     {
         return $this->nameOnCard;
     }
@@ -62,7 +62,7 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return self
      */
-    public function setNameOnCard(string $nameOnCard) : self
+    public function setNameOnCard(string $nameOnCard)
     {
         $this->nameOnCard = $nameOnCard;
         return $this;
@@ -72,7 +72,7 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return int
      */
-    public function getValidFromMonth() : int
+    public function getValidFromMonth()
     {
         return $this->validFromMonth;
     }
@@ -83,7 +83,7 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return self
      */
-    public function setValidFromMonth(int $validFromMonth) : self
+    public function setValidFromMonth(int $validFromMonth)
     {
         $this->validFromMonth = $validFromMonth;
         return $this;
@@ -93,7 +93,7 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return int
      */
-    public function getValidFromYear() : int
+    public function getValidFromYear()
     {
         return $this->validFromYear;
     }
@@ -104,7 +104,7 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return self
      */
-    public function setValidFromYear(int $validFromYear) : self
+    public function setValidFromYear(int $validFromYear)
     {
         $this->validFromYear = $validFromYear;
         return $this;
@@ -114,7 +114,7 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return int
      */
-    public function getExpiryMonth() : int
+    public function getExpiryMonth()
     {
         return $this->expiryMonth;
     }
@@ -125,7 +125,7 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return self
      */
-    public function setExpiryMonth(int $expiryMonth) : self
+    public function setExpiryMonth(int $expiryMonth)
     {
         $this->expiryMonth = $expiryMonth;
         return $this;
@@ -135,7 +135,7 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return int
      */
-    public function getExpiryYear() : int
+    public function getExpiryYear()
     {
         return $this->expiryYear;
     }
@@ -146,7 +146,7 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return self
      */
-    public function setExpiryYear(int $expiryYear) : self
+    public function setExpiryYear(int $expiryYear)
     {
         $this->expiryYear = $expiryYear;
         return $this;
@@ -156,7 +156,7 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return int
      */
-    public function getIssueNumber() : int
+    public function getIssueNumber()
     {
         return $this->issueNumber;
     }
@@ -167,7 +167,7 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return self
      */
-    public function setIssueNumber(int $issueNumber) : self
+    public function setIssueNumber(int $issueNumber)
     {
         $this->issueNumber = $issueNumber;
         return $this;
@@ -177,7 +177,7 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return string
      */
-    public function getNumber() : string
+    public function getNumber()
     {
         return $this->number;
     }
@@ -188,9 +188,13 @@ class ChtypePaymentMethodSchemaCard
      *
      * @return self
      */
-    public function setNumber(string $number) : self
+    public function setNumber(string $number)
     {
         $this->number = $number;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['nameOnCard' => $this->nameOnCard, 'validFromMonth' => $this->validFromMonth, 'validFromYear' => $this->validFromYear, 'expiryMonth' => $this->expiryMonth, 'expiryYear' => $this->expiryYear, 'issueNumber' => $this->issueNumber, 'number' => $this->number];
     }
 }

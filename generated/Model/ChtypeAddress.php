@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeAddress
+class ChtypeAddress implements \JsonSerializable
 {
     /**
      * 
@@ -63,7 +63,7 @@ class ChtypeAddress
      *
      * @return string
      */
-    public function getLineOne() : string
+    public function getLineOne()
     {
         return $this->lineOne;
     }
@@ -74,7 +74,7 @@ class ChtypeAddress
      *
      * @return self
      */
-    public function setLineOne(string $lineOne) : self
+    public function setLineOne(string $lineOne)
     {
         $this->lineOne = $lineOne;
         return $this;
@@ -84,7 +84,7 @@ class ChtypeAddress
      *
      * @return string
      */
-    public function getLineTwo() : string
+    public function getLineTwo()
     {
         return $this->lineTwo;
     }
@@ -95,7 +95,7 @@ class ChtypeAddress
      *
      * @return self
      */
-    public function setLineTwo(string $lineTwo) : self
+    public function setLineTwo(string $lineTwo)
     {
         $this->lineTwo = $lineTwo;
         return $this;
@@ -105,7 +105,7 @@ class ChtypeAddress
      *
      * @return string
      */
-    public function getLineThree() : string
+    public function getLineThree()
     {
         return $this->lineThree;
     }
@@ -116,7 +116,7 @@ class ChtypeAddress
      *
      * @return self
      */
-    public function setLineThree(string $lineThree) : self
+    public function setLineThree(string $lineThree)
     {
         $this->lineThree = $lineThree;
         return $this;
@@ -126,7 +126,7 @@ class ChtypeAddress
      *
      * @return string
      */
-    public function getTown() : string
+    public function getTown()
     {
         return $this->town;
     }
@@ -137,7 +137,7 @@ class ChtypeAddress
      *
      * @return self
      */
-    public function setTown(string $town) : self
+    public function setTown(string $town)
     {
         $this->town = $town;
         return $this;
@@ -147,7 +147,7 @@ class ChtypeAddress
      *
      * @return string
      */
-    public function getCounty() : string
+    public function getCounty()
     {
         return $this->county;
     }
@@ -158,7 +158,7 @@ class ChtypeAddress
      *
      * @return self
      */
-    public function setCounty(string $county) : self
+    public function setCounty(string $county)
     {
         $this->county = $county;
         return $this;
@@ -168,7 +168,7 @@ class ChtypeAddress
      *
      * @return string
      */
-    public function getCountry() : string
+    public function getCountry()
     {
         return $this->country;
     }
@@ -179,7 +179,7 @@ class ChtypeAddress
      *
      * @return self
      */
-    public function setCountry(string $country) : self
+    public function setCountry(string $country)
     {
         $this->country = $country;
         return $this;
@@ -189,7 +189,7 @@ class ChtypeAddress
      *
      * @return string
      */
-    public function getPostalCode() : string
+    public function getPostalCode()
     {
         return $this->postalCode;
     }
@@ -200,7 +200,7 @@ class ChtypeAddress
      *
      * @return self
      */
-    public function setPostalCode(string $postalCode) : self
+    public function setPostalCode(string $postalCode)
     {
         $this->postalCode = $postalCode;
         return $this;
@@ -210,7 +210,7 @@ class ChtypeAddress
      *
      * @return string
      */
-    public function getFao() : string
+    public function getFao()
     {
         return $this->fao;
     }
@@ -221,7 +221,7 @@ class ChtypeAddress
      *
      * @return self
      */
-    public function setFao(string $fao) : self
+    public function setFao(string $fao)
     {
         $this->fao = $fao;
         return $this;
@@ -231,7 +231,7 @@ class ChtypeAddress
      *
      * @return string
      */
-    public function getCompanyName() : string
+    public function getCompanyName()
     {
         return $this->companyName;
     }
@@ -242,9 +242,13 @@ class ChtypeAddress
      *
      * @return self
      */
-    public function setCompanyName(string $companyName) : self
+    public function setCompanyName(string $companyName)
     {
         $this->companyName = $companyName;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['lineOne' => $this->lineOne, 'lineTwo' => $this->lineTwo, 'lineThree' => $this->lineThree, 'town' => $this->town, 'county' => $this->county, 'country' => $this->country, 'postalCode' => $this->postalCode, 'fao' => $this->fao, 'companyName' => $this->companyName];
     }
 }

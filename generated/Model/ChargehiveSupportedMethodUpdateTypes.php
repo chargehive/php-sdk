@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveSupportedMethodUpdateTypes
+class ChargehiveSupportedMethodUpdateTypes implements \JsonSerializable
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveSupportedMethodUpdateTypes
      *
      * @return ChtypePaymentMethodSchemaCard
      */
-    public function getCard() : ChtypePaymentMethodSchemaCard
+    public function getCard()
     {
         return $this->card;
     }
@@ -26,9 +26,13 @@ class ChargehiveSupportedMethodUpdateTypes
      *
      * @return self
      */
-    public function setCard(ChtypePaymentMethodSchemaCard $card) : self
+    public function setCard(ChtypePaymentMethodSchemaCard $card)
     {
         $this->card = $card;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['card' => $this->card];
     }
 }

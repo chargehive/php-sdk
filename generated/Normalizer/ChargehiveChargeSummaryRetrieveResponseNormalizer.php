@@ -20,12 +20,12 @@ class ChargehiveChargeSummaryRetrieveResponseNormalizer implements DenormalizerI
     }
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveChargeSummaryRetrieveResponse';
+        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveChargeSummaryRetrieveResponse';
     }
     public function denormalize($data, $class, $format = null, array $context = array())
     {
         if (!is_object($data)) {
-            throw new InvalidArgumentException(sprintf('Given $data is not an object (%s given). We need an object in order to continue denormalize method.', gettype($data)));
+            throw new InvalidArgumentException();
         }
         $object = new \ChargeHive\Php\Sdk\Generated\Model\ChargehiveChargeSummaryRetrieveResponse();
         if (property_exists($data, 'chargeSummary')) {

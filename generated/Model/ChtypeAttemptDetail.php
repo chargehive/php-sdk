@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeAttemptDetail
+class ChtypeAttemptDetail implements \JsonSerializable
 {
     /**
      * 
@@ -45,7 +45,7 @@ class ChtypeAttemptDetail
      *
      * @return string
      */
-    public function getChargeTransactionNumber() : string
+    public function getChargeTransactionNumber()
     {
         return $this->chargeTransactionNumber;
     }
@@ -56,7 +56,7 @@ class ChtypeAttemptDetail
      *
      * @return self
      */
-    public function setChargeTransactionNumber(string $chargeTransactionNumber) : self
+    public function setChargeTransactionNumber(string $chargeTransactionNumber)
     {
         $this->chargeTransactionNumber = $chargeTransactionNumber;
         return $this;
@@ -66,7 +66,7 @@ class ChtypeAttemptDetail
      *
      * @return string
      */
-    public function getChargeAttemptNumber() : string
+    public function getChargeAttemptNumber()
     {
         return $this->chargeAttemptNumber;
     }
@@ -77,7 +77,7 @@ class ChtypeAttemptDetail
      *
      * @return self
      */
-    public function setChargeAttemptNumber(string $chargeAttemptNumber) : self
+    public function setChargeAttemptNumber(string $chargeAttemptNumber)
     {
         $this->chargeAttemptNumber = $chargeAttemptNumber;
         return $this;
@@ -87,7 +87,7 @@ class ChtypeAttemptDetail
      *
      * @return string
      */
-    public function getAttemptTransactionNumber() : string
+    public function getAttemptTransactionNumber()
     {
         return $this->attemptTransactionNumber;
     }
@@ -98,7 +98,7 @@ class ChtypeAttemptDetail
      *
      * @return self
      */
-    public function setAttemptTransactionNumber(string $attemptTransactionNumber) : self
+    public function setAttemptTransactionNumber(string $attemptTransactionNumber)
     {
         $this->attemptTransactionNumber = $attemptTransactionNumber;
         return $this;
@@ -108,7 +108,7 @@ class ChtypeAttemptDetail
      *
      * @return string
      */
-    public function getAttemptMethodCascade() : string
+    public function getAttemptMethodCascade()
     {
         return $this->attemptMethodCascade;
     }
@@ -119,7 +119,7 @@ class ChtypeAttemptDetail
      *
      * @return self
      */
-    public function setAttemptMethodCascade(string $attemptMethodCascade) : self
+    public function setAttemptMethodCascade(string $attemptMethodCascade)
     {
         $this->attemptMethodCascade = $attemptMethodCascade;
         return $this;
@@ -129,7 +129,7 @@ class ChtypeAttemptDetail
      *
      * @return string
      */
-    public function getAttemptConnectorCascade() : string
+    public function getAttemptConnectorCascade()
     {
         return $this->attemptConnectorCascade;
     }
@@ -140,7 +140,7 @@ class ChtypeAttemptDetail
      *
      * @return self
      */
-    public function setAttemptConnectorCascade(string $attemptConnectorCascade) : self
+    public function setAttemptConnectorCascade(string $attemptConnectorCascade)
     {
         $this->attemptConnectorCascade = $attemptConnectorCascade;
         return $this;
@@ -150,7 +150,7 @@ class ChtypeAttemptDetail
      *
      * @return bool
      */
-    public function getIsPrimaryMethod() : bool
+    public function getIsPrimaryMethod()
     {
         return $this->isPrimaryMethod;
     }
@@ -161,9 +161,13 @@ class ChtypeAttemptDetail
      *
      * @return self
      */
-    public function setIsPrimaryMethod(bool $isPrimaryMethod) : self
+    public function setIsPrimaryMethod(bool $isPrimaryMethod)
     {
         $this->isPrimaryMethod = $isPrimaryMethod;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['chargeTransactionNumber' => $this->chargeTransactionNumber, 'chargeAttemptNumber' => $this->chargeAttemptNumber, 'attemptTransactionNumber' => $this->attemptTransactionNumber, 'attemptMethodCascade' => $this->attemptMethodCascade, 'attemptConnectorCascade' => $this->attemptConnectorCascade, 'isPrimaryMethod' => $this->isPrimaryMethod];
     }
 }

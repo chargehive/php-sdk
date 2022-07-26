@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveConfigurationDeleteResponse
+class ChargehiveConfigurationDeleteResponse implements \JsonSerializable
 {
     /**
      * 
@@ -21,7 +21,7 @@ class ChargehiveConfigurationDeleteResponse
      *
      * @return bool
      */
-    public function getSuccess() : bool
+    public function getSuccess()
     {
         return $this->success;
     }
@@ -32,7 +32,7 @@ class ChargehiveConfigurationDeleteResponse
      *
      * @return self
      */
-    public function setSuccess(bool $success) : self
+    public function setSuccess(bool $success)
     {
         $this->success = $success;
         return $this;
@@ -42,7 +42,7 @@ class ChargehiveConfigurationDeleteResponse
      *
      * @return string
      */
-    public function getMessage() : string
+    public function getMessage()
     {
         return $this->message;
     }
@@ -53,9 +53,13 @@ class ChargehiveConfigurationDeleteResponse
      *
      * @return self
      */
-    public function setMessage(string $message) : self
+    public function setMessage(string $message)
     {
         $this->message = $message;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['success' => $this->success, 'message' => $this->message];
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeChargeMeta
+class ChtypeChargeMeta implements \JsonSerializable
 {
     /**
      * 
@@ -123,7 +123,7 @@ class ChtypeChargeMeta
      *
      * @return ChtypeAddress
      */
-    public function getBillingAddress() : ChtypeAddress
+    public function getBillingAddress()
     {
         return $this->billingAddress;
     }
@@ -134,7 +134,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setBillingAddress(ChtypeAddress $billingAddress) : self
+    public function setBillingAddress(ChtypeAddress $billingAddress)
     {
         $this->billingAddress = $billingAddress;
         return $this;
@@ -144,7 +144,7 @@ class ChtypeChargeMeta
      *
      * @return ChtypeAddress
      */
-    public function getDeliveryAddress() : ChtypeAddress
+    public function getDeliveryAddress()
     {
         return $this->deliveryAddress;
     }
@@ -155,7 +155,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setDeliveryAddress(ChtypeAddress $deliveryAddress) : self
+    public function setDeliveryAddress(ChtypeAddress $deliveryAddress)
     {
         $this->deliveryAddress = $deliveryAddress;
         return $this;
@@ -165,7 +165,7 @@ class ChtypeChargeMeta
      *
      * @return ChtypeChargeItem[]
      */
-    public function getItems() : array
+    public function getItems()
     {
         return $this->items;
     }
@@ -176,7 +176,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setItems(array $items) : self
+    public function setItems(array $items)
     {
         $this->items = $items;
         return $this;
@@ -186,7 +186,7 @@ class ChtypeChargeMeta
      *
      * @return string
      */
-    public function getTerms() : string
+    public function getTerms()
     {
         return $this->terms;
     }
@@ -197,7 +197,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setTerms(string $terms) : self
+    public function setTerms(string $terms)
     {
         $this->terms = $terms;
         return $this;
@@ -207,7 +207,7 @@ class ChtypeChargeMeta
      *
      * @return string
      */
-    public function getNote() : string
+    public function getNote()
     {
         return $this->note;
     }
@@ -218,7 +218,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setNote(string $note) : self
+    public function setNote(string $note)
     {
         $this->note = $note;
         return $this;
@@ -228,7 +228,7 @@ class ChtypeChargeMeta
      *
      * @return string
      */
-    public function getMerchantMemo() : string
+    public function getMerchantMemo()
     {
         return $this->merchantMemo;
     }
@@ -239,7 +239,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setMerchantMemo(string $merchantMemo) : self
+    public function setMerchantMemo(string $merchantMemo)
     {
         $this->merchantMemo = $merchantMemo;
         return $this;
@@ -249,7 +249,7 @@ class ChtypeChargeMeta
      *
      * @return \DateTime
      */
-    public function getInvoiceDate() : \DateTime
+    public function getInvoiceDate()
     {
         return $this->invoiceDate;
     }
@@ -260,7 +260,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setInvoiceDate(\DateTime $invoiceDate) : self
+    public function setInvoiceDate(\DateTime $invoiceDate)
     {
         $this->invoiceDate = $invoiceDate;
         return $this;
@@ -270,7 +270,7 @@ class ChtypeChargeMeta
      *
      * @return \DateTime
      */
-    public function getDueDate() : \DateTime
+    public function getDueDate()
     {
         return $this->dueDate;
     }
@@ -281,7 +281,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setDueDate(\DateTime $dueDate) : self
+    public function setDueDate(\DateTime $dueDate)
     {
         $this->dueDate = $dueDate;
         return $this;
@@ -291,7 +291,7 @@ class ChtypeChargeMeta
      *
      * @return ChtypeAmount
      */
-    public function getDiscountAmount() : ChtypeAmount
+    public function getDiscountAmount()
     {
         return $this->discountAmount;
     }
@@ -302,7 +302,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setDiscountAmount(ChtypeAmount $discountAmount) : self
+    public function setDiscountAmount(ChtypeAmount $discountAmount)
     {
         $this->discountAmount = $discountAmount;
         return $this;
@@ -312,7 +312,7 @@ class ChtypeChargeMeta
      *
      * @return ChtypeAmount
      */
-    public function getDeliveryAmount() : ChtypeAmount
+    public function getDeliveryAmount()
     {
         return $this->deliveryAmount;
     }
@@ -323,7 +323,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setDeliveryAmount(ChtypeAmount $deliveryAmount) : self
+    public function setDeliveryAmount(ChtypeAmount $deliveryAmount)
     {
         $this->deliveryAmount = $deliveryAmount;
         return $this;
@@ -333,7 +333,7 @@ class ChtypeChargeMeta
      *
      * @return ChtypeAmount
      */
-    public function getTaxAmount() : ChtypeAmount
+    public function getTaxAmount()
     {
         return $this->taxAmount;
     }
@@ -344,7 +344,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setTaxAmount(ChtypeAmount $taxAmount) : self
+    public function setTaxAmount(ChtypeAmount $taxAmount)
     {
         $this->taxAmount = $taxAmount;
         return $this;
@@ -354,7 +354,7 @@ class ChtypeChargeMeta
      *
      * @return ChtypeAmount
      */
-    public function getTotalAmount() : ChtypeAmount
+    public function getTotalAmount()
     {
         return $this->totalAmount;
     }
@@ -365,7 +365,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setTotalAmount(ChtypeAmount $totalAmount) : self
+    public function setTotalAmount(ChtypeAmount $totalAmount)
     {
         $this->totalAmount = $totalAmount;
         return $this;
@@ -375,7 +375,7 @@ class ChtypeChargeMeta
      *
      * @return ChtypePerson
      */
-    public function getPerson() : ChtypePerson
+    public function getPerson()
     {
         return $this->person;
     }
@@ -386,7 +386,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setPerson(ChtypePerson $person) : self
+    public function setPerson(ChtypePerson $person)
     {
         $this->person = $person;
         return $this;
@@ -396,7 +396,7 @@ class ChtypeChargeMeta
      *
      * @return ChtypeCompany
      */
-    public function getCompany() : ChtypeCompany
+    public function getCompany()
     {
         return $this->company;
     }
@@ -407,7 +407,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setCompany(ChtypeCompany $company) : self
+    public function setCompany(ChtypeCompany $company)
     {
         $this->company = $company;
         return $this;
@@ -417,7 +417,7 @@ class ChtypeChargeMeta
      *
      * @return string
      */
-    public function getIpAddress() : string
+    public function getIpAddress()
     {
         return $this->ipAddress;
     }
@@ -428,7 +428,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setIpAddress(string $ipAddress) : self
+    public function setIpAddress(string $ipAddress)
     {
         $this->ipAddress = $ipAddress;
         return $this;
@@ -438,7 +438,7 @@ class ChtypeChargeMeta
      *
      * @return ChtypeDelivery
      */
-    public function getDelivery() : ChtypeDelivery
+    public function getDelivery()
     {
         return $this->delivery;
     }
@@ -449,7 +449,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setDelivery(ChtypeDelivery $delivery) : self
+    public function setDelivery(ChtypeDelivery $delivery)
     {
         $this->delivery = $delivery;
         return $this;
@@ -459,7 +459,7 @@ class ChtypeChargeMeta
      *
      * @return ChtypeDevice
      */
-    public function getDevice() : ChtypeDevice
+    public function getDevice()
     {
         return $this->device;
     }
@@ -470,7 +470,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setDevice(ChtypeDevice $device) : self
+    public function setDevice(ChtypeDevice $device)
     {
         $this->device = $device;
         return $this;
@@ -480,7 +480,7 @@ class ChtypeChargeMeta
      *
      * @return string
      */
-    public function getCustomerId() : string
+    public function getCustomerId()
     {
         return $this->customerId;
     }
@@ -491,7 +491,7 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setCustomerId(string $customerId) : self
+    public function setCustomerId(string $customerId)
     {
         $this->customerId = $customerId;
         return $this;
@@ -501,7 +501,7 @@ class ChtypeChargeMeta
      *
      * @return string
      */
-    public function getPlacementId() : string
+    public function getPlacementId()
     {
         return $this->placementId;
     }
@@ -512,9 +512,13 @@ class ChtypeChargeMeta
      *
      * @return self
      */
-    public function setPlacementId(string $placementId) : self
+    public function setPlacementId(string $placementId)
     {
         $this->placementId = $placementId;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['billingAddress' => $this->billingAddress, 'deliveryAddress' => $this->deliveryAddress, 'items' => $this->items, 'terms' => $this->terms, 'note' => $this->note, 'merchantMemo' => $this->merchantMemo, 'invoiceDate' => $this->invoiceDate, 'dueDate' => $this->dueDate, 'discountAmount' => $this->discountAmount, 'deliveryAmount' => $this->deliveryAmount, 'taxAmount' => $this->taxAmount, 'totalAmount' => $this->totalAmount, 'person' => $this->person, 'company' => $this->company, 'ipAddress' => $this->ipAddress, 'delivery' => $this->delivery, 'device' => $this->device, 'customerId' => $this->customerId, 'placementId' => $this->placementId];
     }
 }

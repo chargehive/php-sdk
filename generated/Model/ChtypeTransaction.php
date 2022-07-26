@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeTransaction
+class ChtypeTransaction implements \JsonSerializable
 {
     /**
      * 
@@ -183,7 +183,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getTokenId() : string
+    public function getTokenId()
     {
         return $this->tokenId;
     }
@@ -194,7 +194,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setTokenId(string $tokenId) : self
+    public function setTokenId(string $tokenId)
     {
         $this->tokenId = $tokenId;
         return $this;
@@ -204,7 +204,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getTransactionId() : string
+    public function getTransactionId()
     {
         return $this->transactionId;
     }
@@ -215,7 +215,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setTransactionId(string $transactionId) : self
+    public function setTransactionId(string $transactionId)
     {
         $this->transactionId = $transactionId;
         return $this;
@@ -225,7 +225,7 @@ class ChtypeTransaction
      *
      * @return ChtypeTransactionDetail[]
      */
-    public function getDetails() : array
+    public function getDetails()
     {
         return $this->details;
     }
@@ -236,7 +236,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setDetails(array $details) : self
+    public function setDetails(array $details)
     {
         $this->details = $details;
         return $this;
@@ -246,7 +246,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getPaymentType() : string
+    public function getPaymentType()
     {
         return $this->paymentType;
     }
@@ -257,7 +257,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setPaymentType(string $paymentType) : self
+    public function setPaymentType(string $paymentType)
     {
         $this->paymentType = $paymentType;
         return $this;
@@ -267,7 +267,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getPaymentScheme() : string
+    public function getPaymentScheme()
     {
         return $this->paymentScheme;
     }
@@ -278,7 +278,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setPaymentScheme(string $paymentScheme) : self
+    public function setPaymentScheme(string $paymentScheme)
     {
         $this->paymentScheme = $paymentScheme;
         return $this;
@@ -288,7 +288,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getTransactionType() : string
+    public function getTransactionType()
     {
         return $this->transactionType;
     }
@@ -299,7 +299,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setTransactionType(string $transactionType) : self
+    public function setTransactionType(string $transactionType)
     {
         $this->transactionType = $transactionType;
         return $this;
@@ -309,7 +309,7 @@ class ChtypeTransaction
      *
      * @return ChtypeAmount
      */
-    public function getRequestAmount() : ChtypeAmount
+    public function getRequestAmount()
     {
         return $this->requestAmount;
     }
@@ -320,7 +320,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setRequestAmount(ChtypeAmount $requestAmount) : self
+    public function setRequestAmount(ChtypeAmount $requestAmount)
     {
         $this->requestAmount = $requestAmount;
         return $this;
@@ -330,7 +330,7 @@ class ChtypeTransaction
      *
      * @return ChtypeAmount
      */
-    public function getTransactedAmount() : ChtypeAmount
+    public function getTransactedAmount()
     {
         return $this->transactedAmount;
     }
@@ -341,7 +341,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setTransactedAmount(ChtypeAmount $transactedAmount) : self
+    public function setTransactedAmount(ChtypeAmount $transactedAmount)
     {
         $this->transactedAmount = $transactedAmount;
         return $this;
@@ -351,7 +351,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getContract() : string
+    public function getContract()
     {
         return $this->contract;
     }
@@ -362,7 +362,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setContract(string $contract) : self
+    public function setContract(string $contract)
     {
         $this->contract = $contract;
         return $this;
@@ -372,7 +372,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getStatementDescriptor() : string
+    public function getStatementDescriptor()
     {
         return $this->statementDescriptor;
     }
@@ -383,7 +383,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setStatementDescriptor(string $statementDescriptor) : self
+    public function setStatementDescriptor(string $statementDescriptor)
     {
         $this->statementDescriptor = $statementDescriptor;
         return $this;
@@ -393,7 +393,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getResult() : string
+    public function getResult()
     {
         return $this->result;
     }
@@ -404,7 +404,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setResult(string $result) : self
+    public function setResult(string $result)
     {
         $this->result = $result;
         return $this;
@@ -414,7 +414,7 @@ class ChtypeTransaction
      *
      * @return ChtypeVerifyRequestData
      */
-    public function getVerifyRequest() : ChtypeVerifyRequestData
+    public function getVerifyRequest()
     {
         return $this->verifyRequest;
     }
@@ -425,7 +425,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setVerifyRequest(ChtypeVerifyRequestData $verifyRequest) : self
+    public function setVerifyRequest(ChtypeVerifyRequestData $verifyRequest)
     {
         $this->verifyRequest = $verifyRequest;
         return $this;
@@ -435,7 +435,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getFailureType() : string
+    public function getFailureType()
     {
         return $this->failureType;
     }
@@ -446,7 +446,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setFailureType(string $failureType) : self
+    public function setFailureType(string $failureType)
     {
         $this->failureType = $failureType;
         return $this;
@@ -456,7 +456,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getArn() : string
+    public function getArn()
     {
         return $this->arn;
     }
@@ -467,7 +467,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setArn(string $arn) : self
+    public function setArn(string $arn)
     {
         $this->arn = $arn;
         return $this;
@@ -477,7 +477,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getVerified() : string
+    public function getVerified()
     {
         return $this->verified;
     }
@@ -488,7 +488,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setVerified(string $verified) : self
+    public function setVerified(string $verified)
     {
         $this->verified = $verified;
         return $this;
@@ -498,7 +498,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getLiability() : string
+    public function getLiability()
     {
         return $this->liability;
     }
@@ -509,7 +509,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setLiability(string $liability) : self
+    public function setLiability(string $liability)
     {
         $this->liability = $liability;
         return $this;
@@ -519,7 +519,7 @@ class ChtypeTransaction
      *
      * @return ChtypeAttemptDetail
      */
-    public function getAttemptDetail() : ChtypeAttemptDetail
+    public function getAttemptDetail()
     {
         return $this->attemptDetail;
     }
@@ -530,7 +530,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setAttemptDetail(ChtypeAttemptDetail $attemptDetail) : self
+    public function setAttemptDetail(ChtypeAttemptDetail $attemptDetail)
     {
         $this->attemptDetail = $attemptDetail;
         return $this;
@@ -540,7 +540,7 @@ class ChtypeTransaction
      *
      * @return ChtypeFraudResult[]
      */
-    public function getFraudResults() : array
+    public function getFraudResults()
     {
         return $this->fraudResults;
     }
@@ -551,7 +551,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setFraudResults(array $fraudResults) : self
+    public function setFraudResults(array $fraudResults)
     {
         $this->fraudResults = $fraudResults;
         return $this;
@@ -561,7 +561,7 @@ class ChtypeTransaction
      *
      * @return ChtypeResponseDetail
      */
-    public function getResponse() : ChtypeResponseDetail
+    public function getResponse()
     {
         return $this->response;
     }
@@ -572,7 +572,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setResponse(ChtypeResponseDetail $response) : self
+    public function setResponse(ChtypeResponseDetail $response)
     {
         $this->response = $response;
         return $this;
@@ -582,7 +582,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getSourceTransactionId() : string
+    public function getSourceTransactionId()
     {
         return $this->sourceTransactionId;
     }
@@ -593,7 +593,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setSourceTransactionId(string $sourceTransactionId) : self
+    public function setSourceTransactionId(string $sourceTransactionId)
     {
         $this->sourceTransactionId = $sourceTransactionId;
         return $this;
@@ -603,7 +603,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getPaymentMethodId() : string
+    public function getPaymentMethodId()
     {
         return $this->paymentMethodId;
     }
@@ -614,7 +614,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setPaymentMethodId(string $paymentMethodId) : self
+    public function setPaymentMethodId(string $paymentMethodId)
     {
         $this->paymentMethodId = $paymentMethodId;
         return $this;
@@ -624,7 +624,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getTransactionSubType() : string
+    public function getTransactionSubType()
     {
         return $this->transactionSubType;
     }
@@ -635,7 +635,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setTransactionSubType(string $transactionSubType) : self
+    public function setTransactionSubType(string $transactionSubType)
     {
         $this->transactionSubType = $transactionSubType;
         return $this;
@@ -645,7 +645,7 @@ class ChtypeTransaction
      *
      * @return ChtypeTransaction[]
      */
-    public function getAncillaryTransactions() : array
+    public function getAncillaryTransactions()
     {
         return $this->ancillaryTransactions;
     }
@@ -656,7 +656,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setAncillaryTransactions(array $ancillaryTransactions) : self
+    public function setAncillaryTransactions(array $ancillaryTransactions)
     {
         $this->ancillaryTransactions = $ancillaryTransactions;
         return $this;
@@ -666,7 +666,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getRequestedConnectorId() : string
+    public function getRequestedConnectorId()
     {
         return $this->requestedConnectorId;
     }
@@ -677,7 +677,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setRequestedConnectorId(string $requestedConnectorId) : self
+    public function setRequestedConnectorId(string $requestedConnectorId)
     {
         $this->requestedConnectorId = $requestedConnectorId;
         return $this;
@@ -687,7 +687,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getRequestedConnectorLibrary() : string
+    public function getRequestedConnectorLibrary()
     {
         return $this->requestedConnectorLibrary;
     }
@@ -698,7 +698,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setRequestedConnectorLibrary(string $requestedConnectorLibrary) : self
+    public function setRequestedConnectorLibrary(string $requestedConnectorLibrary)
     {
         $this->requestedConnectorLibrary = $requestedConnectorLibrary;
         return $this;
@@ -708,7 +708,7 @@ class ChtypeTransaction
      *
      * @return \DateTime
      */
-    public function getTransactionTime() : \DateTime
+    public function getTransactionTime()
     {
         return $this->transactionTime;
     }
@@ -719,7 +719,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setTransactionTime(\DateTime $transactionTime) : self
+    public function setTransactionTime(\DateTime $transactionTime)
     {
         $this->transactionTime = $transactionTime;
         return $this;
@@ -729,7 +729,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getPaymentProvider() : string
+    public function getPaymentProvider()
     {
         return $this->paymentProvider;
     }
@@ -740,7 +740,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setPaymentProvider(string $paymentProvider) : self
+    public function setPaymentProvider(string $paymentProvider)
     {
         $this->paymentProvider = $paymentProvider;
         return $this;
@@ -750,7 +750,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getPaymentInputType() : string
+    public function getPaymentInputType()
     {
         return $this->paymentInputType;
     }
@@ -761,7 +761,7 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setPaymentInputType(string $paymentInputType) : self
+    public function setPaymentInputType(string $paymentInputType)
     {
         $this->paymentInputType = $paymentInputType;
         return $this;
@@ -771,7 +771,7 @@ class ChtypeTransaction
      *
      * @return string
      */
-    public function getAuthCode() : string
+    public function getAuthCode()
     {
         return $this->authCode;
     }
@@ -782,9 +782,13 @@ class ChtypeTransaction
      *
      * @return self
      */
-    public function setAuthCode(string $authCode) : self
+    public function setAuthCode(string $authCode)
     {
         $this->authCode = $authCode;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['tokenId' => $this->tokenId, 'transactionId' => $this->transactionId, 'details' => $this->details, 'paymentType' => $this->paymentType, 'paymentScheme' => $this->paymentScheme, 'transactionType' => $this->transactionType, 'requestAmount' => $this->requestAmount, 'transactedAmount' => $this->transactedAmount, 'contract' => $this->contract, 'statementDescriptor' => $this->statementDescriptor, 'result' => $this->result, 'verifyRequest' => $this->verifyRequest, 'failureType' => $this->failureType, 'arn' => $this->arn, 'verified' => $this->verified, 'liability' => $this->liability, 'attemptDetail' => $this->attemptDetail, 'fraudResults' => $this->fraudResults, 'response' => $this->response, 'sourceTransactionId' => $this->sourceTransactionId, 'paymentMethodId' => $this->paymentMethodId, 'transactionSubType' => $this->transactionSubType, 'ancillaryTransactions' => $this->ancillaryTransactions, 'requestedConnectorId' => $this->requestedConnectorId, 'requestedConnectorLibrary' => $this->requestedConnectorLibrary, 'transactionTime' => $this->transactionTime, 'paymentProvider' => $this->paymentProvider, 'paymentInputType' => $this->paymentInputType, 'authCode' => $this->authCode];
     }
 }

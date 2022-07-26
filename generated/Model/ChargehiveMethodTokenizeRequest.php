@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveMethodTokenizeRequest
+class ChargehiveMethodTokenizeRequest implements \JsonSerializable
 {
     /**
      * 
@@ -69,7 +69,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return string
      */
-    public function getDataLocation() : string
+    public function getDataLocation()
     {
         return $this->dataLocation;
     }
@@ -80,7 +80,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return self
      */
-    public function setDataLocation(string $dataLocation) : self
+    public function setDataLocation(string $dataLocation)
     {
         $this->dataLocation = $dataLocation;
         return $this;
@@ -90,7 +90,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return ChtypePaymentMethod
      */
-    public function getMethod() : ChtypePaymentMethod
+    public function getMethod()
     {
         return $this->method;
     }
@@ -101,7 +101,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return self
      */
-    public function setMethod(ChtypePaymentMethod $method) : self
+    public function setMethod(ChtypePaymentMethod $method)
     {
         $this->method = $method;
         return $this;
@@ -111,7 +111,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return string
      */
-    public function getDisplayName() : string
+    public function getDisplayName()
     {
         return $this->displayName;
     }
@@ -122,7 +122,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return self
      */
-    public function setDisplayName(string $displayName) : self
+    public function setDisplayName(string $displayName)
     {
         $this->displayName = $displayName;
         return $this;
@@ -132,7 +132,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return ChtypePaymentMethodVerificationItem[]
      */
-    public function getPaymentMethodVerification() : array
+    public function getPaymentMethodVerification()
     {
         return $this->paymentMethodVerification;
     }
@@ -143,7 +143,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return self
      */
-    public function setPaymentMethodVerification(array $paymentMethodVerification) : self
+    public function setPaymentMethodVerification(array $paymentMethodVerification)
     {
         $this->paymentMethodVerification = $paymentMethodVerification;
         return $this;
@@ -153,7 +153,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return string[]
      */
-    public function getReferences() : \ArrayObject
+    public function getReferences()
     {
         return $this->references;
     }
@@ -164,7 +164,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return self
      */
-    public function setReferences(\ArrayObject $references) : self
+    public function setReferences(\ArrayObject $references)
     {
         $this->references = $references;
         return $this;
@@ -174,7 +174,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return ChargehivechtypeLabel[]
      */
-    public function getLabels() : array
+    public function getLabels()
     {
         return $this->labels;
     }
@@ -185,7 +185,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return self
      */
-    public function setLabels(array $labels) : self
+    public function setLabels(array $labels)
     {
         $this->labels = $labels;
         return $this;
@@ -195,7 +195,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return string
      */
-    public function getVerifyChargeId() : string
+    public function getVerifyChargeId()
     {
         return $this->verifyChargeId;
     }
@@ -206,7 +206,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return self
      */
-    public function setVerifyChargeId(string $verifyChargeId) : self
+    public function setVerifyChargeId(string $verifyChargeId)
     {
         $this->verifyChargeId = $verifyChargeId;
         return $this;
@@ -216,7 +216,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return string[]
      */
-    public function getAdditionalData() : \ArrayObject
+    public function getAdditionalData()
     {
         return $this->additionalData;
     }
@@ -227,7 +227,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return self
      */
-    public function setAdditionalData(\ArrayObject $additionalData) : self
+    public function setAdditionalData(\ArrayObject $additionalData)
     {
         $this->additionalData = $additionalData;
         return $this;
@@ -237,7 +237,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return ChtypeChargeMeta
      */
-    public function getChargeMeta() : ChtypeChargeMeta
+    public function getChargeMeta()
     {
         return $this->chargeMeta;
     }
@@ -248,7 +248,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return self
      */
-    public function setChargeMeta(ChtypeChargeMeta $chargeMeta) : self
+    public function setChargeMeta(ChtypeChargeMeta $chargeMeta)
     {
         $this->chargeMeta = $chargeMeta;
         return $this;
@@ -258,7 +258,7 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return string
      */
-    public function getBillingProfileId() : string
+    public function getBillingProfileId()
     {
         return $this->billingProfileId;
     }
@@ -269,9 +269,13 @@ class ChargehiveMethodTokenizeRequest
      *
      * @return self
      */
-    public function setBillingProfileId(string $billingProfileId) : self
+    public function setBillingProfileId(string $billingProfileId)
     {
         $this->billingProfileId = $billingProfileId;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['dataLocation' => $this->dataLocation, 'method' => $this->method, 'displayName' => $this->displayName, 'paymentMethodVerification' => $this->paymentMethodVerification, 'references' => $this->references, 'labels' => $this->labels, 'verifyChargeId' => $this->verifyChargeId, 'additionalData' => $this->additionalData, 'chargeMeta' => $this->chargeMeta, 'billingProfileId' => $this->billingProfileId];
     }
 }

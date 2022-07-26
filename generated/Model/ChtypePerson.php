@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypePerson
+class ChtypePerson implements \JsonSerializable
 {
     /**
      * 
@@ -51,7 +51,7 @@ class ChtypePerson
      *
      * @return string
      */
-    public function getTitle() : string
+    public function getTitle()
     {
         return $this->title;
     }
@@ -62,7 +62,7 @@ class ChtypePerson
      *
      * @return self
      */
-    public function setTitle(string $title) : self
+    public function setTitle(string $title)
     {
         $this->title = $title;
         return $this;
@@ -72,7 +72,7 @@ class ChtypePerson
      *
      * @return string
      */
-    public function getFirstName() : string
+    public function getFirstName()
     {
         return $this->firstName;
     }
@@ -83,7 +83,7 @@ class ChtypePerson
      *
      * @return self
      */
-    public function setFirstName(string $firstName) : self
+    public function setFirstName(string $firstName)
     {
         $this->firstName = $firstName;
         return $this;
@@ -93,7 +93,7 @@ class ChtypePerson
      *
      * @return string
      */
-    public function getLastName() : string
+    public function getLastName()
     {
         return $this->lastName;
     }
@@ -104,7 +104,7 @@ class ChtypePerson
      *
      * @return self
      */
-    public function setLastName(string $lastName) : self
+    public function setLastName(string $lastName)
     {
         $this->lastName = $lastName;
         return $this;
@@ -114,7 +114,7 @@ class ChtypePerson
      *
      * @return string
      */
-    public function getFullName() : string
+    public function getFullName()
     {
         return $this->fullName;
     }
@@ -125,7 +125,7 @@ class ChtypePerson
      *
      * @return self
      */
-    public function setFullName(string $fullName) : self
+    public function setFullName(string $fullName)
     {
         $this->fullName = $fullName;
         return $this;
@@ -135,7 +135,7 @@ class ChtypePerson
      *
      * @return string
      */
-    public function getEmail() : string
+    public function getEmail()
     {
         return $this->email;
     }
@@ -146,7 +146,7 @@ class ChtypePerson
      *
      * @return self
      */
-    public function setEmail(string $email) : self
+    public function setEmail(string $email)
     {
         $this->email = $email;
         return $this;
@@ -156,7 +156,7 @@ class ChtypePerson
      *
      * @return string
      */
-    public function getPhoneNumber() : string
+    public function getPhoneNumber()
     {
         return $this->phoneNumber;
     }
@@ -167,7 +167,7 @@ class ChtypePerson
      *
      * @return self
      */
-    public function setPhoneNumber(string $phoneNumber) : self
+    public function setPhoneNumber(string $phoneNumber)
     {
         $this->phoneNumber = $phoneNumber;
         return $this;
@@ -177,7 +177,7 @@ class ChtypePerson
      *
      * @return string
      */
-    public function getLanguage() : string
+    public function getLanguage()
     {
         return $this->language;
     }
@@ -188,9 +188,13 @@ class ChtypePerson
      *
      * @return self
      */
-    public function setLanguage(string $language) : self
+    public function setLanguage(string $language)
     {
         $this->language = $language;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['title' => $this->title, 'firstName' => $this->firstName, 'lastName' => $this->lastName, 'fullName' => $this->fullName, 'email' => $this->email, 'phoneNumber' => $this->phoneNumber, 'language' => $this->language];
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveChargeCancelRequest
+class ChargehiveChargeCancelRequest implements \JsonSerializable
 {
     /**
      * 
@@ -21,7 +21,7 @@ class ChargehiveChargeCancelRequest
      *
      * @return string
      */
-    public function getChargeId() : string
+    public function getChargeId()
     {
         return $this->chargeId;
     }
@@ -32,7 +32,7 @@ class ChargehiveChargeCancelRequest
      *
      * @return self
      */
-    public function setChargeId(string $chargeId) : self
+    public function setChargeId(string $chargeId)
     {
         $this->chargeId = $chargeId;
         return $this;
@@ -42,7 +42,7 @@ class ChargehiveChargeCancelRequest
      *
      * @return ChtypeReason
      */
-    public function getReason() : ChtypeReason
+    public function getReason()
     {
         return $this->reason;
     }
@@ -53,9 +53,13 @@ class ChargehiveChargeCancelRequest
      *
      * @return self
      */
-    public function setReason(ChtypeReason $reason) : self
+    public function setReason(ChtypeReason $reason)
     {
         $this->reason = $reason;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['chargeId' => $this->chargeId, 'reason' => $this->reason];
     }
 }

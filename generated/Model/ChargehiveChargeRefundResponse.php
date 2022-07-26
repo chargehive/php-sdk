@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveChargeRefundResponse
+class ChargehiveChargeRefundResponse implements \JsonSerializable
 {
     /**
      * 
@@ -21,7 +21,7 @@ class ChargehiveChargeRefundResponse
      *
      * @return bool
      */
-    public function getAcknowledged() : bool
+    public function getAcknowledged()
     {
         return $this->acknowledged;
     }
@@ -32,7 +32,7 @@ class ChargehiveChargeRefundResponse
      *
      * @return self
      */
-    public function setAcknowledged(bool $acknowledged) : self
+    public function setAcknowledged(bool $acknowledged)
     {
         $this->acknowledged = $acknowledged;
         return $this;
@@ -42,7 +42,7 @@ class ChargehiveChargeRefundResponse
      *
      * @return string
      */
-    public function getProcessId() : string
+    public function getProcessId()
     {
         return $this->processId;
     }
@@ -53,9 +53,13 @@ class ChargehiveChargeRefundResponse
      *
      * @return self
      */
-    public function setProcessId(string $processId) : self
+    public function setProcessId(string $processId)
     {
         $this->processId = $processId;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['acknowledged' => $this->acknowledged, 'processId' => $this->processId];
     }
 }

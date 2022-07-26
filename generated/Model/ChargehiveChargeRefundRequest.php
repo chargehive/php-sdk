@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveChargeRefundRequest
+class ChargehiveChargeRefundRequest implements \JsonSerializable
 {
     /**
      * 
@@ -33,7 +33,7 @@ class ChargehiveChargeRefundRequest
      *
      * @return string
      */
-    public function getChargeId() : string
+    public function getChargeId()
     {
         return $this->chargeId;
     }
@@ -44,7 +44,7 @@ class ChargehiveChargeRefundRequest
      *
      * @return self
      */
-    public function setChargeId(string $chargeId) : self
+    public function setChargeId(string $chargeId)
     {
         $this->chargeId = $chargeId;
         return $this;
@@ -54,7 +54,7 @@ class ChargehiveChargeRefundRequest
      *
      * @return ChtypeAmount
      */
-    public function getAmount() : ChtypeAmount
+    public function getAmount()
     {
         return $this->amount;
     }
@@ -65,7 +65,7 @@ class ChargehiveChargeRefundRequest
      *
      * @return self
      */
-    public function setAmount(ChtypeAmount $amount) : self
+    public function setAmount(ChtypeAmount $amount)
     {
         $this->amount = $amount;
         return $this;
@@ -75,7 +75,7 @@ class ChargehiveChargeRefundRequest
      *
      * @return ChtypeReason
      */
-    public function getReason() : ChtypeReason
+    public function getReason()
     {
         return $this->reason;
     }
@@ -86,7 +86,7 @@ class ChargehiveChargeRefundRequest
      *
      * @return self
      */
-    public function setReason(ChtypeReason $reason) : self
+    public function setReason(ChtypeReason $reason)
     {
         $this->reason = $reason;
         return $this;
@@ -96,7 +96,7 @@ class ChargehiveChargeRefundRequest
      *
      * @return ChargehiveChargeRefundTransaction[]
      */
-    public function getTransactions() : array
+    public function getTransactions()
     {
         return $this->transactions;
     }
@@ -107,9 +107,13 @@ class ChargehiveChargeRefundRequest
      *
      * @return self
      */
-    public function setTransactions(array $transactions) : self
+    public function setTransactions(array $transactions)
     {
         $this->transactions = $transactions;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'reason' => $this->reason, 'transactions' => $this->transactions];
     }
 }

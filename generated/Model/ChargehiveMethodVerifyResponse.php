@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveMethodVerifyResponse
+class ChargehiveMethodVerifyResponse implements \JsonSerializable
 {
     /**
      * 
@@ -39,7 +39,7 @@ class ChargehiveMethodVerifyResponse
      *
      * @return bool
      */
-    public function getVerified() : bool
+    public function getVerified()
     {
         return $this->verified;
     }
@@ -50,7 +50,7 @@ class ChargehiveMethodVerifyResponse
      *
      * @return self
      */
-    public function setVerified(bool $verified) : self
+    public function setVerified(bool $verified)
     {
         $this->verified = $verified;
         return $this;
@@ -60,7 +60,7 @@ class ChargehiveMethodVerifyResponse
      *
      * @return bool
      */
-    public function getAuthed() : bool
+    public function getAuthed()
     {
         return $this->authed;
     }
@@ -71,7 +71,7 @@ class ChargehiveMethodVerifyResponse
      *
      * @return self
      */
-    public function setAuthed(bool $authed) : self
+    public function setAuthed(bool $authed)
     {
         $this->authed = $authed;
         return $this;
@@ -81,7 +81,7 @@ class ChargehiveMethodVerifyResponse
      *
      * @return ChtypePaymentMethodInfo
      */
-    public function getInfo() : ChtypePaymentMethodInfo
+    public function getInfo()
     {
         return $this->info;
     }
@@ -92,7 +92,7 @@ class ChargehiveMethodVerifyResponse
      *
      * @return self
      */
-    public function setInfo(ChtypePaymentMethodInfo $info) : self
+    public function setInfo(ChtypePaymentMethodInfo $info)
     {
         $this->info = $info;
         return $this;
@@ -102,7 +102,7 @@ class ChargehiveMethodVerifyResponse
      *
      * @return ChtypeTransaction
      */
-    public function getTransaction() : ChtypeTransaction
+    public function getTransaction()
     {
         return $this->transaction;
     }
@@ -113,7 +113,7 @@ class ChargehiveMethodVerifyResponse
      *
      * @return self
      */
-    public function setTransaction(ChtypeTransaction $transaction) : self
+    public function setTransaction(ChtypeTransaction $transaction)
     {
         $this->transaction = $transaction;
         return $this;
@@ -123,7 +123,7 @@ class ChargehiveMethodVerifyResponse
      *
      * @return ChargehivePCIBTokenizeResponse
      */
-    public function getTokenizeResponse() : ChargehivePCIBTokenizeResponse
+    public function getTokenizeResponse()
     {
         return $this->tokenizeResponse;
     }
@@ -134,9 +134,13 @@ class ChargehiveMethodVerifyResponse
      *
      * @return self
      */
-    public function setTokenizeResponse(ChargehivePCIBTokenizeResponse $tokenizeResponse) : self
+    public function setTokenizeResponse(ChargehivePCIBTokenizeResponse $tokenizeResponse)
     {
         $this->tokenizeResponse = $tokenizeResponse;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['verified' => $this->verified, 'authed' => $this->authed, 'info' => $this->info, 'transaction' => $this->transaction, 'tokenizeResponse' => $this->tokenizeResponse];
     }
 }

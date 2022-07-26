@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveConfigurationApplyResponse
+class ChargehiveConfigurationApplyResponse implements \JsonSerializable
 {
     /**
      * 
@@ -27,7 +27,7 @@ class ChargehiveConfigurationApplyResponse
      *
      * @return bool
      */
-    public function getSuccess() : bool
+    public function getSuccess()
     {
         return $this->success;
     }
@@ -38,7 +38,7 @@ class ChargehiveConfigurationApplyResponse
      *
      * @return self
      */
-    public function setSuccess(bool $success) : self
+    public function setSuccess(bool $success)
     {
         $this->success = $success;
         return $this;
@@ -48,7 +48,7 @@ class ChargehiveConfigurationApplyResponse
      *
      * @return string
      */
-    public function getMessage() : string
+    public function getMessage()
     {
         return $this->message;
     }
@@ -59,7 +59,7 @@ class ChargehiveConfigurationApplyResponse
      *
      * @return self
      */
-    public function setMessage(string $message) : self
+    public function setMessage(string $message)
     {
         $this->message = $message;
         return $this;
@@ -69,7 +69,7 @@ class ChargehiveConfigurationApplyResponse
      *
      * @return string
      */
-    public function getResult() : string
+    public function getResult()
     {
         return $this->result;
     }
@@ -80,9 +80,13 @@ class ChargehiveConfigurationApplyResponse
      *
      * @return self
      */
-    public function setResult(string $result) : self
+    public function setResult(string $result)
     {
         $this->result = $result;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['success' => $this->success, 'message' => $this->message, 'result' => $this->result];
     }
 }

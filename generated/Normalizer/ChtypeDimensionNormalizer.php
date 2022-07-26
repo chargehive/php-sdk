@@ -20,12 +20,12 @@ class ChtypeDimensionNormalizer implements DenormalizerInterface, NormalizerInte
     }
     public function supportsNormalization($data, $format = null)
     {
-        return is_object($data) && get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypeDimension';
+        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypeDimension';
     }
     public function denormalize($data, $class, $format = null, array $context = array())
     {
         if (!is_object($data)) {
-            throw new InvalidArgumentException(sprintf('Given $data is not an object (%s given). We need an object in order to continue denormalize method.', gettype($data)));
+            throw new InvalidArgumentException();
         }
         $object = new \ChargeHive\Php\Sdk\Generated\Model\ChtypeDimension();
         if (property_exists($data, 'width')) {

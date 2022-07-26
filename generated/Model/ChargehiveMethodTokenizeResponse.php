@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveMethodTokenizeResponse
+class ChargehiveMethodTokenizeResponse implements \JsonSerializable
 {
     /**
      * 
@@ -51,7 +51,7 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return bool
      */
-    public function getSuccess() : bool
+    public function getSuccess()
     {
         return $this->success;
     }
@@ -62,7 +62,7 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return self
      */
-    public function setSuccess(bool $success) : self
+    public function setSuccess(bool $success)
     {
         $this->success = $success;
         return $this;
@@ -72,7 +72,7 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return string
      */
-    public function getToken() : string
+    public function getToken()
     {
         return $this->token;
     }
@@ -83,7 +83,7 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return self
      */
-    public function setToken(string $token) : self
+    public function setToken(string $token)
     {
         $this->token = $token;
         return $this;
@@ -93,7 +93,7 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return ChtypePaymentMethodInfo
      */
-    public function getInfo() : ChtypePaymentMethodInfo
+    public function getInfo()
     {
         return $this->info;
     }
@@ -104,7 +104,7 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return self
      */
-    public function setInfo(ChtypePaymentMethodInfo $info) : self
+    public function setInfo(ChtypePaymentMethodInfo $info)
     {
         $this->info = $info;
         return $this;
@@ -114,7 +114,7 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return string[]
      */
-    public function getAdditionalData() : \ArrayObject
+    public function getAdditionalData()
     {
         return $this->additionalData;
     }
@@ -125,7 +125,7 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return self
      */
-    public function setAdditionalData(\ArrayObject $additionalData) : self
+    public function setAdditionalData(\ArrayObject $additionalData)
     {
         $this->additionalData = $additionalData;
         return $this;
@@ -135,7 +135,7 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return string
      */
-    public function getCustomerMessage() : string
+    public function getCustomerMessage()
     {
         return $this->customerMessage;
     }
@@ -146,7 +146,7 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return self
      */
-    public function setCustomerMessage(string $customerMessage) : self
+    public function setCustomerMessage(string $customerMessage)
     {
         $this->customerMessage = $customerMessage;
         return $this;
@@ -156,7 +156,7 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return string
      */
-    public function getMerchantMessage() : string
+    public function getMerchantMessage()
     {
         return $this->merchantMessage;
     }
@@ -167,7 +167,7 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return self
      */
-    public function setMerchantMessage(string $merchantMessage) : self
+    public function setMerchantMessage(string $merchantMessage)
     {
         $this->merchantMessage = $merchantMessage;
         return $this;
@@ -177,7 +177,7 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return ChargehivePCIBTokenizeResponse
      */
-    public function getTokenizeResponse() : ChargehivePCIBTokenizeResponse
+    public function getTokenizeResponse()
     {
         return $this->tokenizeResponse;
     }
@@ -188,9 +188,13 @@ class ChargehiveMethodTokenizeResponse
      *
      * @return self
      */
-    public function setTokenizeResponse(ChargehivePCIBTokenizeResponse $tokenizeResponse) : self
+    public function setTokenizeResponse(ChargehivePCIBTokenizeResponse $tokenizeResponse)
     {
         $this->tokenizeResponse = $tokenizeResponse;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['success' => $this->success, 'token' => $this->token, 'info' => $this->info, 'additionalData' => $this->additionalData, 'customerMessage' => $this->customerMessage, 'merchantMessage' => $this->merchantMessage, 'tokenizeResponse' => $this->tokenizeResponse];
     }
 }

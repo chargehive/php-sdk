@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveConfigurationListItem
+class ChargehiveConfigurationListItem implements \JsonSerializable
 {
     /**
      * 
@@ -33,7 +33,7 @@ class ChargehiveConfigurationListItem
      *
      * @return string
      */
-    public function getKind() : string
+    public function getKind()
     {
         return $this->kind;
     }
@@ -44,7 +44,7 @@ class ChargehiveConfigurationListItem
      *
      * @return self
      */
-    public function setKind(string $kind) : self
+    public function setKind(string $kind)
     {
         $this->kind = $kind;
         return $this;
@@ -54,7 +54,7 @@ class ChargehiveConfigurationListItem
      *
      * @return string
      */
-    public function getId() : string
+    public function getId()
     {
         return $this->id;
     }
@@ -65,7 +65,7 @@ class ChargehiveConfigurationListItem
      *
      * @return self
      */
-    public function setId(string $id) : self
+    public function setId(string $id)
     {
         $this->id = $id;
         return $this;
@@ -75,7 +75,7 @@ class ChargehiveConfigurationListItem
      *
      * @return string
      */
-    public function getDescription() : string
+    public function getDescription()
     {
         return $this->description;
     }
@@ -86,7 +86,7 @@ class ChargehiveConfigurationListItem
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(string $description)
     {
         $this->description = $description;
         return $this;
@@ -96,7 +96,7 @@ class ChargehiveConfigurationListItem
      *
      * @return bool
      */
-    public function getDisabled() : bool
+    public function getDisabled()
     {
         return $this->disabled;
     }
@@ -107,9 +107,13 @@ class ChargehiveConfigurationListItem
      *
      * @return self
      */
-    public function setDisabled(bool $disabled) : self
+    public function setDisabled(bool $disabled)
     {
         $this->disabled = $disabled;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['kind' => $this->kind, 'id' => $this->id, 'description' => $this->description, 'disabled' => $this->disabled];
     }
 }

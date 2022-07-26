@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeDevice
+class ChtypeDevice implements \JsonSerializable
 {
     /**
      * 
@@ -159,7 +159,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getBrowserAcceptHeader() : string
+    public function getBrowserAcceptHeader()
     {
         return $this->browserAcceptHeader;
     }
@@ -170,7 +170,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setBrowserAcceptHeader(string $browserAcceptHeader) : self
+    public function setBrowserAcceptHeader(string $browserAcceptHeader)
     {
         $this->browserAcceptHeader = $browserAcceptHeader;
         return $this;
@@ -180,7 +180,7 @@ class ChtypeDevice
      *
      * @return int
      */
-    public function getColorDepth() : int
+    public function getColorDepth()
     {
         return $this->colorDepth;
     }
@@ -191,7 +191,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setColorDepth(int $colorDepth) : self
+    public function setColorDepth(int $colorDepth)
     {
         $this->colorDepth = $colorDepth;
         return $this;
@@ -201,7 +201,7 @@ class ChtypeDevice
      *
      * @return bool
      */
-    public function getJavaEnabled() : bool
+    public function getJavaEnabled()
     {
         return $this->javaEnabled;
     }
@@ -212,7 +212,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setJavaEnabled(bool $javaEnabled) : self
+    public function setJavaEnabled(bool $javaEnabled)
     {
         $this->javaEnabled = $javaEnabled;
         return $this;
@@ -222,7 +222,7 @@ class ChtypeDevice
      *
      * @return bool
      */
-    public function getJavascriptEnabled() : bool
+    public function getJavascriptEnabled()
     {
         return $this->javascriptEnabled;
     }
@@ -233,7 +233,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setJavascriptEnabled(bool $javascriptEnabled) : self
+    public function setJavascriptEnabled(bool $javascriptEnabled)
     {
         $this->javascriptEnabled = $javascriptEnabled;
         return $this;
@@ -243,7 +243,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getLanguage() : string
+    public function getLanguage()
     {
         return $this->language;
     }
@@ -254,7 +254,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setLanguage(string $language) : self
+    public function setLanguage(string $language)
     {
         $this->language = $language;
         return $this;
@@ -264,7 +264,7 @@ class ChtypeDevice
      *
      * @return ChtypeDimension
      */
-    public function getScreen() : ChtypeDimension
+    public function getScreen()
     {
         return $this->screen;
     }
@@ -275,7 +275,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setScreen(ChtypeDimension $screen) : self
+    public function setScreen(ChtypeDimension $screen)
     {
         $this->screen = $screen;
         return $this;
@@ -285,7 +285,7 @@ class ChtypeDevice
      *
      * @return ChtypeDimension
      */
-    public function getScreenAvailable() : ChtypeDimension
+    public function getScreenAvailable()
     {
         return $this->screenAvailable;
     }
@@ -296,7 +296,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setScreenAvailable(ChtypeDimension $screenAvailable) : self
+    public function setScreenAvailable(ChtypeDimension $screenAvailable)
     {
         $this->screenAvailable = $screenAvailable;
         return $this;
@@ -306,7 +306,7 @@ class ChtypeDevice
      *
      * @return ChtypeDimension
      */
-    public function getWindowInner() : ChtypeDimension
+    public function getWindowInner()
     {
         return $this->windowInner;
     }
@@ -317,7 +317,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setWindowInner(ChtypeDimension $windowInner) : self
+    public function setWindowInner(ChtypeDimension $windowInner)
     {
         $this->windowInner = $windowInner;
         return $this;
@@ -327,7 +327,7 @@ class ChtypeDevice
      *
      * @return ChtypeDimension
      */
-    public function getWindowOuter() : ChtypeDimension
+    public function getWindowOuter()
     {
         return $this->windowOuter;
     }
@@ -338,7 +338,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setWindowOuter(ChtypeDimension $windowOuter) : self
+    public function setWindowOuter(ChtypeDimension $windowOuter)
     {
         $this->windowOuter = $windowOuter;
         return $this;
@@ -348,7 +348,7 @@ class ChtypeDevice
      *
      * @return int
      */
-    public function getTimezoneOffsetMins() : int
+    public function getTimezoneOffsetMins()
     {
         return $this->timezoneOffsetMins;
     }
@@ -359,7 +359,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setTimezoneOffsetMins(int $timezoneOffsetMins) : self
+    public function setTimezoneOffsetMins(int $timezoneOffsetMins)
     {
         $this->timezoneOffsetMins = $timezoneOffsetMins;
         return $this;
@@ -369,7 +369,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getUserAgent() : string
+    public function getUserAgent()
     {
         return $this->userAgent;
     }
@@ -380,7 +380,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setUserAgent(string $userAgent) : self
+    public function setUserAgent(string $userAgent)
     {
         $this->userAgent = $userAgent;
         return $this;
@@ -390,7 +390,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getIpAddress() : string
+    public function getIpAddress()
     {
         return $this->ipAddress;
     }
@@ -401,7 +401,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setIpAddress(string $ipAddress) : self
+    public function setIpAddress(string $ipAddress)
     {
         $this->ipAddress = $ipAddress;
         return $this;
@@ -411,7 +411,7 @@ class ChtypeDevice
      *
      * @return bool
      */
-    public function getCookiesEnabled() : bool
+    public function getCookiesEnabled()
     {
         return $this->cookiesEnabled;
     }
@@ -422,7 +422,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setCookiesEnabled(bool $cookiesEnabled) : self
+    public function setCookiesEnabled(bool $cookiesEnabled)
     {
         $this->cookiesEnabled = $cookiesEnabled;
         return $this;
@@ -432,7 +432,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getFlashVersion() : string
+    public function getFlashVersion()
     {
         return $this->flashVersion;
     }
@@ -443,7 +443,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setFlashVersion(string $flashVersion) : self
+    public function setFlashVersion(string $flashVersion)
     {
         $this->flashVersion = $flashVersion;
         return $this;
@@ -453,7 +453,7 @@ class ChtypeDevice
      *
      * @return bool
      */
-    public function getIsTouch() : bool
+    public function getIsTouch()
     {
         return $this->isTouch;
     }
@@ -464,7 +464,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setIsTouch(bool $isTouch) : self
+    public function setIsTouch(bool $isTouch)
     {
         $this->isTouch = $isTouch;
         return $this;
@@ -474,7 +474,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getOs() : string
+    public function getOs()
     {
         return $this->os;
     }
@@ -485,7 +485,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setOs(string $os) : self
+    public function setOs(string $os)
     {
         $this->os = $os;
         return $this;
@@ -495,7 +495,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getOsVersion() : string
+    public function getOsVersion()
     {
         return $this->osVersion;
     }
@@ -506,7 +506,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setOsVersion(string $osVersion) : self
+    public function setOsVersion(string $osVersion)
     {
         $this->osVersion = $osVersion;
         return $this;
@@ -516,7 +516,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getBrowser() : string
+    public function getBrowser()
     {
         return $this->browser;
     }
@@ -527,7 +527,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setBrowser(string $browser) : self
+    public function setBrowser(string $browser)
     {
         $this->browser = $browser;
         return $this;
@@ -537,7 +537,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getBrowserVersion() : string
+    public function getBrowserVersion()
     {
         return $this->browserVersion;
     }
@@ -548,7 +548,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setBrowserVersion(string $browserVersion) : self
+    public function setBrowserVersion(string $browserVersion)
     {
         $this->browserVersion = $browserVersion;
         return $this;
@@ -558,7 +558,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getDeviceManufacturer() : string
+    public function getDeviceManufacturer()
     {
         return $this->deviceManufacturer;
     }
@@ -569,7 +569,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setDeviceManufacturer(string $deviceManufacturer) : self
+    public function setDeviceManufacturer(string $deviceManufacturer)
     {
         $this->deviceManufacturer = $deviceManufacturer;
         return $this;
@@ -579,7 +579,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getDeviceName() : string
+    public function getDeviceName()
     {
         return $this->deviceName;
     }
@@ -590,7 +590,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setDeviceName(string $deviceName) : self
+    public function setDeviceName(string $deviceName)
     {
         $this->deviceName = $deviceName;
         return $this;
@@ -600,7 +600,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getDeviceVersion() : string
+    public function getDeviceVersion()
     {
         return $this->deviceVersion;
     }
@@ -611,7 +611,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setDeviceVersion(string $deviceVersion) : self
+    public function setDeviceVersion(string $deviceVersion)
     {
         $this->deviceVersion = $deviceVersion;
         return $this;
@@ -621,7 +621,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getFingerprint() : string
+    public function getFingerprint()
     {
         return $this->fingerprint;
     }
@@ -632,7 +632,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setFingerprint(string $fingerprint) : self
+    public function setFingerprint(string $fingerprint)
     {
         $this->fingerprint = $fingerprint;
         return $this;
@@ -642,7 +642,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getType() : string
+    public function getType()
     {
         return $this->type;
     }
@@ -653,7 +653,7 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(string $type)
     {
         $this->type = $type;
         return $this;
@@ -663,7 +663,7 @@ class ChtypeDevice
      *
      * @return string
      */
-    public function getTimezone() : string
+    public function getTimezone()
     {
         return $this->timezone;
     }
@@ -674,9 +674,13 @@ class ChtypeDevice
      *
      * @return self
      */
-    public function setTimezone(string $timezone) : self
+    public function setTimezone(string $timezone)
     {
         $this->timezone = $timezone;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['browserAcceptHeader' => $this->browserAcceptHeader, 'colorDepth' => $this->colorDepth, 'javaEnabled' => $this->javaEnabled, 'javascriptEnabled' => $this->javascriptEnabled, 'language' => $this->language, 'screen' => $this->screen, 'screenAvailable' => $this->screenAvailable, 'windowInner' => $this->windowInner, 'windowOuter' => $this->windowOuter, 'timezoneOffsetMins' => $this->timezoneOffsetMins, 'userAgent' => $this->userAgent, 'ipAddress' => $this->ipAddress, 'cookiesEnabled' => $this->cookiesEnabled, 'flashVersion' => $this->flashVersion, 'isTouch' => $this->isTouch, 'os' => $this->os, 'osVersion' => $this->osVersion, 'browser' => $this->browser, 'browserVersion' => $this->browserVersion, 'deviceManufacturer' => $this->deviceManufacturer, 'deviceName' => $this->deviceName, 'deviceVersion' => $this->deviceVersion, 'fingerprint' => $this->fingerprint, 'type' => $this->type, 'timezone' => $this->timezone];
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeReason
+class ChtypeReason implements \JsonSerializable
 {
     /**
      * 
@@ -33,7 +33,7 @@ class ChtypeReason
      *
      * @return string
      */
-    public function getDescription() : string
+    public function getDescription()
     {
         return $this->description;
     }
@@ -44,7 +44,7 @@ class ChtypeReason
      *
      * @return self
      */
-    public function setDescription(string $description) : self
+    public function setDescription(string $description)
     {
         $this->description = $description;
         return $this;
@@ -54,7 +54,7 @@ class ChtypeReason
      *
      * @return string
      */
-    public function getReasonType() : string
+    public function getReasonType()
     {
         return $this->reasonType;
     }
@@ -65,7 +65,7 @@ class ChtypeReason
      *
      * @return self
      */
-    public function setReasonType(string $reasonType) : self
+    public function setReasonType(string $reasonType)
     {
         $this->reasonType = $reasonType;
         return $this;
@@ -75,7 +75,7 @@ class ChtypeReason
      *
      * @return string
      */
-    public function getRequestorComment() : string
+    public function getRequestorComment()
     {
         return $this->requestorComment;
     }
@@ -86,7 +86,7 @@ class ChtypeReason
      *
      * @return self
      */
-    public function setRequestorComment(string $requestorComment) : self
+    public function setRequestorComment(string $requestorComment)
     {
         $this->requestorComment = $requestorComment;
         return $this;
@@ -96,7 +96,7 @@ class ChtypeReason
      *
      * @return string
      */
-    public function getRequestedBy() : string
+    public function getRequestedBy()
     {
         return $this->requestedBy;
     }
@@ -107,9 +107,13 @@ class ChtypeReason
      *
      * @return self
      */
-    public function setRequestedBy(string $requestedBy) : self
+    public function setRequestedBy(string $requestedBy)
     {
         $this->requestedBy = $requestedBy;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['description' => $this->description, 'reasonType' => $this->reasonType, 'requestorComment' => $this->requestorComment, 'requestedBy' => $this->requestedBy];
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeCompany
+class ChtypeCompany implements \JsonSerializable
 {
     /**
      * 
@@ -27,7 +27,7 @@ class ChtypeCompany
      *
      * @return string
      */
-    public function getName() : string
+    public function getName()
     {
         return $this->name;
     }
@@ -38,7 +38,7 @@ class ChtypeCompany
      *
      * @return self
      */
-    public function setName(string $name) : self
+    public function setName(string $name)
     {
         $this->name = $name;
         return $this;
@@ -48,7 +48,7 @@ class ChtypeCompany
      *
      * @return string
      */
-    public function getEmail() : string
+    public function getEmail()
     {
         return $this->email;
     }
@@ -59,7 +59,7 @@ class ChtypeCompany
      *
      * @return self
      */
-    public function setEmail(string $email) : self
+    public function setEmail(string $email)
     {
         $this->email = $email;
         return $this;
@@ -69,7 +69,7 @@ class ChtypeCompany
      *
      * @return string
      */
-    public function getPhoneNumber() : string
+    public function getPhoneNumber()
     {
         return $this->phoneNumber;
     }
@@ -80,9 +80,13 @@ class ChtypeCompany
      *
      * @return self
      */
-    public function setPhoneNumber(string $phoneNumber) : self
+    public function setPhoneNumber(string $phoneNumber)
     {
         $this->phoneNumber = $phoneNumber;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['name' => $this->name, 'email' => $this->email, 'phoneNumber' => $this->phoneNumber];
     }
 }

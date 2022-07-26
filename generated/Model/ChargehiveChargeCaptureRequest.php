@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveChargeCaptureRequest
+class ChargehiveChargeCaptureRequest implements \JsonSerializable
 {
     /**
      * 
@@ -27,7 +27,7 @@ class ChargehiveChargeCaptureRequest
      *
      * @return string
      */
-    public function getChargeId() : string
+    public function getChargeId()
     {
         return $this->chargeId;
     }
@@ -38,7 +38,7 @@ class ChargehiveChargeCaptureRequest
      *
      * @return self
      */
-    public function setChargeId(string $chargeId) : self
+    public function setChargeId(string $chargeId)
     {
         $this->chargeId = $chargeId;
         return $this;
@@ -48,7 +48,7 @@ class ChargehiveChargeCaptureRequest
      *
      * @return ChtypeAmount
      */
-    public function getAmount() : ChtypeAmount
+    public function getAmount()
     {
         return $this->amount;
     }
@@ -59,7 +59,7 @@ class ChargehiveChargeCaptureRequest
      *
      * @return self
      */
-    public function setAmount(ChtypeAmount $amount) : self
+    public function setAmount(ChtypeAmount $amount)
     {
         $this->amount = $amount;
         return $this;
@@ -69,7 +69,7 @@ class ChargehiveChargeCaptureRequest
      *
      * @return string
      */
-    public function getInitialTransactionId() : string
+    public function getInitialTransactionId()
     {
         return $this->initialTransactionId;
     }
@@ -80,9 +80,13 @@ class ChargehiveChargeCaptureRequest
      *
      * @return self
      */
-    public function setInitialTransactionId(string $initialTransactionId) : self
+    public function setInitialTransactionId(string $initialTransactionId)
     {
         $this->initialTransactionId = $initialTransactionId;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'initialTransactionId' => $this->initialTransactionId];
     }
 }

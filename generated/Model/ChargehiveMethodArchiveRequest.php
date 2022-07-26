@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveMethodArchiveRequest
+class ChargehiveMethodArchiveRequest implements \JsonSerializable
 {
     /**
      * 
@@ -15,7 +15,7 @@ class ChargehiveMethodArchiveRequest
      *
      * @return string
      */
-    public function getToken() : string
+    public function getToken()
     {
         return $this->token;
     }
@@ -26,9 +26,13 @@ class ChargehiveMethodArchiveRequest
      *
      * @return self
      */
-    public function setToken(string $token) : self
+    public function setToken(string $token)
     {
         $this->token = $token;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['token' => $this->token];
     }
 }

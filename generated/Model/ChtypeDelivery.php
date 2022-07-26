@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeDelivery
+class ChtypeDelivery implements \JsonSerializable
 {
     /**
      * 
@@ -33,7 +33,7 @@ class ChtypeDelivery
      *
      * @return string
      */
-    public function getStandard() : string
+    public function getStandard()
     {
         return $this->standard;
     }
@@ -44,7 +44,7 @@ class ChtypeDelivery
      *
      * @return self
      */
-    public function setStandard(string $standard) : self
+    public function setStandard(string $standard)
     {
         $this->standard = $standard;
         return $this;
@@ -54,7 +54,7 @@ class ChtypeDelivery
      *
      * @return string
      */
-    public function getType() : string
+    public function getType()
     {
         return $this->type;
     }
@@ -65,7 +65,7 @@ class ChtypeDelivery
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(string $type)
     {
         $this->type = $type;
         return $this;
@@ -75,7 +75,7 @@ class ChtypeDelivery
      *
      * @return string
      */
-    public function getTrackingCode() : string
+    public function getTrackingCode()
     {
         return $this->trackingCode;
     }
@@ -86,7 +86,7 @@ class ChtypeDelivery
      *
      * @return self
      */
-    public function setTrackingCode(string $trackingCode) : self
+    public function setTrackingCode(string $trackingCode)
     {
         $this->trackingCode = $trackingCode;
         return $this;
@@ -96,7 +96,7 @@ class ChtypeDelivery
      *
      * @return string
      */
-    public function getCourier() : string
+    public function getCourier()
     {
         return $this->courier;
     }
@@ -107,9 +107,13 @@ class ChtypeDelivery
      *
      * @return self
      */
-    public function setCourier(string $courier) : self
+    public function setCourier(string $courier)
     {
         $this->courier = $courier;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['standard' => $this->standard, 'type' => $this->type, 'trackingCode' => $this->trackingCode, 'courier' => $this->courier];
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeTransactionDetail
+class ChtypeTransactionDetail implements \JsonSerializable
 {
     /**
      * 
@@ -129,7 +129,7 @@ class ChtypeTransactionDetail
      *
      * @return string
      */
-    public function getActorId() : string
+    public function getActorId()
     {
         return $this->actorId;
     }
@@ -140,7 +140,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setActorId(string $actorId) : self
+    public function setActorId(string $actorId)
     {
         $this->actorId = $actorId;
         return $this;
@@ -150,7 +150,7 @@ class ChtypeTransactionDetail
      *
      * @return string
      */
-    public function getActorVersion() : string
+    public function getActorVersion()
     {
         return $this->actorVersion;
     }
@@ -161,7 +161,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setActorVersion(string $actorVersion) : self
+    public function setActorVersion(string $actorVersion)
     {
         $this->actorVersion = $actorVersion;
         return $this;
@@ -171,7 +171,7 @@ class ChtypeTransactionDetail
      *
      * @return string
      */
-    public function getActorType() : string
+    public function getActorType()
     {
         return $this->actorType;
     }
@@ -182,7 +182,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setActorType(string $actorType) : self
+    public function setActorType(string $actorType)
     {
         $this->actorType = $actorType;
         return $this;
@@ -192,7 +192,7 @@ class ChtypeTransactionDetail
      *
      * @return string
      */
-    public function getTransactionId() : string
+    public function getTransactionId()
     {
         return $this->transactionId;
     }
@@ -203,7 +203,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setTransactionId(string $transactionId) : self
+    public function setTransactionId(string $transactionId)
     {
         $this->transactionId = $transactionId;
         return $this;
@@ -213,7 +213,7 @@ class ChtypeTransactionDetail
      *
      * @return ChtypeAmount
      */
-    public function getRequestedAmount() : ChtypeAmount
+    public function getRequestedAmount()
     {
         return $this->requestedAmount;
     }
@@ -224,7 +224,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setRequestedAmount(ChtypeAmount $requestedAmount) : self
+    public function setRequestedAmount(ChtypeAmount $requestedAmount)
     {
         $this->requestedAmount = $requestedAmount;
         return $this;
@@ -234,7 +234,7 @@ class ChtypeTransactionDetail
      *
      * @return ChtypeAmount
      */
-    public function getProcessedAmount() : ChtypeAmount
+    public function getProcessedAmount()
     {
         return $this->processedAmount;
     }
@@ -245,7 +245,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setProcessedAmount(ChtypeAmount $processedAmount) : self
+    public function setProcessedAmount(ChtypeAmount $processedAmount)
     {
         $this->processedAmount = $processedAmount;
         return $this;
@@ -255,7 +255,7 @@ class ChtypeTransactionDetail
      *
      * @return ChtypeAmount
      */
-    public function getFeeEstimate() : ChtypeAmount
+    public function getFeeEstimate()
     {
         return $this->feeEstimate;
     }
@@ -266,7 +266,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setFeeEstimate(ChtypeAmount $feeEstimate) : self
+    public function setFeeEstimate(ChtypeAmount $feeEstimate)
     {
         $this->feeEstimate = $feeEstimate;
         return $this;
@@ -276,7 +276,7 @@ class ChtypeTransactionDetail
      *
      * @return ChtypeAmount
      */
-    public function getFeeActual() : ChtypeAmount
+    public function getFeeActual()
     {
         return $this->feeActual;
     }
@@ -287,7 +287,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setFeeActual(ChtypeAmount $feeActual) : self
+    public function setFeeActual(ChtypeAmount $feeActual)
     {
         $this->feeActual = $feeActual;
         return $this;
@@ -297,7 +297,7 @@ class ChtypeTransactionDetail
      *
      * @return \DateTime
      */
-    public function getStartTime() : \DateTime
+    public function getStartTime()
     {
         return $this->startTime;
     }
@@ -308,7 +308,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setStartTime(\DateTime $startTime) : self
+    public function setStartTime(\DateTime $startTime)
     {
         $this->startTime = $startTime;
         return $this;
@@ -318,7 +318,7 @@ class ChtypeTransactionDetail
      *
      * @return \DateTime
      */
-    public function getEndTime() : \DateTime
+    public function getEndTime()
     {
         return $this->endTime;
     }
@@ -329,7 +329,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setEndTime(\DateTime $endTime) : self
+    public function setEndTime(\DateTime $endTime)
     {
         $this->endTime = $endTime;
         return $this;
@@ -339,7 +339,7 @@ class ChtypeTransactionDetail
      *
      * @return bool
      */
-    public function getWasSuccessful() : bool
+    public function getWasSuccessful()
     {
         return $this->wasSuccessful;
     }
@@ -350,7 +350,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setWasSuccessful(bool $wasSuccessful) : self
+    public function setWasSuccessful(bool $wasSuccessful)
     {
         $this->wasSuccessful = $wasSuccessful;
         return $this;
@@ -360,7 +360,7 @@ class ChtypeTransactionDetail
      *
      * @return string
      */
-    public function getEnvironment() : string
+    public function getEnvironment()
     {
         return $this->environment;
     }
@@ -371,7 +371,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setEnvironment(string $environment) : self
+    public function setEnvironment(string $environment)
     {
         $this->environment = $environment;
         return $this;
@@ -381,7 +381,7 @@ class ChtypeTransactionDetail
      *
      * @return ChtypeResponseDetail
      */
-    public function getResponse() : ChtypeResponseDetail
+    public function getResponse()
     {
         return $this->response;
     }
@@ -392,7 +392,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setResponse(ChtypeResponseDetail $response) : self
+    public function setResponse(ChtypeResponseDetail $response)
     {
         $this->response = $response;
         return $this;
@@ -402,7 +402,7 @@ class ChtypeTransactionDetail
      *
      * @return ChtypeVerificationResult
      */
-    public function getVerificationResult() : ChtypeVerificationResult
+    public function getVerificationResult()
     {
         return $this->verificationResult;
     }
@@ -413,7 +413,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setVerificationResult(ChtypeVerificationResult $verificationResult) : self
+    public function setVerificationResult(ChtypeVerificationResult $verificationResult)
     {
         $this->verificationResult = $verificationResult;
         return $this;
@@ -423,7 +423,7 @@ class ChtypeTransactionDetail
      *
      * @return string[]
      */
-    public function getAdditionalData() : \ArrayObject
+    public function getAdditionalData()
     {
         return $this->additionalData;
     }
@@ -434,7 +434,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setAdditionalData(\ArrayObject $additionalData) : self
+    public function setAdditionalData(\ArrayObject $additionalData)
     {
         $this->additionalData = $additionalData;
         return $this;
@@ -444,7 +444,7 @@ class ChtypeTransactionDetail
      *
      * @return string
      */
-    public function getAuthorizationCode() : string
+    public function getAuthorizationCode()
     {
         return $this->authorizationCode;
     }
@@ -455,7 +455,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setAuthorizationCode(string $authorizationCode) : self
+    public function setAuthorizationCode(string $authorizationCode)
     {
         $this->authorizationCode = $authorizationCode;
         return $this;
@@ -465,7 +465,7 @@ class ChtypeTransactionDetail
      *
      * @return string
      */
-    public function getLiability() : string
+    public function getLiability()
     {
         return $this->liability;
     }
@@ -476,7 +476,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setLiability(string $liability) : self
+    public function setLiability(string $liability)
     {
         $this->liability = $liability;
         return $this;
@@ -486,7 +486,7 @@ class ChtypeTransactionDetail
      *
      * @return string
      */
-    public function getConnectorLibrary() : string
+    public function getConnectorLibrary()
     {
         return $this->connectorLibrary;
     }
@@ -497,7 +497,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setConnectorLibrary(string $connectorLibrary) : self
+    public function setConnectorLibrary(string $connectorLibrary)
     {
         $this->connectorLibrary = $connectorLibrary;
         return $this;
@@ -507,7 +507,7 @@ class ChtypeTransactionDetail
      *
      * @return string
      */
-    public function getConnectorId() : string
+    public function getConnectorId()
     {
         return $this->connectorId;
     }
@@ -518,7 +518,7 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setConnectorId(string $connectorId) : self
+    public function setConnectorId(string $connectorId)
     {
         $this->connectorId = $connectorId;
         return $this;
@@ -528,7 +528,7 @@ class ChtypeTransactionDetail
      *
      * @return bool
      */
-    public function getPrimary() : bool
+    public function getPrimary()
     {
         return $this->primary;
     }
@@ -539,9 +539,13 @@ class ChtypeTransactionDetail
      *
      * @return self
      */
-    public function setPrimary(bool $primary) : self
+    public function setPrimary(bool $primary)
     {
         $this->primary = $primary;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['actorId' => $this->actorId, 'actorVersion' => $this->actorVersion, 'actorType' => $this->actorType, 'transactionId' => $this->transactionId, 'requestedAmount' => $this->requestedAmount, 'processedAmount' => $this->processedAmount, 'feeEstimate' => $this->feeEstimate, 'feeActual' => $this->feeActual, 'startTime' => $this->startTime, 'endTime' => $this->endTime, 'wasSuccessful' => $this->wasSuccessful, 'environment' => $this->environment, 'response' => $this->response, 'verificationResult' => $this->verificationResult, 'additionalData' => $this->additionalData, 'authorizationCode' => $this->authorizationCode, 'liability' => $this->liability, 'connectorLibrary' => $this->connectorLibrary, 'connectorId' => $this->connectorId, 'primary' => $this->primary];
     }
 }

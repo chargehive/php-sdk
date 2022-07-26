@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class RuntimeError
+class RuntimeError implements \JsonSerializable
 {
     /**
      * 
@@ -33,7 +33,7 @@ class RuntimeError
      *
      * @return string
      */
-    public function getError() : string
+    public function getError()
     {
         return $this->error;
     }
@@ -44,7 +44,7 @@ class RuntimeError
      *
      * @return self
      */
-    public function setError(string $error) : self
+    public function setError(string $error)
     {
         $this->error = $error;
         return $this;
@@ -54,7 +54,7 @@ class RuntimeError
      *
      * @return int
      */
-    public function getCode() : int
+    public function getCode()
     {
         return $this->code;
     }
@@ -65,7 +65,7 @@ class RuntimeError
      *
      * @return self
      */
-    public function setCode(int $code) : self
+    public function setCode(int $code)
     {
         $this->code = $code;
         return $this;
@@ -75,7 +75,7 @@ class RuntimeError
      *
      * @return string
      */
-    public function getMessage() : string
+    public function getMessage()
     {
         return $this->message;
     }
@@ -86,7 +86,7 @@ class RuntimeError
      *
      * @return self
      */
-    public function setMessage(string $message) : self
+    public function setMessage(string $message)
     {
         $this->message = $message;
         return $this;
@@ -96,7 +96,7 @@ class RuntimeError
      *
      * @return ProtobufAny[]
      */
-    public function getDetails() : array
+    public function getDetails()
     {
         return $this->details;
     }
@@ -107,9 +107,13 @@ class RuntimeError
      *
      * @return self
      */
-    public function setDetails(array $details) : self
+    public function setDetails(array $details)
     {
         $this->details = $details;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['error' => $this->error, 'code' => $this->code, 'message' => $this->message, 'details' => $this->details];
     }
 }

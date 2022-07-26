@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveConnectionConfirmRequest
+class ChargehiveConnectionConfirmRequest implements \JsonSerializable
 {
     /**
      * 
@@ -21,7 +21,7 @@ class ChargehiveConnectionConfirmRequest
      *
      * @return string
      */
-    public function getRequestId() : string
+    public function getRequestId()
     {
         return $this->requestId;
     }
@@ -32,7 +32,7 @@ class ChargehiveConnectionConfirmRequest
      *
      * @return self
      */
-    public function setRequestId(string $requestId) : self
+    public function setRequestId(string $requestId)
     {
         $this->requestId = $requestId;
         return $this;
@@ -42,7 +42,7 @@ class ChargehiveConnectionConfirmRequest
      *
      * @return string
      */
-    public function getVerificationKey() : string
+    public function getVerificationKey()
     {
         return $this->verificationKey;
     }
@@ -53,9 +53,13 @@ class ChargehiveConnectionConfirmRequest
      *
      * @return self
      */
-    public function setVerificationKey(string $verificationKey) : self
+    public function setVerificationKey(string $verificationKey)
     {
         $this->verificationKey = $verificationKey;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['requestId' => $this->requestId, 'verificationKey' => $this->verificationKey];
     }
 }

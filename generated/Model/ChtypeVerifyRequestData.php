@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeVerifyRequestData
+class ChtypeVerifyRequestData implements \JsonSerializable
 {
     /**
      * 
@@ -39,7 +39,7 @@ class ChtypeVerifyRequestData
      *
      * @return string
      */
-    public function getType() : string
+    public function getType()
     {
         return $this->type;
     }
@@ -50,7 +50,7 @@ class ChtypeVerifyRequestData
      *
      * @return self
      */
-    public function setType(string $type) : self
+    public function setType(string $type)
     {
         $this->type = $type;
         return $this;
@@ -60,7 +60,7 @@ class ChtypeVerifyRequestData
      *
      * @return string[]
      */
-    public function getData() : \ArrayObject
+    public function getData()
     {
         return $this->data;
     }
@@ -71,7 +71,7 @@ class ChtypeVerifyRequestData
      *
      * @return self
      */
-    public function setData(\ArrayObject $data) : self
+    public function setData(\ArrayObject $data)
     {
         $this->data = $data;
         return $this;
@@ -81,7 +81,7 @@ class ChtypeVerifyRequestData
      *
      * @return string
      */
-    public function getConnectorLibrary() : string
+    public function getConnectorLibrary()
     {
         return $this->connectorLibrary;
     }
@@ -92,7 +92,7 @@ class ChtypeVerifyRequestData
      *
      * @return self
      */
-    public function setConnectorLibrary(string $connectorLibrary) : self
+    public function setConnectorLibrary(string $connectorLibrary)
     {
         $this->connectorLibrary = $connectorLibrary;
         return $this;
@@ -102,7 +102,7 @@ class ChtypeVerifyRequestData
      *
      * @return string
      */
-    public function getEnvironment() : string
+    public function getEnvironment()
     {
         return $this->environment;
     }
@@ -113,7 +113,7 @@ class ChtypeVerifyRequestData
      *
      * @return self
      */
-    public function setEnvironment(string $environment) : self
+    public function setEnvironment(string $environment)
     {
         $this->environment = $environment;
         return $this;
@@ -123,7 +123,7 @@ class ChtypeVerifyRequestData
      *
      * @return bool
      */
-    public function getRequired() : bool
+    public function getRequired()
     {
         return $this->required;
     }
@@ -134,9 +134,13 @@ class ChtypeVerifyRequestData
      *
      * @return self
      */
-    public function setRequired(bool $required) : self
+    public function setRequired(bool $required)
     {
         $this->required = $required;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['type' => $this->type, 'data' => $this->data, 'connectorLibrary' => $this->connectorLibrary, 'environment' => $this->environment, 'required' => $this->required];
     }
 }

@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChtypeFraudFactor
+class ChtypeFraudFactor implements \JsonSerializable
 {
     /**
      * 
@@ -33,7 +33,7 @@ class ChtypeFraudFactor
      *
      * @return string
      */
-    public function getOn() : string
+    public function getOn()
     {
         return $this->on;
     }
@@ -44,7 +44,7 @@ class ChtypeFraudFactor
      *
      * @return self
      */
-    public function setOn(string $on) : self
+    public function setOn(string $on)
     {
         $this->on = $on;
         return $this;
@@ -54,7 +54,7 @@ class ChtypeFraudFactor
      *
      * @return string
      */
-    public function getFactor() : string
+    public function getFactor()
     {
         return $this->factor;
     }
@@ -65,7 +65,7 @@ class ChtypeFraudFactor
      *
      * @return self
      */
-    public function setFactor(string $factor) : self
+    public function setFactor(string $factor)
     {
         $this->factor = $factor;
         return $this;
@@ -75,7 +75,7 @@ class ChtypeFraudFactor
      *
      * @return string
      */
-    public function getOtherOn() : string
+    public function getOtherOn()
     {
         return $this->otherOn;
     }
@@ -86,7 +86,7 @@ class ChtypeFraudFactor
      *
      * @return self
      */
-    public function setOtherOn(string $otherOn) : self
+    public function setOtherOn(string $otherOn)
     {
         $this->otherOn = $otherOn;
         return $this;
@@ -96,7 +96,7 @@ class ChtypeFraudFactor
      *
      * @return string
      */
-    public function getOtherFactor() : string
+    public function getOtherFactor()
     {
         return $this->otherFactor;
     }
@@ -107,9 +107,13 @@ class ChtypeFraudFactor
      *
      * @return self
      */
-    public function setOtherFactor(string $otherFactor) : self
+    public function setOtherFactor(string $otherFactor)
     {
         $this->otherFactor = $otherFactor;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['on' => $this->on, 'factor' => $this->factor, 'otherOn' => $this->otherOn, 'otherFactor' => $this->otherFactor];
     }
 }

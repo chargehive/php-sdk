@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveConnectionValidateResponse
+class ChargehiveConnectionValidateResponse implements \JsonSerializable
 {
     /**
      * 
@@ -27,7 +27,7 @@ class ChargehiveConnectionValidateResponse
      *
      * @return string
      */
-    public function getRequestId() : string
+    public function getRequestId()
     {
         return $this->requestId;
     }
@@ -38,7 +38,7 @@ class ChargehiveConnectionValidateResponse
      *
      * @return self
      */
-    public function setRequestId(string $requestId) : self
+    public function setRequestId(string $requestId)
     {
         $this->requestId = $requestId;
         return $this;
@@ -48,7 +48,7 @@ class ChargehiveConnectionValidateResponse
      *
      * @return string
      */
-    public function getVerificationKey() : string
+    public function getVerificationKey()
     {
         return $this->verificationKey;
     }
@@ -59,7 +59,7 @@ class ChargehiveConnectionValidateResponse
      *
      * @return self
      */
-    public function setVerificationKey(string $verificationKey) : self
+    public function setVerificationKey(string $verificationKey)
     {
         $this->verificationKey = $verificationKey;
         return $this;
@@ -69,7 +69,7 @@ class ChargehiveConnectionValidateResponse
      *
      * @return ChtypeResponseDetail
      */
-    public function getResponse() : ChtypeResponseDetail
+    public function getResponse()
     {
         return $this->response;
     }
@@ -80,9 +80,13 @@ class ChargehiveConnectionValidateResponse
      *
      * @return self
      */
-    public function setResponse(ChtypeResponseDetail $response) : self
+    public function setResponse(ChtypeResponseDetail $response)
     {
         $this->response = $response;
         return $this;
+    }
+    public function jsonSerialize()
+    {
+        return ['requestId' => $this->requestId, 'verificationKey' => $this->verificationKey, 'response' => $this->response];
     }
 }
