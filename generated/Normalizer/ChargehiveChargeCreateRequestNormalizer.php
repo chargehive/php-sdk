@@ -60,6 +60,13 @@ class ChargehiveChargeCreateRequestNormalizer implements DenormalizerInterface, 
             }
             $object->setLabels($values_1);
         }
+        if (property_exists($data, 'initial_transactions')) {
+            $values_2 = array();
+            foreach ($data->{'initial_transactions'} as $value_2) {
+                $values_2[] = $this->denormalizer->denormalize($value_2, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypeInitialTransactionData', 'json', $context);
+            }
+            $object->setInitialTransactions($values_2);
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -96,6 +103,13 @@ class ChargehiveChargeCreateRequestNormalizer implements DenormalizerInterface, 
                 $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
             }
             $data->{'labels'} = $values_1;
+        }
+        if (null !== $object->getInitialTransactions()) {
+            $values_2 = array();
+            foreach ($object->getInitialTransactions() as $value_2) {
+                $values_2[] = $this->normalizer->normalize($value_2, 'json', $context);
+            }
+            $data->{'initial_transactions'} = $values_2;
         }
         return $data;
     }

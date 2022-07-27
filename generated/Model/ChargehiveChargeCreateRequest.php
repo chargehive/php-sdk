@@ -55,6 +55,12 @@ class ChargehiveChargeCreateRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var ChtypeInitialTransactionData[]
+     */
+    protected $initialTransactions;
+    /**
+     * 
+     *
      * @return string
      */
     public function getMerchantReference()
@@ -220,8 +226,29 @@ class ChargehiveChargeCreateRequest implements \JsonSerializable
         $this->labels = $labels;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return ChtypeInitialTransactionData[]
+     */
+    public function getInitialTransactions()
+    {
+        return $this->initialTransactions;
+    }
+    /**
+     * 
+     *
+     * @param ChtypeInitialTransactionData[] $initialTransactions
+     *
+     * @return self
+     */
+    public function setInitialTransactions(array $initialTransactions)
+    {
+        $this->initialTransactions = $initialTransactions;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['merchantReference' => $this->merchantReference, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'contractType' => $this->contractType, 'environment' => $this->environment, 'chargeMeta' => $this->chargeMeta, 'labels' => $this->labels];
+        return ['merchantReference' => $this->merchantReference, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'contractType' => $this->contractType, 'environment' => $this->environment, 'chargeMeta' => $this->chargeMeta, 'labels' => $this->labels, 'initialTransactions' => $this->initialTransactions];
     }
 }

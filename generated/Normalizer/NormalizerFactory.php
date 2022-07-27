@@ -74,6 +74,7 @@ class NormalizerFactory
         $normalizers[] = new ChtypeFraudFactorNormalizer();
         $normalizers[] = new ChtypeFraudResultNormalizer();
         $normalizers[] = new ChtypeFraudScoreNormalizer();
+        $normalizers[] = new ChtypeInitialTransactionDataNormalizer();
         $normalizers[] = new ChtypePaymentMethodNormalizer();
         $normalizers[] = new ChtypePaymentMethodInfoNormalizer();
         $normalizers[] = new ChtypePaymentMethodSchemaCardNormalizer();
