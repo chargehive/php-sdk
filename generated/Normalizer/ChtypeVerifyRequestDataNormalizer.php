@@ -47,6 +47,13 @@ class ChtypeVerifyRequestDataNormalizer implements DenormalizerInterface, Normal
         if (property_exists($data, 'required')) {
             $object->setRequired($data->{'required'});
         }
+        if (property_exists($data, 'methodData')) {
+            $values_1 = new \ArrayObject(array(), \ArrayObject::ARRAY_AS_PROPS);
+            foreach ($data->{'methodData'} as $key_1 => $value_1) {
+                $values_1[$key_1] = $value_1;
+            }
+            $object->setMethodData($values_1);
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -70,6 +77,13 @@ class ChtypeVerifyRequestDataNormalizer implements DenormalizerInterface, Normal
         }
         if (null !== $object->getRequired()) {
             $data->{'required'} = $object->getRequired();
+        }
+        if (null !== $object->getMethodData()) {
+            $values_1 = new \stdClass();
+            foreach ($object->getMethodData() as $key_1 => $value_1) {
+                $values_1->{$key_1} = $value_1;
+            }
+            $data->{'methodData'} = $values_1;
         }
         return $data;
     }

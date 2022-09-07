@@ -37,6 +37,12 @@ class ChtypeVerifyRequestData implements \JsonSerializable
     /**
      * 
      *
+     * @var string[]
+     */
+    protected $methodData;
+    /**
+     * 
+     *
      * @return string
      */
     public function getType()
@@ -139,8 +145,29 @@ class ChtypeVerifyRequestData implements \JsonSerializable
         $this->required = $required;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string[]
+     */
+    public function getMethodData()
+    {
+        return $this->methodData;
+    }
+    /**
+     * 
+     *
+     * @param string[] $methodData
+     *
+     * @return self
+     */
+    public function setMethodData(\ArrayObject $methodData)
+    {
+        $this->methodData = $methodData;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['type' => $this->type, 'data' => $this->data, 'connectorLibrary' => $this->connectorLibrary, 'environment' => $this->environment, 'required' => $this->required];
+        return ['type' => $this->type, 'data' => $this->data, 'connectorLibrary' => $this->connectorLibrary, 'environment' => $this->environment, 'required' => $this->required, 'methodData' => $this->methodData];
     }
 }
