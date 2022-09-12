@@ -49,6 +49,12 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $billingProfileId;
+    /**
+     * 
+     *
      * @return string
      */
     public function getChargeId()
@@ -193,8 +199,29 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
         $this->labels = $labels;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getBillingProfileId()
+    {
+        return $this->billingProfileId;
+    }
+    /**
+     * 
+     *
+     * @param string $billingProfileId
+     *
+     * @return self
+     */
+    public function setBillingProfileId(string $billingProfileId)
+    {
+        $this->billingProfileId = $billingProfileId;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'chargeMeta' => $this->chargeMeta, 'chargeMetaType' => $this->chargeMetaType, 'labels' => $this->labels];
+        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'chargeMeta' => $this->chargeMeta, 'chargeMetaType' => $this->chargeMetaType, 'labels' => $this->labels, 'billingProfileId' => $this->billingProfileId];
     }
 }

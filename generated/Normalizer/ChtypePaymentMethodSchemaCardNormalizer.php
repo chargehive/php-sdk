@@ -49,6 +49,9 @@ class ChtypePaymentMethodSchemaCardNormalizer implements DenormalizerInterface, 
         if (property_exists($data, 'number')) {
             $object->setNumber($data->{'number'});
         }
+        if (property_exists($data, 'scheme')) {
+            $object->setScheme($data->{'scheme'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -74,6 +77,9 @@ class ChtypePaymentMethodSchemaCardNormalizer implements DenormalizerInterface, 
         }
         if (null !== $object->getNumber()) {
             $data->{'number'} = $object->getNumber();
+        }
+        if (null !== $object->getScheme()) {
+            $data->{'scheme'} = $object->getScheme();
         }
         return $data;
     }

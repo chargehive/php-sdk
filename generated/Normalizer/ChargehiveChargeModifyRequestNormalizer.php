@@ -57,6 +57,9 @@ class ChargehiveChargeModifyRequestNormalizer implements DenormalizerInterface, 
             }
             $object->setLabels($values_1);
         }
+        if (property_exists($data, 'billing_profile_id')) {
+            $object->setBillingProfileId($data->{'billing_profile_id'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -90,6 +93,9 @@ class ChargehiveChargeModifyRequestNormalizer implements DenormalizerInterface, 
                 $values_1[] = $this->normalizer->normalize($value_1, 'json', $context);
             }
             $data->{'labels'} = $values_1;
+        }
+        if (null !== $object->getBillingProfileId()) {
+            $data->{'billing_profile_id'} = $object->getBillingProfileId();
         }
         return $data;
     }
