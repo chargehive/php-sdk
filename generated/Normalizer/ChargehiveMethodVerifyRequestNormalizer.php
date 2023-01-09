@@ -43,6 +43,9 @@ class ChargehiveMethodVerifyRequestNormalizer implements DenormalizerInterface, 
         if (property_exists($data, 'billing_profile_id')) {
             $object->setBillingProfileId($data->{'billing_profile_id'});
         }
+        if (property_exists($data, 'account_holder')) {
+            $object->setAccountHolder($data->{'account_holder'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -62,6 +65,9 @@ class ChargehiveMethodVerifyRequestNormalizer implements DenormalizerInterface, 
         }
         if (null !== $object->getBillingProfileId()) {
             $data->{'billing_profile_id'} = $object->getBillingProfileId();
+        }
+        if (null !== $object->getAccountHolder()) {
+            $data->{'account_holder'} = $object->getAccountHolder();
         }
         return $data;
     }
