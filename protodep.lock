@@ -1,0 +1,27 @@
+proto_outdir = "./protodep"
+
+[[dependencies]]
+  target = "github.com/chargehive/proto/chargehive/chtype"
+  subgroup = ""
+  revision = "32f1f825da4507f66e97ff6befc26d34a2efeb49"
+  branch = ""
+  path = "chargehive/chtype"
+  protocol = ""
+
+[[dependencies]]
+  target = "github.com/grpc-ecosystem/grpc-gateway"
+  subgroup = ""
+  revision = "0eb17c3d70415c44406b0f02265ceaad570d6fa3"
+  branch = ""
+  path = ""
+  includes = ["/protoc-gen-openapiv2"]
+  protocol = ""
+
+[[dependencies]]
+  target = "github.com/googleapis/googleapis/google"
+  subgroup = ""
+  revision = "288aa7fb71c9b6244db1a816cfd4108f811e6049"
+  branch = ""
+  path = "google"
+  includes = ["/api"]
+  protocol = ""

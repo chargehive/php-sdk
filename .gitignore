@@ -1,3 +1,4 @@
-/vendor/*
+/vendor/
+/protodep/
 /api.swagger.json
 /composer.lock

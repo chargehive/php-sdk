@@ -3,26 +3,13 @@
   "description": "ChargeHive PHP SDK",
   "type": "library",
   "require": {
-    "php": ">=7.2",
-    "jane-php/json-schema-runtime": "4.4.0",
-    "jane-php/open-api-runtime": "4.4.0",
-    "guzzlehttp/psr7": "^1.6",
-    "php-http/message": "^1.8"
-  },
-  "require-dev": {
-    "jane-php/jane-php": "4.x-dev as 4.4.0",
-    "php-http/guzzle6-adapter": "^2.0"
+    "php": ">=7.4",
+    "php-http/message": "^1.16.0",
+    "google/protobuf": "^3.23.1"
   },
   "autoload": {
     "psr-4": {
-      "ChargeHive\\Php\\Sdk\\Generated\\": "generated/",
-      "ChargeHive\\Php\\Sdk\\Client\\": "src/"
+      "ChargeHive\\Php\\Sdk\\": "generated/ChargeHive/"
     }
-  },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "git@github.com:packaged/janephp.git"
-    }
-  ]
+  }
 }

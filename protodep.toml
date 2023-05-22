@@ -1,0 +1,21 @@
+proto_outdir = "./protodep"
+
+[[dependencies]]
+target = "github.com/chargehive/proto/chargehive/chtype"
+revision = "v1.7.1"
+path = "chargehive/chtype"
+
+[[dependencies]]
+target = "github.com/grpc-ecosystem/grpc-gateway"
+revision = "v2.15.2"
+includes = [
+    "/protoc-gen-openapiv2"
+]
+
+[[dependencies]]
+target = "github.com/googleapis/googleapis/google"
+revision = "latest"
+path = "google"
+includes = [
+    "/api"
+]
