@@ -37,6 +37,9 @@ class ChtypeInitialTransactionDataNormalizer implements DenormalizerInterface, N
         if (property_exists($data, 'connector_id')) {
             $object->setConnectorId($data->{'connector_id'});
         }
+        if (property_exists($data, 'network_id')) {
+            $object->setNetworkId($data->{'network_id'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -50,6 +53,9 @@ class ChtypeInitialTransactionDataNormalizer implements DenormalizerInterface, N
         }
         if (null !== $object->getConnectorId()) {
             $data->{'connector_id'} = $object->getConnectorId();
+        }
+        if (null !== $object->getNetworkId()) {
+            $data->{'network_id'} = $object->getNetworkId();
         }
         return $data;
     }

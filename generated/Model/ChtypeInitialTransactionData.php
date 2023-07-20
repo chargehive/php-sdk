@@ -25,6 +25,12 @@ class ChtypeInitialTransactionData implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $networkId;
+    /**
+     * 
+     *
      * @return string
      */
     public function getChargeId()
@@ -85,8 +91,29 @@ class ChtypeInitialTransactionData implements \JsonSerializable
         $this->connectorId = $connectorId;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getNetworkId()
+    {
+        return $this->networkId;
+    }
+    /**
+     * 
+     *
+     * @param string $networkId
+     *
+     * @return self
+     */
+    public function setNetworkId(string $networkId)
+    {
+        $this->networkId = $networkId;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['chargeId' => $this->chargeId, 'transactionId' => $this->transactionId, 'connectorId' => $this->connectorId];
+        return ['chargeId' => $this->chargeId, 'transactionId' => $this->transactionId, 'connectorId' => $this->connectorId, 'networkId' => $this->networkId];
     }
 }

@@ -147,6 +147,30 @@ class Client extends \Jane\OpenApiRuntime\Client\Psr7HttplugClient
     /**
      * 
      *
+     * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationDisableRequest $body 
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationDisableResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
+     */
+    public function configurationDisable(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationDisableRequest $body, string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\ConfigurationDisable($body), $fetch);
+    }
+    /**
+     * 
+     *
+     * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationEnableRequest $body 
+     * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
+     *
+     * @return null|\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationEnableResponse|\ChargeHive\Php\Sdk\Generated\Model\RuntimeError|\Psr\Http\Message\ResponseInterface
+     */
+    public function configurationEnable(\ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationEnableRequest $body, string $fetch = self::FETCH_OBJECT)
+    {
+        return $this->executePsr7Endpoint(new \ChargeHive\Php\Sdk\Generated\Endpoint\ConfigurationEnable($body), $fetch);
+    }
+    /**
+     * 
+     *
      * @param \ChargeHive\Php\Sdk\Generated\Model\ChargehiveConfigurationGetRequest $body 
      * @param string $fetch Fetch mode to use (can be OBJECT or RESPONSE)
      *

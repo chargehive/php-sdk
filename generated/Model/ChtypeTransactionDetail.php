@@ -127,6 +127,18 @@ class ChtypeTransactionDetail implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $networkId;
+    /**
+     * 
+     *
+     * @var string
+     */
+    protected $pspTransactionId;
+    /**
+     * 
+     *
      * @return string
      */
     public function getActorId()
@@ -544,8 +556,50 @@ class ChtypeTransactionDetail implements \JsonSerializable
         $this->primary = $primary;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getNetworkId()
+    {
+        return $this->networkId;
+    }
+    /**
+     * 
+     *
+     * @param string $networkId
+     *
+     * @return self
+     */
+    public function setNetworkId(string $networkId)
+    {
+        $this->networkId = $networkId;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getPspTransactionId()
+    {
+        return $this->pspTransactionId;
+    }
+    /**
+     * 
+     *
+     * @param string $pspTransactionId
+     *
+     * @return self
+     */
+    public function setPspTransactionId(string $pspTransactionId)
+    {
+        $this->pspTransactionId = $pspTransactionId;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['actorId' => $this->actorId, 'actorVersion' => $this->actorVersion, 'actorType' => $this->actorType, 'transactionId' => $this->transactionId, 'requestedAmount' => $this->requestedAmount, 'processedAmount' => $this->processedAmount, 'feeEstimate' => $this->feeEstimate, 'feeActual' => $this->feeActual, 'startTime' => $this->startTime, 'endTime' => $this->endTime, 'wasSuccessful' => $this->wasSuccessful, 'environment' => $this->environment, 'response' => $this->response, 'verificationResult' => $this->verificationResult, 'additionalData' => $this->additionalData, 'authorizationCode' => $this->authorizationCode, 'liability' => $this->liability, 'connectorLibrary' => $this->connectorLibrary, 'connectorId' => $this->connectorId, 'primary' => $this->primary];
+        return ['actorId' => $this->actorId, 'actorVersion' => $this->actorVersion, 'actorType' => $this->actorType, 'transactionId' => $this->transactionId, 'requestedAmount' => $this->requestedAmount, 'processedAmount' => $this->processedAmount, 'feeEstimate' => $this->feeEstimate, 'feeActual' => $this->feeActual, 'startTime' => $this->startTime, 'endTime' => $this->endTime, 'wasSuccessful' => $this->wasSuccessful, 'environment' => $this->environment, 'response' => $this->response, 'verificationResult' => $this->verificationResult, 'additionalData' => $this->additionalData, 'authorizationCode' => $this->authorizationCode, 'liability' => $this->liability, 'connectorLibrary' => $this->connectorLibrary, 'connectorId' => $this->connectorId, 'primary' => $this->primary, 'networkId' => $this->networkId, 'pspTransactionId' => $this->pspTransactionId];
     }
 }

@@ -55,6 +55,12 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var ChtypeInitialTransactionData[]
+     */
+    protected $initialTransaction;
+    /**
+     * 
+     *
      * @return string
      */
     public function getChargeId()
@@ -220,8 +226,29 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
         $this->billingProfileId = $billingProfileId;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return ChtypeInitialTransactionData[]
+     */
+    public function getInitialTransaction()
+    {
+        return $this->initialTransaction;
+    }
+    /**
+     * 
+     *
+     * @param ChtypeInitialTransactionData[] $initialTransaction
+     *
+     * @return self
+     */
+    public function setInitialTransaction(array $initialTransaction)
+    {
+        $this->initialTransaction = $initialTransaction;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'chargeMeta' => $this->chargeMeta, 'chargeMetaType' => $this->chargeMetaType, 'labels' => $this->labels, 'billingProfileId' => $this->billingProfileId];
+        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'chargeMeta' => $this->chargeMeta, 'chargeMetaType' => $this->chargeMetaType, 'labels' => $this->labels, 'billingProfileId' => $this->billingProfileId, 'initialTransaction' => $this->initialTransaction];
     }
 }

@@ -92,6 +92,12 @@ class ChtypeTransactionDetailNormalizer implements DenormalizerInterface, Normal
         if (property_exists($data, 'primary')) {
             $object->setPrimary($data->{'primary'});
         }
+        if (property_exists($data, 'network_id')) {
+            $object->setNetworkId($data->{'network_id'});
+        }
+        if (property_exists($data, 'psp_transaction_id')) {
+            $object->setPspTransactionId($data->{'psp_transaction_id'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -160,6 +166,12 @@ class ChtypeTransactionDetailNormalizer implements DenormalizerInterface, Normal
         }
         if (null !== $object->getPrimary()) {
             $data->{'primary'} = $object->getPrimary();
+        }
+        if (null !== $object->getNetworkId()) {
+            $data->{'network_id'} = $object->getNetworkId();
+        }
+        if (null !== $object->getPspTransactionId()) {
+            $data->{'psp_transaction_id'} = $object->getPspTransactionId();
         }
         return $data;
     }

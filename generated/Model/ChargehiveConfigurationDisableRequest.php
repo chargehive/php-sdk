@@ -2,39 +2,39 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ProtobufAny implements \JsonSerializable
+class ChargehiveConfigurationDisableRequest implements \JsonSerializable
 {
     /**
      * 
      *
      * @var string
      */
-    protected $typeUrl;
+    protected $kind;
     /**
      * 
      *
      * @var string
      */
-    protected $value;
+    protected $id;
     /**
      * 
      *
      * @return string
      */
-    public function getTypeUrl()
+    public function getKind()
     {
-        return $this->typeUrl;
+        return $this->kind;
     }
     /**
      * 
      *
-     * @param string $typeUrl
+     * @param string $kind
      *
      * @return self
      */
-    public function setTypeUrl(string $typeUrl)
+    public function setKind(string $kind)
     {
-        $this->typeUrl = $typeUrl;
+        $this->kind = $kind;
         return $this;
     }
     /**
@@ -42,24 +42,24 @@ class ProtobufAny implements \JsonSerializable
      *
      * @return string
      */
-    public function getValue()
+    public function getId()
     {
-        return $this->value;
+        return $this->id;
     }
     /**
      * 
      *
-     * @param string $value
+     * @param string $id
      *
      * @return self
      */
-    public function setValue(string $value)
+    public function setId(string $id)
     {
-        $this->value = $value;
+        $this->id = $id;
         return $this;
     }
     public function jsonSerialize()
     {
-        return ['typeUrl' => $this->typeUrl, 'value' => $this->value];
+        return ['kind' => $this->kind, 'id' => $this->id];
     }
 }

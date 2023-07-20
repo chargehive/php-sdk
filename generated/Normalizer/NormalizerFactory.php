@@ -31,6 +31,10 @@ class NormalizerFactory
         $normalizers[] = new ChargehiveConfigurationApplyRequestNormalizer();
         $normalizers[] = new ChargehiveConfigurationApplyResponseNormalizer();
         $normalizers[] = new ChargehiveConfigurationDeleteResponseNormalizer();
+        $normalizers[] = new ChargehiveConfigurationDisableRequestNormalizer();
+        $normalizers[] = new ChargehiveConfigurationDisableResponseNormalizer();
+        $normalizers[] = new ChargehiveConfigurationEnableRequestNormalizer();
+        $normalizers[] = new ChargehiveConfigurationEnableResponseNormalizer();
         $normalizers[] = new ChargehiveConfigurationGetRequestNormalizer();
         $normalizers[] = new ChargehiveConfigurationGetResponseNormalizer();
         $normalizers[] = new ChargehiveConfigurationListItemNormalizer();
