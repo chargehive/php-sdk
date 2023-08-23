@@ -37,6 +37,9 @@ class ChargehiveChargeRefundTransactionNormalizer implements DenormalizerInterfa
         if (property_exists($data, 'payment_method_token')) {
             $object->setPaymentMethodToken($data->{'payment_method_token'});
         }
+        if (property_exists($data, 'merchant_reference')) {
+            $object->setMerchantReference($data->{'merchant_reference'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -50,6 +53,9 @@ class ChargehiveChargeRefundTransactionNormalizer implements DenormalizerInterfa
         }
         if (null !== $object->getPaymentMethodToken()) {
             $data->{'payment_method_token'} = $object->getPaymentMethodToken();
+        }
+        if (null !== $object->getMerchantReference()) {
+            $data->{'merchant_reference'} = $object->getMerchantReference();
         }
         return $data;
     }

@@ -25,6 +25,12 @@ class ChargehiveChargeRefundTransaction implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $merchantReference;
+    /**
+     * 
+     *
      * @return string
      */
     public function getSourceTransactionId()
@@ -85,8 +91,29 @@ class ChargehiveChargeRefundTransaction implements \JsonSerializable
         $this->paymentMethodToken = $paymentMethodToken;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getMerchantReference()
+    {
+        return $this->merchantReference;
+    }
+    /**
+     * 
+     *
+     * @param string $merchantReference
+     *
+     * @return self
+     */
+    public function setMerchantReference(string $merchantReference)
+    {
+        $this->merchantReference = $merchantReference;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['sourceTransactionId' => $this->sourceTransactionId, 'amount' => $this->amount, 'paymentMethodToken' => $this->paymentMethodToken];
+        return ['sourceTransactionId' => $this->sourceTransactionId, 'amount' => $this->amount, 'paymentMethodToken' => $this->paymentMethodToken, 'merchantReference' => $this->merchantReference];
     }
 }
