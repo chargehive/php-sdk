@@ -40,6 +40,9 @@ class ChargehiveChargeRefundTransactionNormalizer implements DenormalizerInterfa
         if (property_exists($data, 'merchant_reference')) {
             $object->setMerchantReference($data->{'merchant_reference'});
         }
+        if (property_exists($data, 'refund_transaction_id')) {
+            $object->setRefundTransactionId($data->{'refund_transaction_id'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -56,6 +59,9 @@ class ChargehiveChargeRefundTransactionNormalizer implements DenormalizerInterfa
         }
         if (null !== $object->getMerchantReference()) {
             $data->{'merchant_reference'} = $object->getMerchantReference();
+        }
+        if (null !== $object->getRefundTransactionId()) {
+            $data->{'refund_transaction_id'} = $object->getRefundTransactionId();
         }
         return $data;
     }
