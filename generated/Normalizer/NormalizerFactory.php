@@ -47,6 +47,8 @@ class NormalizerFactory
         $normalizers[] = new ChargehiveMethodArchiveResponseNormalizer();
         $normalizers[] = new ChargehiveMethodRefreshRequestNormalizer();
         $normalizers[] = new ChargehiveMethodRefreshResponseNormalizer();
+        $normalizers[] = new ChargehiveMethodRepairRequestNormalizer();
+        $normalizers[] = new ChargehiveMethodRepairResponseNormalizer();
         $normalizers[] = new ChargehiveMethodSuspendRequestNormalizer();
         $normalizers[] = new ChargehiveMethodSuspendResponseNormalizer();
         $normalizers[] = new ChargehiveMethodTokenizeRequestNormalizer();
