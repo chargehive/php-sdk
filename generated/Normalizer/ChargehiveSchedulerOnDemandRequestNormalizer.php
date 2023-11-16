@@ -31,6 +31,9 @@ class ChargehiveSchedulerOnDemandRequestNormalizer implements DenormalizerInterf
         if (property_exists($data, 'scheduler_id')) {
             $object->setSchedulerId($data->{'scheduler_id'});
         }
+        if (property_exists($data, 'charge_id')) {
+            $object->setChargeId($data->{'charge_id'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -38,6 +41,9 @@ class ChargehiveSchedulerOnDemandRequestNormalizer implements DenormalizerInterf
         $data = new \stdClass();
         if (null !== $object->getSchedulerId()) {
             $data->{'scheduler_id'} = $object->getSchedulerId();
+        }
+        if (null !== $object->getChargeId()) {
+            $data->{'charge_id'} = $object->getChargeId();
         }
         return $data;
     }
