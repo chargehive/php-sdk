@@ -98,6 +98,9 @@ class ChtypeTransactionDetailNormalizer implements DenormalizerInterface, Normal
         if (property_exists($data, 'psp_transaction_id')) {
             $object->setPspTransactionId($data->{'psp_transaction_id'});
         }
+        if (property_exists($data, 'psp_request_id')) {
+            $object->setPspRequestId($data->{'psp_request_id'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -172,6 +175,9 @@ class ChtypeTransactionDetailNormalizer implements DenormalizerInterface, Normal
         }
         if (null !== $object->getPspTransactionId()) {
             $data->{'psp_transaction_id'} = $object->getPspTransactionId();
+        }
+        if (null !== $object->getPspRequestId()) {
+            $data->{'psp_request_id'} = $object->getPspRequestId();
         }
         return $data;
     }
