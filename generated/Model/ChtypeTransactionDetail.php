@@ -145,6 +145,12 @@ class ChtypeTransactionDetail implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $issuerName;
+    /**
+     * 
+     *
      * @return string
      */
     public function getActorId()
@@ -625,8 +631,29 @@ class ChtypeTransactionDetail implements \JsonSerializable
         $this->pspRequestId = $pspRequestId;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getIssuerName()
+    {
+        return $this->issuerName;
+    }
+    /**
+     * 
+     *
+     * @param string $issuerName
+     *
+     * @return self
+     */
+    public function setIssuerName(string $issuerName)
+    {
+        $this->issuerName = $issuerName;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['actorId' => $this->actorId, 'actorVersion' => $this->actorVersion, 'actorType' => $this->actorType, 'transactionId' => $this->transactionId, 'requestedAmount' => $this->requestedAmount, 'processedAmount' => $this->processedAmount, 'feeEstimate' => $this->feeEstimate, 'feeActual' => $this->feeActual, 'startTime' => $this->startTime, 'endTime' => $this->endTime, 'wasSuccessful' => $this->wasSuccessful, 'environment' => $this->environment, 'response' => $this->response, 'verificationResult' => $this->verificationResult, 'additionalData' => $this->additionalData, 'authorizationCode' => $this->authorizationCode, 'liability' => $this->liability, 'connectorLibrary' => $this->connectorLibrary, 'connectorId' => $this->connectorId, 'primary' => $this->primary, 'networkId' => $this->networkId, 'pspTransactionId' => $this->pspTransactionId, 'pspRequestId' => $this->pspRequestId];
+        return ['actorId' => $this->actorId, 'actorVersion' => $this->actorVersion, 'actorType' => $this->actorType, 'transactionId' => $this->transactionId, 'requestedAmount' => $this->requestedAmount, 'processedAmount' => $this->processedAmount, 'feeEstimate' => $this->feeEstimate, 'feeActual' => $this->feeActual, 'startTime' => $this->startTime, 'endTime' => $this->endTime, 'wasSuccessful' => $this->wasSuccessful, 'environment' => $this->environment, 'response' => $this->response, 'verificationResult' => $this->verificationResult, 'additionalData' => $this->additionalData, 'authorizationCode' => $this->authorizationCode, 'liability' => $this->liability, 'connectorLibrary' => $this->connectorLibrary, 'connectorId' => $this->connectorId, 'primary' => $this->primary, 'networkId' => $this->networkId, 'pspTransactionId' => $this->pspTransactionId, 'pspRequestId' => $this->pspRequestId, 'issuerName' => $this->issuerName];
     }
 }

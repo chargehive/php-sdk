@@ -2,7 +2,7 @@
 
 namespace ChargeHive\Php\Sdk\Generated\Model;
 
-class ChargehiveMethodUnlockRequest implements \JsonSerializable
+class ChargehiveMethodLockRequest implements \JsonSerializable
 {
     /**
      * 
@@ -16,6 +16,12 @@ class ChargehiveMethodUnlockRequest implements \JsonSerializable
      * @var string
      */
     protected $reason;
+    /**
+     * 
+     *
+     * @var string
+     */
+    protected $duration;
     /**
      * 
      *
@@ -58,8 +64,29 @@ class ChargehiveMethodUnlockRequest implements \JsonSerializable
         $this->reason = $reason;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getDuration()
+    {
+        return $this->duration;
+    }
+    /**
+     * 
+     *
+     * @param string $duration
+     *
+     * @return self
+     */
+    public function setDuration(string $duration)
+    {
+        $this->duration = $duration;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['methodId' => $this->methodId, 'reason' => $this->reason];
+        return ['methodId' => $this->methodId, 'reason' => $this->reason, 'duration' => $this->duration];
     }
 }

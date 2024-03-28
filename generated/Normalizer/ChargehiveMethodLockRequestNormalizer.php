@@ -10,29 +10,32 @@ use Symfony\Component\Serializer\Normalizer\DenormalizerInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface;
 use Symfony\Component\Serializer\Normalizer\NormalizerAwareTrait;
 use Symfony\Component\Serializer\Normalizer\NormalizerInterface;
-class ChargehiveMethodUnlockRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
+class ChargehiveMethodLockRequestNormalizer implements DenormalizerInterface, NormalizerInterface, DenormalizerAwareInterface, NormalizerAwareInterface
 {
     use DenormalizerAwareTrait;
     use NormalizerAwareTrait;
     public function supportsDenormalization($data, $type, $format = null)
     {
-        return $type === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodUnlockRequest';
+        return $type === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodLockRequest';
     }
     public function supportsNormalization($data, $format = null)
     {
-        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodUnlockRequest';
+        return get_class($data) === 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehiveMethodLockRequest';
     }
     public function denormalize($data, $class, $format = null, array $context = array())
     {
         if (!is_object($data)) {
             throw new InvalidArgumentException();
         }
-        $object = new \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodUnlockRequest();
+        $object = new \ChargeHive\Php\Sdk\Generated\Model\ChargehiveMethodLockRequest();
         if (property_exists($data, 'method_id')) {
             $object->setMethodId($data->{'method_id'});
         }
         if (property_exists($data, 'reason')) {
             $object->setReason($data->{'reason'});
+        }
+        if (property_exists($data, 'duration')) {
+            $object->setDuration($data->{'duration'});
         }
         return $object;
     }
@@ -44,6 +47,9 @@ class ChargehiveMethodUnlockRequestNormalizer implements DenormalizerInterface, 
         }
         if (null !== $object->getReason()) {
             $data->{'reason'} = $object->getReason();
+        }
+        if (null !== $object->getDuration()) {
+            $data->{'duration'} = $object->getDuration();
         }
         return $data;
     }

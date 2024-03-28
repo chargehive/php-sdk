@@ -70,6 +70,9 @@ class ChargehiveChargeCreateRequestNormalizer implements DenormalizerInterface, 
         if (property_exists($data, 'billing_profile_id')) {
             $object->setBillingProfileId($data->{'billing_profile_id'});
         }
+        if (property_exists($data, 'charge_timezone')) {
+            $object->setChargeTimezone($data->{'charge_timezone'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -116,6 +119,9 @@ class ChargehiveChargeCreateRequestNormalizer implements DenormalizerInterface, 
         }
         if (null !== $object->getBillingProfileId()) {
             $data->{'billing_profile_id'} = $object->getBillingProfileId();
+        }
+        if (null !== $object->getChargeTimezone()) {
+            $data->{'charge_timezone'} = $object->getChargeTimezone();
         }
         return $data;
     }
