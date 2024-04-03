@@ -67,6 +67,9 @@ class ChargehiveChargeModifyRequestNormalizer implements DenormalizerInterface, 
             }
             $object->setInitialTransaction($values_2);
         }
+        if (property_exists($data, 'reactivate')) {
+            $object->setReactivate($data->{'reactivate'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -110,6 +113,9 @@ class ChargehiveChargeModifyRequestNormalizer implements DenormalizerInterface, 
                 $values_2[] = $this->normalizer->normalize($value_2, 'json', $context);
             }
             $data->{'initial_transaction'} = $values_2;
+        }
+        if (null !== $object->getReactivate()) {
+            $data->{'reactivate'} = $object->getReactivate();
         }
         return $data;
     }

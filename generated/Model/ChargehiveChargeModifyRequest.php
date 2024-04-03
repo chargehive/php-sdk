@@ -61,6 +61,12 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var bool
+     */
+    protected $reactivate;
+    /**
+     * 
+     *
      * @return string
      */
     public function getChargeId()
@@ -247,8 +253,29 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
         $this->initialTransaction = $initialTransaction;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return bool
+     */
+    public function getReactivate()
+    {
+        return $this->reactivate;
+    }
+    /**
+     * 
+     *
+     * @param bool $reactivate
+     *
+     * @return self
+     */
+    public function setReactivate(bool $reactivate)
+    {
+        $this->reactivate = $reactivate;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'chargeMeta' => $this->chargeMeta, 'chargeMetaType' => $this->chargeMetaType, 'labels' => $this->labels, 'billingProfileId' => $this->billingProfileId, 'initialTransaction' => $this->initialTransaction];
+        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'chargeMeta' => $this->chargeMeta, 'chargeMetaType' => $this->chargeMetaType, 'labels' => $this->labels, 'billingProfileId' => $this->billingProfileId, 'initialTransaction' => $this->initialTransaction, 'reactivate' => $this->reactivate];
     }
 }
