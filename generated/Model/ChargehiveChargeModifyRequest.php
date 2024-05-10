@@ -67,6 +67,12 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $chargeTimezone;
+    /**
+     * 
+     *
      * @return string
      */
     public function getChargeId()
@@ -274,8 +280,29 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
         $this->reactivate = $reactivate;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getChargeTimezone()
+    {
+        return $this->chargeTimezone;
+    }
+    /**
+     * 
+     *
+     * @param string $chargeTimezone
+     *
+     * @return self
+     */
+    public function setChargeTimezone(string $chargeTimezone)
+    {
+        $this->chargeTimezone = $chargeTimezone;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'chargeMeta' => $this->chargeMeta, 'chargeMetaType' => $this->chargeMetaType, 'labels' => $this->labels, 'billingProfileId' => $this->billingProfileId, 'initialTransaction' => $this->initialTransaction, 'reactivate' => $this->reactivate];
+        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'chargeMeta' => $this->chargeMeta, 'chargeMetaType' => $this->chargeMetaType, 'labels' => $this->labels, 'billingProfileId' => $this->billingProfileId, 'initialTransaction' => $this->initialTransaction, 'reactivate' => $this->reactivate, 'chargeTimezone' => $this->chargeTimezone];
     }
 }

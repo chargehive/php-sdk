@@ -70,6 +70,9 @@ class ChargehiveChargeModifyRequestNormalizer implements DenormalizerInterface, 
         if (property_exists($data, 'reactivate')) {
             $object->setReactivate($data->{'reactivate'});
         }
+        if (property_exists($data, 'charge_timezone')) {
+            $object->setChargeTimezone($data->{'charge_timezone'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -116,6 +119,9 @@ class ChargehiveChargeModifyRequestNormalizer implements DenormalizerInterface, 
         }
         if (null !== $object->getReactivate()) {
             $data->{'reactivate'} = $object->getReactivate();
+        }
+        if (null !== $object->getChargeTimezone()) {
+            $data->{'charge_timezone'} = $object->getChargeTimezone();
         }
         return $data;
     }
