@@ -55,6 +55,12 @@ class ChargehiveMethodRepairRequestNormalizer implements DenormalizerInterface, 
         if (property_exists($data, 'token_expiry')) {
             $object->setTokenExpiry($data->{'token_expiry'});
         }
+        if (property_exists($data, 'previous_method_id')) {
+            $object->setPreviousMethodId($data->{'previous_method_id'});
+        }
+        if (property_exists($data, 'refresh_reason')) {
+            $object->setRefreshReason($data->{'refresh_reason'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -86,6 +92,12 @@ class ChargehiveMethodRepairRequestNormalizer implements DenormalizerInterface, 
         }
         if (null !== $object->getTokenExpiry()) {
             $data->{'token_expiry'} = $object->getTokenExpiry();
+        }
+        if (null !== $object->getPreviousMethodId()) {
+            $data->{'previous_method_id'} = $object->getPreviousMethodId();
+        }
+        if (null !== $object->getRefreshReason()) {
+            $data->{'refresh_reason'} = $object->getRefreshReason();
         }
         return $data;
     }
