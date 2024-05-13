@@ -61,6 +61,18 @@ class ChargehiveMethodRepairRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $previousMethodId;
+    /**
+     * 
+     *
+     * @var string
+     */
+    protected $refreshReason;
+    /**
+     * 
+     *
      * @return string
      */
     public function getPaymentMethodId()
@@ -247,8 +259,50 @@ class ChargehiveMethodRepairRequest implements \JsonSerializable
         $this->tokenExpiry = $tokenExpiry;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getPreviousMethodId()
+    {
+        return $this->previousMethodId;
+    }
+    /**
+     * 
+     *
+     * @param string $previousMethodId
+     *
+     * @return self
+     */
+    public function setPreviousMethodId(string $previousMethodId)
+    {
+        $this->previousMethodId = $previousMethodId;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getRefreshReason()
+    {
+        return $this->refreshReason;
+    }
+    /**
+     * 
+     *
+     * @param string $refreshReason
+     *
+     * @return self
+     */
+    public function setRefreshReason(string $refreshReason)
+    {
+        $this->refreshReason = $refreshReason;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['paymentMethodId' => $this->paymentMethodId, 'bpid' => $this->bpid, 'mfp' => $this->mfp, 'name' => $this->name, 'pfp' => $this->pfp, 'paymentScheme' => $this->paymentScheme, 'tokenId' => $this->tokenId, 'tokenType' => $this->tokenType, 'tokenExpiry' => $this->tokenExpiry];
+        return ['paymentMethodId' => $this->paymentMethodId, 'bpid' => $this->bpid, 'mfp' => $this->mfp, 'name' => $this->name, 'pfp' => $this->pfp, 'paymentScheme' => $this->paymentScheme, 'tokenId' => $this->tokenId, 'tokenType' => $this->tokenType, 'tokenExpiry' => $this->tokenExpiry, 'previousMethodId' => $this->previousMethodId, 'refreshReason' => $this->refreshReason];
     }
 }
