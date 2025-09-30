@@ -79,6 +79,9 @@ class ChtypeThreeDSResultNormalizer implements DenormalizerInterface, Normalizer
         if (property_exists($data, 'sdk_response')) {
             $object->setSdkResponse($data->{'sdk_response'});
         }
+        if (property_exists($data, 'acs_trans_id')) {
+            $object->setAcsTransId($data->{'acs_trans_id'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -134,6 +137,9 @@ class ChtypeThreeDSResultNormalizer implements DenormalizerInterface, Normalizer
         }
         if (null !== $object->getSdkResponse()) {
             $data->{'sdk_response'} = $object->getSdkResponse();
+        }
+        if (null !== $object->getAcsTransId()) {
+            $data->{'acs_trans_id'} = $object->getAcsTransId();
         }
         return $data;
     }

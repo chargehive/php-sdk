@@ -109,6 +109,12 @@ class ChtypeThreeDSResult implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $acsTransId;
+    /**
+     * 
+     *
      * @return string
      */
     public function getEci()
@@ -463,8 +469,29 @@ class ChtypeThreeDSResult implements \JsonSerializable
         $this->sdkResponse = $sdkResponse;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getAcsTransId()
+    {
+        return $this->acsTransId;
+    }
+    /**
+     * 
+     *
+     * @param string $acsTransId
+     *
+     * @return self
+     */
+    public function setAcsTransId(string $acsTransId)
+    {
+        $this->acsTransId = $acsTransId;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['eci' => $this->eci, 'cavv' => $this->cavv, 'xid' => $this->xid, 'enrollment' => $this->enrollment, 'result' => $this->result, 'signatureStatus' => $this->signatureStatus, 'serverTransactionId' => $this->serverTransactionId, 'status' => $this->status, 'majorVersion' => $this->majorVersion, 'version' => $this->version, 'paReq' => $this->paReq, 'acsUrl' => $this->acsUrl, 'paRes' => $this->paRes, 'id' => $this->id, 'timestamp' => $this->timestamp, 'liability' => $this->liability, 'sdkResponse' => $this->sdkResponse];
+        return ['eci' => $this->eci, 'cavv' => $this->cavv, 'xid' => $this->xid, 'enrollment' => $this->enrollment, 'result' => $this->result, 'signatureStatus' => $this->signatureStatus, 'serverTransactionId' => $this->serverTransactionId, 'status' => $this->status, 'majorVersion' => $this->majorVersion, 'version' => $this->version, 'paReq' => $this->paReq, 'acsUrl' => $this->acsUrl, 'paRes' => $this->paRes, 'id' => $this->id, 'timestamp' => $this->timestamp, 'liability' => $this->liability, 'sdkResponse' => $this->sdkResponse, 'acsTransId' => $this->acsTransId];
     }
 }

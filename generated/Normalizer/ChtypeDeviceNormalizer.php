@@ -103,6 +103,13 @@ class ChtypeDeviceNormalizer implements DenormalizerInterface, NormalizerInterfa
         if (property_exists($data, 'timezone')) {
             $object->setTimezone($data->{'timezone'});
         }
+        if (property_exists($data, 'request_headers')) {
+            $values = array();
+            foreach ($data->{'request_headers'} as $value) {
+                $values[] = $this->denormalizer->denormalize($value, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypeDeviceHeader', 'json', $context);
+            }
+            $object->setRequestHeaders($values);
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -182,6 +189,13 @@ class ChtypeDeviceNormalizer implements DenormalizerInterface, NormalizerInterfa
         }
         if (null !== $object->getTimezone()) {
             $data->{'timezone'} = $object->getTimezone();
+        }
+        if (null !== $object->getRequestHeaders()) {
+            $values = array();
+            foreach ($object->getRequestHeaders() as $value) {
+                $values[] = $this->normalizer->normalize($value, 'json', $context);
+            }
+            $data->{'request_headers'} = $values;
         }
         return $data;
     }

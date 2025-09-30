@@ -157,6 +157,12 @@ class ChtypeDevice implements \JsonSerializable
     /**
      * 
      *
+     * @var ChtypeDeviceHeader[]
+     */
+    protected $requestHeaders;
+    /**
+     * 
+     *
      * @return string
      */
     public function getBrowserAcceptHeader()
@@ -679,8 +685,29 @@ class ChtypeDevice implements \JsonSerializable
         $this->timezone = $timezone;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return ChtypeDeviceHeader[]
+     */
+    public function getRequestHeaders()
+    {
+        return $this->requestHeaders;
+    }
+    /**
+     * 
+     *
+     * @param ChtypeDeviceHeader[] $requestHeaders
+     *
+     * @return self
+     */
+    public function setRequestHeaders(array $requestHeaders)
+    {
+        $this->requestHeaders = $requestHeaders;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['browserAcceptHeader' => $this->browserAcceptHeader, 'colorDepth' => $this->colorDepth, 'javaEnabled' => $this->javaEnabled, 'javascriptEnabled' => $this->javascriptEnabled, 'language' => $this->language, 'screen' => $this->screen, 'screenAvailable' => $this->screenAvailable, 'windowInner' => $this->windowInner, 'windowOuter' => $this->windowOuter, 'timezoneOffsetMins' => $this->timezoneOffsetMins, 'userAgent' => $this->userAgent, 'ipAddress' => $this->ipAddress, 'cookiesEnabled' => $this->cookiesEnabled, 'flashVersion' => $this->flashVersion, 'isTouch' => $this->isTouch, 'os' => $this->os, 'osVersion' => $this->osVersion, 'browser' => $this->browser, 'browserVersion' => $this->browserVersion, 'deviceManufacturer' => $this->deviceManufacturer, 'deviceName' => $this->deviceName, 'deviceVersion' => $this->deviceVersion, 'fingerprint' => $this->fingerprint, 'type' => $this->type, 'timezone' => $this->timezone];
+        return ['browserAcceptHeader' => $this->browserAcceptHeader, 'colorDepth' => $this->colorDepth, 'javaEnabled' => $this->javaEnabled, 'javascriptEnabled' => $this->javascriptEnabled, 'language' => $this->language, 'screen' => $this->screen, 'screenAvailable' => $this->screenAvailable, 'windowInner' => $this->windowInner, 'windowOuter' => $this->windowOuter, 'timezoneOffsetMins' => $this->timezoneOffsetMins, 'userAgent' => $this->userAgent, 'ipAddress' => $this->ipAddress, 'cookiesEnabled' => $this->cookiesEnabled, 'flashVersion' => $this->flashVersion, 'isTouch' => $this->isTouch, 'os' => $this->os, 'osVersion' => $this->osVersion, 'browser' => $this->browser, 'browserVersion' => $this->browserVersion, 'deviceManufacturer' => $this->deviceManufacturer, 'deviceName' => $this->deviceName, 'deviceVersion' => $this->deviceVersion, 'fingerprint' => $this->fingerprint, 'type' => $this->type, 'timezone' => $this->timezone, 'requestHeaders' => $this->requestHeaders];
     }
 }

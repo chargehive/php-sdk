@@ -25,6 +25,7 @@ class NormalizerFactory
         $normalizers[] = new ChargehiveChargeRefundTransactionNormalizer();
         $normalizers[] = new ChargehiveChargeResumeRequestNormalizer();
         $normalizers[] = new ChargehiveChargeResumeResponseNormalizer();
+        $normalizers[] = new ChargehiveChargeRetrieveResponseNormalizer();
         $normalizers[] = new ChargehiveChargeSummaryRetrieveResponseNormalizer();
         $normalizers[] = new ChargehiveChargeSuspendRequestNormalizer();
         $normalizers[] = new ChargehiveChargeSuspendResponseNormalizer();
@@ -72,12 +73,14 @@ class NormalizerFactory
         $normalizers[] = new ChtypeAddressNormalizer();
         $normalizers[] = new ChtypeAmountNormalizer();
         $normalizers[] = new ChtypeAttemptDetailNormalizer();
+        $normalizers[] = new ChtypeChargeNormalizer();
         $normalizers[] = new ChtypeChargeItemNormalizer();
         $normalizers[] = new ChtypeChargeMetaNormalizer();
         $normalizers[] = new ChtypeChargeSummaryNormalizer();
         $normalizers[] = new ChtypeCompanyNormalizer();
         $normalizers[] = new ChtypeDeliveryNormalizer();
         $normalizers[] = new ChtypeDeviceNormalizer();
+        $normalizers[] = new ChtypeDeviceHeaderNormalizer();
         $normalizers[] = new ChtypeDimensionNormalizer();
         $normalizers[] = new ChtypeFraudFactorNormalizer();
         $normalizers[] = new ChtypeFraudResultNormalizer();
@@ -90,6 +93,7 @@ class NormalizerFactory
         $normalizers[] = new ChtypePersonNormalizer();
         $normalizers[] = new ChtypeReasonNormalizer();
         $normalizers[] = new ChtypeResponseDetailNormalizer();
+        $normalizers[] = new ChtypeStatementDescriptorNormalizer();
         $normalizers[] = new ChtypeThreeDSResultNormalizer();
         $normalizers[] = new ChtypeTransactionNormalizer();
         $normalizers[] = new ChtypeTransactionDetailNormalizer();

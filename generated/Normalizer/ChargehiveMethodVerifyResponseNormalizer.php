@@ -43,6 +43,9 @@ class ChargehiveMethodVerifyResponseNormalizer implements DenormalizerInterface,
         if (property_exists($data, 'tokenize_response')) {
             $object->setTokenizeResponse($this->denormalizer->denormalize($data->{'tokenize_response'}, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChargehivePCIBTokenizeResponse', 'json', $context));
         }
+        if (property_exists($data, 'token_expiry')) {
+            $object->setTokenExpiry($data->{'token_expiry'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -62,6 +65,9 @@ class ChargehiveMethodVerifyResponseNormalizer implements DenormalizerInterface,
         }
         if (null !== $object->getTokenizeResponse()) {
             $data->{'tokenize_response'} = $this->normalizer->normalize($object->getTokenizeResponse(), 'json', $context);
+        }
+        if (null !== $object->getTokenExpiry()) {
+            $data->{'token_expiry'} = $object->getTokenExpiry();
         }
         return $data;
     }
