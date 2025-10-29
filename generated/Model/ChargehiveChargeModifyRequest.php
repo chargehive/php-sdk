@@ -73,6 +73,18 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $contractType = 'CONTRACT_TYPE_INVALID';
+    /**
+     * 
+     *
+     * @var string
+     */
+    protected $environment = 'CHARGE_ENVIRONMENT_INVALID';
+    /**
+     * 
+     *
      * @return string
      */
     public function getChargeId()
@@ -301,8 +313,50 @@ class ChargehiveChargeModifyRequest implements \JsonSerializable
         $this->chargeTimezone = $chargeTimezone;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getContractType()
+    {
+        return $this->contractType;
+    }
+    /**
+     * 
+     *
+     * @param string $contractType
+     *
+     * @return self
+     */
+    public function setContractType(string $contractType)
+    {
+        $this->contractType = $contractType;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getEnvironment()
+    {
+        return $this->environment;
+    }
+    /**
+     * 
+     *
+     * @param string $environment
+     *
+     * @return self
+     */
+    public function setEnvironment(string $environment)
+    {
+        $this->environment = $environment;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'chargeMeta' => $this->chargeMeta, 'chargeMetaType' => $this->chargeMetaType, 'labels' => $this->labels, 'billingProfileId' => $this->billingProfileId, 'initialTransaction' => $this->initialTransaction, 'reactivate' => $this->reactivate, 'chargeTimezone' => $this->chargeTimezone];
+        return ['chargeId' => $this->chargeId, 'amount' => $this->amount, 'paymentMethodIds' => $this->paymentMethodIds, 'expiryTime' => $this->expiryTime, 'chargeMeta' => $this->chargeMeta, 'chargeMetaType' => $this->chargeMetaType, 'labels' => $this->labels, 'billingProfileId' => $this->billingProfileId, 'initialTransaction' => $this->initialTransaction, 'reactivate' => $this->reactivate, 'chargeTimezone' => $this->chargeTimezone, 'contractType' => $this->contractType, 'environment' => $this->environment];
     }
 }
