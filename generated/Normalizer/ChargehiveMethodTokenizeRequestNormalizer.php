@@ -74,6 +74,12 @@ class ChargehiveMethodTokenizeRequestNormalizer implements DenormalizerInterface
         if (property_exists($data, 'billing_profile_id')) {
             $object->setBillingProfileId($data->{'billing_profile_id'});
         }
+        if (property_exists($data, 'connector_id')) {
+            $object->setConnectorId($data->{'connector_id'});
+        }
+        if (property_exists($data, 'merchant_reference')) {
+            $object->setMerchantReference($data->{'merchant_reference'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -124,6 +130,12 @@ class ChargehiveMethodTokenizeRequestNormalizer implements DenormalizerInterface
         }
         if (null !== $object->getBillingProfileId()) {
             $data->{'billing_profile_id'} = $object->getBillingProfileId();
+        }
+        if (null !== $object->getConnectorId()) {
+            $data->{'connector_id'} = $object->getConnectorId();
+        }
+        if (null !== $object->getMerchantReference()) {
+            $data->{'merchant_reference'} = $object->getMerchantReference();
         }
         return $data;
     }

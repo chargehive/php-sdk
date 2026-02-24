@@ -67,6 +67,18 @@ class ChargehiveMethodTokenizeRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var string
+     */
+    protected $connectorId;
+    /**
+     * 
+     *
+     * @var string
+     */
+    protected $merchantReference;
+    /**
+     * 
+     *
      * @return string
      */
     public function getDataLocation()
@@ -274,8 +286,50 @@ class ChargehiveMethodTokenizeRequest implements \JsonSerializable
         $this->billingProfileId = $billingProfileId;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getConnectorId()
+    {
+        return $this->connectorId;
+    }
+    /**
+     * 
+     *
+     * @param string $connectorId
+     *
+     * @return self
+     */
+    public function setConnectorId(string $connectorId)
+    {
+        $this->connectorId = $connectorId;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getMerchantReference()
+    {
+        return $this->merchantReference;
+    }
+    /**
+     * 
+     *
+     * @param string $merchantReference
+     *
+     * @return self
+     */
+    public function setMerchantReference(string $merchantReference)
+    {
+        $this->merchantReference = $merchantReference;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['dataLocation' => $this->dataLocation, 'method' => $this->method, 'displayName' => $this->displayName, 'paymentMethodVerification' => $this->paymentMethodVerification, 'references' => $this->references, 'labels' => $this->labels, 'verifyChargeId' => $this->verifyChargeId, 'additionalData' => $this->additionalData, 'chargeMeta' => $this->chargeMeta, 'billingProfileId' => $this->billingProfileId];
+        return ['dataLocation' => $this->dataLocation, 'method' => $this->method, 'displayName' => $this->displayName, 'paymentMethodVerification' => $this->paymentMethodVerification, 'references' => $this->references, 'labels' => $this->labels, 'verifyChargeId' => $this->verifyChargeId, 'additionalData' => $this->additionalData, 'chargeMeta' => $this->chargeMeta, 'billingProfileId' => $this->billingProfileId, 'connectorId' => $this->connectorId, 'merchantReference' => $this->merchantReference];
     }
 }
