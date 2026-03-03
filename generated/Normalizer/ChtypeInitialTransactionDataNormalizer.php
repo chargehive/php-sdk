@@ -43,6 +43,12 @@ class ChtypeInitialTransactionDataNormalizer implements DenormalizerInterface, N
         if (property_exists($data, 'transaction_type')) {
             $object->setTransactionType($data->{'transaction_type'});
         }
+        if (property_exists($data, 'transaction_time')) {
+            $object->setTransactionTime(\DateTime::createFromFormat("Y-m-d\TH:i:sP", $data->{'transaction_time'}));
+        }
+        if (property_exists($data, 'method_id')) {
+            $object->setMethodId($data->{'method_id'});
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -62,6 +68,12 @@ class ChtypeInitialTransactionDataNormalizer implements DenormalizerInterface, N
         }
         if (null !== $object->getTransactionType()) {
             $data->{'transaction_type'} = $object->getTransactionType();
+        }
+        if (null !== $object->getTransactionTime()) {
+            $data->{'transaction_time'} = $object->getTransactionTime()->format("Y-m-d\TH:i:sP");
+        }
+        if (null !== $object->getMethodId()) {
+            $data->{'method_id'} = $object->getMethodId();
         }
         return $data;
     }

@@ -37,6 +37,18 @@ class ChtypeInitialTransactionData implements \JsonSerializable
     /**
      * 
      *
+     * @var \DateTime
+     */
+    protected $transactionTime;
+    /**
+     * 
+     *
+     * @var string
+     */
+    protected $methodId;
+    /**
+     * 
+     *
      * @return string
      */
     public function getChargeId()
@@ -139,8 +151,50 @@ class ChtypeInitialTransactionData implements \JsonSerializable
         $this->transactionType = $transactionType;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return \DateTime
+     */
+    public function getTransactionTime()
+    {
+        return $this->transactionTime;
+    }
+    /**
+     * 
+     *
+     * @param \DateTime $transactionTime
+     *
+     * @return self
+     */
+    public function setTransactionTime(\DateTime $transactionTime)
+    {
+        $this->transactionTime = $transactionTime;
+        return $this;
+    }
+    /**
+     * 
+     *
+     * @return string
+     */
+    public function getMethodId()
+    {
+        return $this->methodId;
+    }
+    /**
+     * 
+     *
+     * @param string $methodId
+     *
+     * @return self
+     */
+    public function setMethodId(string $methodId)
+    {
+        $this->methodId = $methodId;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['chargeId' => $this->chargeId, 'transactionId' => $this->transactionId, 'connectorId' => $this->connectorId, 'networkId' => $this->networkId, 'transactionType' => $this->transactionType];
+        return ['chargeId' => $this->chargeId, 'transactionId' => $this->transactionId, 'connectorId' => $this->connectorId, 'networkId' => $this->networkId, 'transactionType' => $this->transactionType, 'transactionTime' => $this->transactionTime, 'methodId' => $this->methodId];
     }
 }
