@@ -31,6 +31,13 @@ class ChargehiveChargeAuthorizeRequestNormalizer implements DenormalizerInterfac
         if (property_exists($data, 'charge_id')) {
             $object->setChargeId($data->{'charge_id'});
         }
+        if (property_exists($data, 'payment_method_verification')) {
+            $values = array();
+            foreach ($data->{'payment_method_verification'} as $value) {
+                $values[] = $this->denormalizer->denormalize($value, 'ChargeHive\\Php\\Sdk\\Generated\\Model\\ChtypePaymentMethodVerificationItem', 'json', $context);
+            }
+            $object->setPaymentMethodVerification($values);
+        }
         return $object;
     }
     public function normalize($object, $format = null, array $context = array())
@@ -38,6 +45,13 @@ class ChargehiveChargeAuthorizeRequestNormalizer implements DenormalizerInterfac
         $data = new \stdClass();
         if (null !== $object->getChargeId()) {
             $data->{'charge_id'} = $object->getChargeId();
+        }
+        if (null !== $object->getPaymentMethodVerification()) {
+            $values = array();
+            foreach ($object->getPaymentMethodVerification() as $value) {
+                $values[] = $this->normalizer->normalize($value, 'json', $context);
+            }
+            $data->{'payment_method_verification'} = $values;
         }
         return $data;
     }

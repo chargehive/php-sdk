@@ -13,6 +13,12 @@ class ChargehiveChargeAuthorizeRequest implements \JsonSerializable
     /**
      * 
      *
+     * @var ChtypePaymentMethodVerificationItem[]
+     */
+    protected $paymentMethodVerification;
+    /**
+     * 
+     *
      * @return string
      */
     public function getChargeId()
@@ -31,8 +37,29 @@ class ChargehiveChargeAuthorizeRequest implements \JsonSerializable
         $this->chargeId = $chargeId;
         return $this;
     }
+    /**
+     * 
+     *
+     * @return ChtypePaymentMethodVerificationItem[]
+     */
+    public function getPaymentMethodVerification()
+    {
+        return $this->paymentMethodVerification;
+    }
+    /**
+     * 
+     *
+     * @param ChtypePaymentMethodVerificationItem[] $paymentMethodVerification
+     *
+     * @return self
+     */
+    public function setPaymentMethodVerification(array $paymentMethodVerification)
+    {
+        $this->paymentMethodVerification = $paymentMethodVerification;
+        return $this;
+    }
     public function jsonSerialize()
     {
-        return ['chargeId' => $this->chargeId];
+        return ['chargeId' => $this->chargeId, 'paymentMethodVerification' => $this->paymentMethodVerification];
     }
 }
